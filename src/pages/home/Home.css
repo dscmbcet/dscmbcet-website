@@ -1,0 +1,15 @@
+/*Navbar*/
+.navbarhome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+    gap: 10px;
+    position: absolute;
+    width: 100vw;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+    background: black;
+}

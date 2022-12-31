@@ -1,9 +1,12 @@
-import React from 'react';
+import './Events.css';
+import Navbar from '../../Components/Navbar/Navbar';
+import eventsheader from './../../assets/images/events.png';
 
 function Events() {
     return (
         <div>
-            <h1>This is the home page</h1>
+            <Navbar />
+            <img src={eventsheader} alt="img" className="image1"></img>
         </div>
     );
 }

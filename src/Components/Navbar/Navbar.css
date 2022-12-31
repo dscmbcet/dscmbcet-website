@@ -1,0 +1,63 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+    gap: 10px;
+    position: absolute;
+    width: 100vw;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.19) 0%, rgba(26, 26, 26, 0) 100%);
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 34px;
+    width: 761.09px;
+    height: 45px;
+    list-style-type: none;
+}
+
+.navlink {
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.4469px;
+    line-height: 25px;
+    color: #ffffff;
+}
+
+.btn {
+    box-sizing: border-box;
+    width: 101px;
+    height: 40px;
+    left: 1648px;
+    top: 36px;
+    border: 1px solid #ffffff;
+    border-radius: 13px;
+    color: #ffffff;
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.19) 0%, rgba(26, 26, 26, 0) 100%);
+    padding: 2px;
+    width: 80px;
+    height: 35px;
+    left: 1657.5px;
+    top: 40.41px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.gdsclogo {
+    width: 230.62px;
+    height: 29.12px;
+    left: 38.8px;
+}
