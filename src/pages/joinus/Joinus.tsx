@@ -40,23 +40,23 @@ function Joinus() {
                     <a href='https://twitter.com/gdscmbcet'>
                         <FontAwesomeIcon icon={faTwitter}/>
                     </a>
-                    <a href=''>
+                    <a href='/'>
                         <FontAwesomeIcon icon={faWhatsapp}/>
                     </a>
 
-                    <a href=''>
+                    <a href='/'>
                         <FontAwesomeIcon icon={faDiscord}/>
                     </a>
 
-                    <a href=''>
+                    <a href='/'>
                         <FontAwesomeIcon icon={faInstagram}/>
                     </a>
 
-                    <a href=''>
+                    <a href='/'>
                         <FontAwesomeIcon icon={faLinkedin}/>
                     </a>
 
-                    <a href=''>
+                    <a href='/'>
                         <FontAwesomeIcon icon={faGithub}/>
                     </a>
                 </div>
