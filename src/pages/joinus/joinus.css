@@ -1,3 +1,9 @@
+.main{
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.524);
+    height: 300vh;
+}
+
 .centered {
     position: absolute;
     top: 26%;
@@ -6,4 +12,96 @@
     color: white;
     font-weight: 500;
     font-size: 90px;
+}
+
+.video{
+    position: absolute;
+    width: 950px;
+    height: 600px;
+    left: 250px;
+    top: 800px;
+}
+.text{
+    position: absolute;
+    width: 1027px;
+    height: 168px;
+    left: 207px;
+    top: 540px;
+
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 81px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.yt{
+height: 250vh;
+width: 100vw;
+background-image: linear-gradient(to bottom,#21384b8a,#223d5384,#de3d318b); 
+display: flex;
+align-items: center;
+
+}
+
+.Join_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 309.6px;
+    height: 126px;
+    left: 565px;
+    top: 1460px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 9.61505px 3.20502px -6.41004px rgba(0, 0, 0, 0.2), 0px 6.41004px 6.41004px rgba(0, 0, 0, 0.14), 0px 3.20502px 16.0251px rgba(0, 0, 0, 0.12);
+    border-radius: 16.0251px;
+
+}
+
+.button_text{
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 58.7848px;
+    line-height: 83px;
+
+    background: linear-gradient(180deg, #259BFD 0%, #D72E23 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.container{
+    position: absolute;
+    width: 511.68px;
+    height: 212px;
+    left: 474px;
+    top: 1860px;
+
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 11px;
+    gap: 23px;
+    left: 15%;
+    position: absolute;
+}
+
+a{
+    color: white;
 }
