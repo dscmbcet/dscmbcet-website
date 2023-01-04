@@ -3,6 +3,7 @@
     flex-direction: column;
     color: white;
     background-color: #1a1a1a;
+    min-height: 100vh;
 }
 
 #oppurPageName {
@@ -51,8 +52,4 @@
     background-color: #333333;
     border: #333333;
     color: gray;
-}
-
-#oppurSearchInput::-webkit-search-cancel-button {
-    -webkit-appearance: none;
 }
