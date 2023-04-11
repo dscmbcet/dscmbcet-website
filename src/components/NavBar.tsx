@@ -21,7 +21,7 @@ function NavBar() {
 
     const navRef = useRef(null);
     const sunmoonRef = useRef(null);
-    const ctx = gsap.context(() => {});
+    const ctx = gsap.context(() => { });
 
     useEffect(() => {
         return () => ctx.revert();
@@ -70,9 +70,9 @@ function NavBar() {
                     style={
                         theme === "dark"
                             ? {
-                                  backgroundColor: "var(--dark-sky)",
-                                  borderColor: "var(--light-sky)",
-                              }
+                                backgroundColor: "var(--dark-sky)",
+                                borderColor: "var(--light-sky)",
+                            }
                             : { backgroundColor: "var(--light-sky)" }
                     }
                 >
@@ -81,9 +81,9 @@ function NavBar() {
                         style={
                             theme === "dark"
                                 ? {
-                                      left: "calc(100% - 23px)",
-                                      borderColor: "var(--light-sky)",
-                                  }
+                                    left: "calc(100% - 23px)",
+                                    borderColor: "var(--light-sky)",
+                                }
                                 : { left: 3, borderColor: "var(--dark-sky)" }
                         }
                     />
@@ -111,11 +111,11 @@ function NavBar() {
                     <button className="navBar_button">Join Us</button>
                 </div>
                 <img
-                className="navBar_SunMoon"
-                ref={sunmoonRef}
-                src={SunMoon}
-                alt=""
-            />
+                    className="navBar_SunMoon"
+                    ref={sunmoonRef}
+                    src={SunMoon}
+                    alt=""
+                />
             </div>
             <Marquee className="navBar_marquee" gradient={false} speed={60}>
                 UXTopia <div className="navBar_circle" /> Not just a regular

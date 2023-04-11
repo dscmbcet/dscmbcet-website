@@ -10,12 +10,12 @@
 
 .theme-dark .home_landing, .theme-dark .home_earth {
 	background-color: var(--dark-sky);
-	color: white;
+	color: var(--cream)	;
 }
 
 .theme-light .home_earth{
 	background-color: var(--light-sky-2);
-	color: white;
+	color: black;
 }
 
 .home_landing {
@@ -57,9 +57,43 @@
 	bottom: 0;
 }
 
+.home_earth {
+	position: relative;
+	transition: all 0.5s ease;
+	height: max(100vh, 600px, 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 2px solid var(--eerie-black);
+}
+
 .home_earth_clouds {
+	position: absolute;
+	top: 0%;
 	transition: all 0.5s ease;
 	background-color: none;
-	transform: scaleX(115%);
-	width: 100%; 
+	margin: 0%;
+	width: 100%;
 }
+
+.home_earth_container {
+	margin: 0% 25% 0%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px
+}
+
+.home_earth_container_header >  h1 {
+	font-size: 85px;
+	text-align: center;
+	line-height: 100%;
+}
+
+.home_earth_container > p {
+	font-size: 21px;
+	text-align: center;
+}
+
+

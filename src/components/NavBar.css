@@ -56,7 +56,7 @@
 }
 
 .navBar_marquee {
-	background-color: #FFF8E1;
+	background-color: var(--cream);
 	height: 30px;
 	z-index: 10;
 	border: 2px solid var(--eerie-black);

@@ -1,8 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useLayoutEffect, useRef } from 'react'
 import './Home.css'
 import LandingImg from '../../assets/landing-img.png'
 import { ThemeContext } from '../../context/theme-context';
-import GEarth from '../../components/gEarth';
+import GEarth from './components/GEarth';
+import FilledButton from '../../components/FilledButton';
 
 function Home() {
 	const { theme, setTheme } = useContext(ThemeContext);
@@ -14,7 +15,7 @@ function Home() {
 				<p>We are an initiative to grow their knowledge on developer technologies and more through peer to peer workshops and events, and gain relevant industry experience.</p>
 				<div className="home_landing_buttons">
 				</div>
-				<svg className='home_landing_clouds' width="1278" height="557" viewBox="0 0 1278 557" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg preserveAspectRatio="none" className='home_landing_clouds' width="1278" height="557" viewBox="0 0 1278 557" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<mask id="path-1-inside-1_202_11851" fill={theme === "dark" ? "#333333" : "white"}>
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M1073.92 383.591C1078.96 386.384 1084.43 387.886 1090.04 388.213C1080.42 432.607 1094.99 476.09 1129.67 495.305C1155.95 509.863 1187.91 507.247 1216.01 491.338C1208.38 534.071 1223.12 575.187 1256.58 593.722C1285.4 609.69 1321.06 604.996 1350.96 584.763C1347.97 592.97 1346.95 601.353 1347.78 609.104C1338.29 613.721 1329.6 621.815 1323.62 632.619C1310.45 656.38 1315.32 684.25 1334.49 694.868C1353.66 705.487 1379.87 694.833 1393.03 671.072C1399.01 660.268 1401.27 648.614 1400.15 638.119C1409.64 633.502 1418.33 625.408 1424.31 614.604C1433.69 597.669 1433.92 578.645 1426.33 565.269C1433.31 559.015 1439.54 551.302 1444.51 542.331C1453.36 526.345 1456.72 509.106 1455.1 493.566C1473.42 482.401 1489.89 465.522 1501.79 444.043C1522.67 406.355 1524.07 364.226 1508.72 333.383C1516.34 328.31 1523.17 321.032 1528.2 311.954C1533.32 302.704 1535.87 292.867 1536.05 283.561C1554.15 285.848 1574.43 274.547 1585.7 254.2C1599.69 228.954 1594.52 199.342 1574.15 188.06C1553.79 176.778 1525.94 188.098 1511.95 213.343C1511.24 214.626 1510.58 215.919 1509.97 217.221C1503.42 197.225 1490.78 180.527 1472.63 170.473C1428 145.752 1366.99 170.555 1336.34 225.873C1334.9 228.48 1333.55 231.107 1332.29 233.751C1325.38 223.019 1316.15 214.081 1304.75 207.764C1262.84 184.545 1206.46 205.014 1174.37 253.419C1172.38 251.662 1170.19 250.108 1167.81 248.787C1145.95 236.675 1116.05 248.827 1101.04 275.929C1099.85 278.069 1098.8 280.238 1097.86 282.424C1083.73 286.342 1070.16 296.988 1061.52 312.588C1046.5 339.69 1052.05 371.479 1073.92 383.591Z" />
 					</mask>
@@ -38,7 +39,7 @@ function Home() {
 				</svg>
 			</div>
 			<div className="home_earth">
-				<svg className='home_earth_clouds' width="1280" height="564" viewBox="0 0 1280 564" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg preserveAspectRatio="none" className='home_earth_clouds' width="1280" height="564" viewBox="0 0 1280 564" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<mask id="path-1-inside-1_202_12395" fill={theme === "dark" ? "#333333" : "white"}>
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M177.082 179.504C172.042 176.711 166.574 175.209 160.961 174.882C170.584 130.488 156.013 87.0053 121.326 67.7894C95.0483 53.2315 63.0849 55.8479 34.9867 71.7563C42.6223 29.0239 27.8803 -12.0917 -5.57864 -30.6277C-34.4016 -46.5954 -70.0643 -41.9014 -99.9643 -21.6685C-96.9655 -29.8748 -95.9504 -38.2581 -96.7774 -46.0095C-87.286 -50.6262 -78.6036 -58.7203 -72.6183 -69.5242C-59.455 -93.2851 -64.3222 -121.155 -83.4896 -131.774C-102.657 -142.392 -128.866 -131.738 -142.029 -107.977C-148.015 -97.1732 -150.272 -85.5195 -149.153 -75.0243C-158.644 -70.4076 -167.326 -62.3135 -173.312 -51.5096C-182.694 -34.5738 -182.916 -15.5503 -175.329 -2.17411C-182.314 4.08019 -188.537 11.7927 -193.507 20.764C-202.363 36.75 -205.721 53.9891 -204.096 69.5289C-222.416 80.6942 -238.894 97.5728 -250.793 119.052C-271.672 156.74 -273.067 198.869 -257.723 229.712C-265.345 234.785 -272.166 242.063 -277.195 251.141C-282.32 260.391 -284.872 270.227 -285.048 279.534C-303.154 277.246 -323.431 288.548 -334.703 308.895C-348.689 334.141 -343.518 363.753 -323.152 375.035C-302.787 386.317 -274.94 374.997 -260.954 349.751C-260.243 348.469 -259.583 347.176 -258.971 345.874C-252.42 365.87 -239.778 382.568 -221.629 392.622C-177.005 417.343 -115.987 392.54 -85.3411 337.221C-83.8972 334.615 -82.5465 331.988 -81.2881 329.344C-74.3781 340.075 -65.1496 349.014 -53.7475 355.331C-11.836 378.549 44.5372 358.081 76.6258 309.676C78.6164 311.433 80.8063 312.987 83.1903 314.308C105.053 326.42 134.948 314.268 149.962 287.165C151.148 285.026 152.205 282.857 153.136 280.671C167.268 276.753 180.84 266.106 189.482 250.507C204.497 223.405 198.945 191.615 177.082 179.504Z" />
 					</mask>
@@ -62,6 +63,12 @@ function Home() {
 				</svg>
 				<div className="home_earth_container">
 					<GEarth/>
+					<div className='home_earth_container_header'>
+						<h1>the gears</h1>
+						<h1>behind it all</h1>
+					</div>
+					<p>We are a committed and eclectic team of scientists, engineers and plant lovers coming from all over the world to bring our mission to life.</p>
+					<FilledButton fontSize='18px' text='Meet The Team' bgColor={theme === 'dark' ? "var(--cream)" : "black"} textColor={theme === 'dark' ? "black" : "white"} border={false}/>
 				</div>
 			</div>
 		</div>
