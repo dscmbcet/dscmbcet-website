@@ -8,8 +8,13 @@
 	color: black;
 }
 
-.theme-dark .home_landing {
+.theme-dark .home_landing, .theme-dark .home_earth {
 	background-color: var(--dark-sky);
+	color: white;
+}
+
+.theme-light .home_earth{
+	background-color: var(--light-sky-2);
 	color: white;
 }
 
@@ -50,4 +55,11 @@
 	position: absolute;
 	width: 100%;
 	bottom: 0;
+}
+
+.home_earth_clouds {
+	transition: all 0.5s ease;
+	background-color: none;
+	transform: scaleX(115%);
+	width: 100%; 
 }
