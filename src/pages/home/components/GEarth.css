@@ -1,0 +1,20 @@
+.gEarth {
+    animation: rotate 60s infinite linear;
+    transition: all 0.5s ease;
+    margin-top: 30%;
+    border-radius: 100%;
+	border: 3px solid;
+}
+
+.theme-dark .gEarth {
+    border-color: white;
+}
+
+.theme-light .gEarth {
+    border-color: black;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
