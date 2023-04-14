@@ -66,7 +66,7 @@
 }
 
 .home_about {
-	height: max(970px, 100vh);
+	height: max(980px, 100vh);
 	position: relative;
 } 
 
@@ -87,7 +87,6 @@
 .home_about_inner {
 	display: flex;
 	align-items: center;
-	height: max-content;
 	margin: 0% 0% 0% 10%;
 }
 
@@ -97,13 +96,23 @@
 }
 
 .home_about_image {
-	animation: llamaRotate 3s infinite linear;
 	transform: scale(80%);
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	transform-origin: top -10px;
 }
+
+.llama_cloud {
+	position: absolute;
+	transform: translate(17px, 52px);
+}
+
+.llama_body{
+	transform-origin: top;
+	animation: llamaRotate 3s infinite linear;
+	position: relative;
+}
+
 
 @keyframes llamaRotate {
 	0% {
@@ -121,15 +130,6 @@
 	  100% {
 		transform: rotate(0deg);
 	  }
-}
-
-.llama_cloud {
-	position: absolute;
-	transform: translate(17px, 52px);
-}
-
-.llama_body{
-	position: relative;
 }
 
  .home_about_cloud {
