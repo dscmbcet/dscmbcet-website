@@ -3,9 +3,14 @@
 	margin-top: 90px;
 }
 
-.theme-light .home_landing {
+.theme-light .home_about {
 	background-color: var(--light-sky);
 	color: black;
+}
+
+.theme-dark .home_about {
+	background-color: var(--eerie-black);
+	color: var(--cream);
 }
 
 .theme-dark .home_landing, .theme-dark .home_earth {
@@ -13,20 +18,23 @@
 	color: var(--cream)	;
 }
 
-.theme-light .home_earth{
+.theme-light .home_earth, .theme-light .home_landing{
 	background-color: var(--light-sky-2);
 	color: black;
 }
 
-.home_landing {
+.home_landing, .home_earth {
 	position: relative;
 	transition: all 0.5s ease;
-	height: max(100vh, 600px);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	border-bottom: 2px solid var(--eerie-black);
+}
+
+.home_landing {
+	height: max(100vh, 600px);
 }
 
 .home_landing > h1 {
@@ -57,15 +65,83 @@
 	bottom: 0;
 }
 
-.home_earth {
+.home_about {
+	height: max(970px, 100vh);
 	position: relative;
-	transition: all 0.5s ease;
-	height: max(100vh, 600px, 100%);
+} 
+
+.home_about_marquee {
+	padding-top: 2%;
+	font-size: 75px;
+	color: transparent;
+	-webkit-text-stroke-width: 3px;
+}
+
+.theme-light .marquee_span {
+	color: black;
+}
+.theme-dark .marquee_span {
+	color: var(--cream);
+}
+
+.home_about_inner {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	border-bottom: 2px solid var(--eerie-black);
+	height: max-content;
+	margin: 0% 0% 0% 10%;
+}
+
+.home_about_content > p {
+	margin-bottom: 10%;
+	font-size: 22px;
+}
+
+.home_about_image {
+	animation: llamaRotate 3s infinite linear;
+	transform: scale(80%);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	transform-origin: top -10px;
+}
+
+@keyframes llamaRotate {
+	0% {
+		transform: rotate(0deg);
+	  }
+	  25% {
+		transform: rotate(3deg);
+	  }
+	  50% {
+		transform: rotate(0deg);
+	  }
+	  75% {
+		transform: rotate(-3deg);
+	  }
+	  100% {
+		transform: rotate(0deg);
+	  }
+}
+
+.llama_cloud {
+	position: absolute;
+	transform: translate(17px, 52px);
+}
+
+.llama_body{
+	position: relative;
+}
+
+ .home_about_cloud {
+	width: 100%;
+	position: absolute;
+	transform: scaleY(90%) translateY(6%);
+	bottom: 0%
+} 
+
+
+.home_earth {
+	height: max(100vh, 600px, 100%);
 }
 
 .home_earth_clouds {
