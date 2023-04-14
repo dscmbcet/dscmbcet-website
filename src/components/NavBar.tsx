@@ -23,10 +23,6 @@ function NavBar() {
     const sunmoonRef = useRef(null);
     const ctx = gsap.context(() => { });
 
-    useEffect(() => {
-        return () => ctx.revert();
-    }, []);
-
     useLayoutEffect(() => {
         setTimeout(() => {
             ctx.add(() => {
@@ -43,6 +39,7 @@ function NavBar() {
                 }
             });
         }, 200);
+        return () => ctx.revert();
     }, []);
 
     const handleThemeChange = () => {
