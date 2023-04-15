@@ -193,13 +193,7 @@ letter-spacing: -0.02em;
 }
 
 
-/*
-.home_events_list div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-*/
+
 
 .home_events_list2 p{
     width: 225.17px;
@@ -222,21 +216,7 @@ letter-spacing: -0.02em;
     border-radius: 16px 16px 16px 16px ;
 	
 }
-/*.theme-dark .home_events_list1 img,.theme-dark .home_events_list2 img,.theme-dark .home_events_list3 img{
-    border:white 2px solid;
-	
 
-    border-radius: 16px 16px 16px 16px ;
-	
-}
-*/
-/*
-.home_events_list1{
-    display: flex;
-    flex-direction: column;
-    align-items: self-end;
-}
-*/
 
 .home_events_list_left{
     display: flex;
