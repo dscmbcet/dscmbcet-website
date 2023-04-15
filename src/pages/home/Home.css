@@ -109,28 +109,9 @@
 
 .llama_body{
 	transform-origin: top;
-	animation: llamaRotate 3s infinite linear;
 	position: relative;
 }
 
-
-@keyframes llamaRotate {
-	0% {
-		transform: rotate(0deg);
-	  }
-	  25% {
-		transform: rotate(3deg);
-	  }
-	  50% {
-		transform: rotate(0deg);
-	  }
-	  75% {
-		transform: rotate(-3deg);
-	  }
-	  100% {
-		transform: rotate(0deg);
-	  }
-}
 
  .home_about_cloud {
 	width: 100%;
