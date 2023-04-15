@@ -139,6 +139,97 @@
 	bottom: 0%
 } 
 
+.theme-light .home_events {
+    background-color: white;
+    color: black;
+}
+
+.theme-dark .home_events {
+    background-color: #333333;;
+    color: white;
+}
+
+.home_events{
+    padding:  8%;
+}
+
+.home_events_head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ justify-content: space-between;
+}
+
+.home_events h1{
+    font-size: 96px;
+    letter-spacing: -0.02em;
+}
+
+.home_events a{
+    color: black;
+}
+
+.theme-dark .home_events a{
+    color: white;
+}
+
+.home_events_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 12%;
+    overflow: hidden;
+	margin-bottom: 4%
+}
+
+.home_events_list1, .home_events_list3{
+    margin-top: 16%;
+}
+
+
+.home_events_list2 p{
+    width: 225.17px;
+    height: 67.88px;
+    
+}
+
+.theme-light .home_events_list1 img,.theme-light .home_events_list2 img,.theme-light .home_events_list3 img{
+    border: black 2px solid;
+	-webkit-border-radius: 40px 40px 40px 40px;
+
+    border-radius: 16px 16px 16px 16px ;
+	
+}
+
+
+.home_events_list_left{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.home_events_list_right{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.theme-dark .home_events_cloud{
+	background-color: #333333;
+}
+
+.home_events_cloud_left{
+    position: absolute;
+    left: -60%;
+}
+
+.home_events_cloud_right{
+    position: absolute;
+    right:-70%
+}
+
+
 
 .home_earth {
 	height: max(100vh, 600px, 100%);
