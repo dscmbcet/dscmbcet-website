@@ -3,8 +3,6 @@ import "./Home.css";
 import LandingImg from "../../assets/landing-img.png";
 import Event1 from "../../assets/Event1.png";
 import Event2 from "../../assets/Event2.png";
-import Eventb1 from "../../assets/Eventb1.png";
-import Eventb2 from "../../assets/Eventb2.png";
 import { ThemeContext } from "../../context/theme-context";
 import GEarth from "./components/GEarth";
 import FilledButton from "../../components/FilledButton";
