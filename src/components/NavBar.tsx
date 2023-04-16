@@ -1,6 +1,5 @@
 import React, {
     useContext,
-    useEffect,
     useLayoutEffect,
     useRef,
     useState,

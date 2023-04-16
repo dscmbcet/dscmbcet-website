@@ -3,12 +3,12 @@
 	margin-top: 90px;
 }
 
-.theme-light .home_about {
+.theme-light .home_about, .theme-light .home_story {
 	background-color: var(--light-sky);
 	color: black;
 }
 
-.theme-dark .home_about {
+.theme-dark .home_about, .theme-dark .home_story {
 	background-color: var(--eerie-black);
 	color: var(--cream);
 }
@@ -70,8 +70,8 @@
 	position: relative;
 } 
 
-.home_about_marquee {
-	padding-top: 2%;
+.home_marquee {
+	padding-top: 3%;
 	font-size: 75px;
 	color: transparent;
 	-webkit-text-stroke-width: 3px;
@@ -196,10 +196,6 @@
     position: relative;
 }
 
-.theme-dark .home_events_cloud{
-	background-color: #333333;
-}
-
 .home_events_cloud_left{
     position: absolute;
     left: -60%;
@@ -210,7 +206,38 @@
     right:-70%
 }
 
+.home_story {
+	height: max(1000px, 100vh);
+	position: relative;
+} 
 
+
+.home_story_cloud {
+	position: absolute;
+	top: 0%;
+}
+
+.home_story_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.home_story_stories {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.home_story_rod {
+	width: 100%;
+	margin-top: 5%;
+}
+
+.home_story_buttons {
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-90%);
+}
 
 .home_earth {
 	height: max(100vh, 600px, 100%);

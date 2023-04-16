@@ -1,0 +1,36 @@
+.buttondiv {
+    display: flex;
+}
+
+.JButton {
+    padding:50px 30px;
+    border-radius: 0 20px 20px 0px;
+    border-style: solid;
+    border-width: 2px 2px 2px 0px;
+    margin: 0%;
+    position: relative;
+    z-index: 2;
+    scale: 75%;
+    transform: translateX(-16%);
+}
+
+.theme-dark .JButton {
+    border-color: white;
+    background-color: #373737;
+}
+
+.theme-light .JButton {
+    border-color: black;
+    background-color: white;
+}
+
+.joystick {
+    position: relative;
+    z-index: 1;
+    transform-origin: left;
+    transform: translateX(-40%);
+    scale: 75%;
+}
+
+
+
