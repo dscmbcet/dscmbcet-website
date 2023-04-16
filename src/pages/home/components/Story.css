@@ -1,0 +1,10 @@
+.Story {
+    position: relative;
+    transform-origin: top;
+    scale: 70%;
+    transform: translateY(-5%);
+}
+
+.Story .big {
+    scale: 100%;
+}
