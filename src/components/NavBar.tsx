@@ -23,6 +23,7 @@ function NavBar() {
     const ctx = gsap.context(() => { });
 
     useLayoutEffect(() => {
+        ctx.revert();
         setTimeout(() => {
             ctx.add(() => {
                 if (theme == "dark") {

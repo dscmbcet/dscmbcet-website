@@ -38,16 +38,23 @@
 	height: max(100vh, 600px);
 }
 
-.home_landing > h1 {
-	display: flex;
-	font-size: 90px;
-	line-height: 90px;
+.home_landing_head {
+	display: grid;
+	width: 100%;
+	justify-content: center;
 	align-items: center;
-	gap: 20px;
-	width: 60%;
 }
 
-.home_landing > h1 > img {
+.home_landing_head > h1 {
+	display: flex;
+	align-items: center;
+	font-size: 90px;
+	line-height: 90px;
+	gap: 20px;
+	width: 100%;
+}
+
+.home_landing_head > h1 > img {
 	width: 200px;
 }
 

@@ -41,10 +41,12 @@ function Home() {
   return (
     <div className="home">
       <div className="home_landing">
-        <h1>
-          beyond just <img src={LandingImg} alt="" />
-        </h1>
-        <h1>the technicality</h1>
+		<div className="home_landing_head">
+			<h1>
+			beyond just <img className="home_landingImg" src={LandingImg} alt="" />
+			</h1>
+			<h1>the technicality</h1>
+		</div>
         <p>
           We are an initiative to grow their knowledge on developer technologies
           and more through peer to peer workshops and events, and gain relevant

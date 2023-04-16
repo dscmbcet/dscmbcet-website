@@ -84,5 +84,5 @@
 	top: -26px;
 	left: 50%;
 	z-index: -1;
-	transform: translateX(-50%);
+	transform: translate(-50%, 0%);
 }
