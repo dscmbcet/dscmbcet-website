@@ -214,6 +214,7 @@
 
 .home_earth {
 	height: max(100vh, 600px, 100%);
+	padding-bottom: 7%;
 }
 
 .home_earth_clouds {
@@ -244,4 +245,46 @@
 	text-align: center;
 }
 
+.home_footer_one{
+	display: flex;
+	flex-direction: row;
+	background-color: #FFF8E1;
+	padding:2% 5%;
+	align-items: center;
+    overflow: hidden;
+}
 
+.home_footer_links{
+	display: flex;
+	flex-direction: row;
+	margin-left: 35%;
+}
+
+.home_footer_links a{
+	margin-right:2% ;
+}
+
+.home_footer_two{
+	background: linear-gradient(0deg, #1A1A1A, #1A1A1A);
+    color:white;
+     padding: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.home_footer_two_left div{
+    font-size: 24px;
+}
+
+.home_footer_two_right{
+    display: flex;
+    flex-direction: row;
+    line-height: 35px;
+}
+
+.home_footer_img{
+	background: linear-gradient(0deg, #1A1A1A, #1A1A1A);
+	overflow: hidden;
+}
