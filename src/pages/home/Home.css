@@ -1,6 +1,7 @@
 .home {
 	height: 100%;
 	margin-top: 90px;
+	overflow: hidden;
 }
 
 .theme-light .home_about {
