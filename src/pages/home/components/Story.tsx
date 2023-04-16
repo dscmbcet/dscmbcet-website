@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from "../../../context/theme-context";
 import "./Story.css"
+import storyImg from "../../../assets/storyImg.png"
 
 type StoryProps = {
     size?: string;
@@ -32,7 +33,7 @@ export default function Story({size}: StoryProps) {
                     <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
                         <use xlinkHref="#image0_202_12122" transform="matrix(0.00223714 0 0 0.00171799 0 -0.000794772)" />
                     </pattern>
-                    <image id="image0_202_12122" width="447" height="583" xlinkHref="src\assets\storyImg.png" />
+                    <image id="image0_202_12122" width="447" height="583" xlinkHref={storyImg} />
                 </defs>
             </svg>
         </div>
