@@ -1,5 +1,6 @@
 import React, {
     useContext,
+    useEffect,
     useLayoutEffect,
     useRef,
     useState,
@@ -22,8 +23,7 @@ function NavBar() {
     const sunmoonRef = useRef(null);
     const ctx = gsap.context(() => { });
 
-    useLayoutEffect(() => {
-        ctx.revert();
+    useEffect(() => {
         setTimeout(() => {
             ctx.add(() => {
                 if (theme == "dark") {
@@ -40,7 +40,27 @@ function NavBar() {
             });
         }, 200);
         return () => ctx.revert();
-    }, []);
+    }, [])
+    
+
+    // useLayoutEffect(() => {
+    //     setTimeout(() => {
+    //         ctx.add(() => {
+    //             if (theme == "dark") {
+    //                 gsap.to(sunmoonRef.current, {
+    //                     duration: 1,
+    //                     rotation: "180_cw",
+    //                 });
+    //             } else {
+    //                 gsap.to(sunmoonRef.current, {
+    //                     duration: 1,
+    //                     rotation: "0_cw",
+    //                 });
+    //             }
+    //         });
+    //     }, 200);
+    //     return () => ctx.revert();
+    // }, []);
 
     const handleThemeChange = () => {
         const isCurrentDark = theme === "dark";
