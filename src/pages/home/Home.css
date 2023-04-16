@@ -280,10 +280,6 @@
 	text-align: center;
 }
 
-.home_footer{
-	max-height: 10%;
-}
-
 .home_footer_one{
 	display: flex;
 	flex-direction: row;
