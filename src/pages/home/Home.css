@@ -284,15 +284,18 @@
 	display: flex;
 	flex-direction: row;
 	background-color: #FFF8E1;
-	padding:2% 5%;
+	padding:2% 7%;
 	align-items: center;
-    overflow: hidden;
+    justify-content: space-between;
+}
+
+.home_footer_one > img {
+	transform: translateX(-24%);
 }
 
 .home_footer_links{
 	display: flex;
 	flex-direction: row;
-	margin-left: 35%;
 }
 
 .home_footer_links a{
@@ -321,5 +324,8 @@
 
 .home_footer_img{
 	background: linear-gradient(0deg, #1A1A1A, #1A1A1A);
-	overflow: hidden;
+}
+
+.home_footer_img > img {
+	width: 100%;
 }
