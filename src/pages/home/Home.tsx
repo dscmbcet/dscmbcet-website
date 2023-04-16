@@ -422,12 +422,12 @@ function Home() {
         </div>
         <div className="home_footer_two">
           <div className="home_footer_two_left">
-              <h2> © 2023 GDSC MBCET</h2>
+              <h4> © 2023 GDSC MBCET</h4>
               <div>All Rights Reserved</div>
           </div>
           <div className="home_footer_two_right">
               <div>
-                 <h2>About</h2>
+                 <h4>About</h4>
                  <p>Who we are</p>
                  <p>Events</p>
                  <p>Team</p>
@@ -435,7 +435,7 @@ function Home() {
                  <p>Community Guildlines</p>
               </div>
               <div className="home_footer_two_curations">
-                 <h2>Curations</h2>
+                 <h4>Curations</h4>
                  <p>Opportunities</p>
                  <p>Resources</p>
               </div>
