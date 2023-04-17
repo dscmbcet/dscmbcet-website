@@ -34,6 +34,15 @@
 	border-bottom: 2px solid var(--eerie-black);
 }
 
+.theme-dark .home_landing, .theme-dark .home_story {
+	border-bottom: 4px solid var(--cream);
+}
+
+.theme-light .home_landing, .theme-light .home_story {
+	border-bottom: 4px solid var(--eerie-black);
+} 
+
+
 .home_landing {
 	height: max(100vh, 600px);
 }

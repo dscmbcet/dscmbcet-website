@@ -19,9 +19,16 @@ function NavBar() {
     const { theme, setTheme } = useContext(ThemeContext);
     const [tl, setTl] = useState<any>(null);
 
-    const navRef = useRef(null);
+    const navRef = useRef<HTMLDivElement | undefined>(undefined);
     const sunmoonRef = useRef(null);
-    const ctx = gsap.context(() => { });
+    const ctx = gsap.context(() => { }, navRef?.current);
+
+    useEffect(() => {
+      return () => {
+        ctx.revert()
+      }
+    }, [])
+    
 
     useEffect(() => {
         setTimeout(() => {
