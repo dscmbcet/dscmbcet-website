@@ -284,7 +284,7 @@
 	display: flex;
 	flex-direction: row;
 	background-color: #FFF8E1;
-	padding:2% 7% ;
+	padding:2% 9% ;
 	align-items: center;
     justify-content: space-between;
 }
@@ -305,7 +305,7 @@
 .home_footer_two{
 	background: linear-gradient(0deg, #1A1A1A, #1A1A1A);
     color:white;
-     padding: 2%;
+     padding: 4%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
