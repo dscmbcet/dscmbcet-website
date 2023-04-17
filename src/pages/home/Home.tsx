@@ -441,9 +441,11 @@ function Home() {
               </div>
           </div>
         </div>
+      {/*
         <div className="home_footer_img">
         <img src={Doodles}/>
         </div>
+  */}
       </div>
     </div>
   );
