@@ -8,7 +8,6 @@ type CardProps = { cards: { title: string; }[], theme: string, onClick?: () => v
 
 
 export default function Carousel({cards , theme}:CardProps) {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [cardList, setCardList] = useState(cards);
   const [loop, setLoop] = useState<any>(null)
   const [boxes, setBoxes] = useState<HTMLDivElement[] | null>(null)
@@ -35,13 +34,21 @@ export default function Carousel({cards , theme}:CardProps) {
 
   function nextClick() {
     ctx.add(()=> {
-      loop.next({duration: 0.5, ease: "power1.inOut"});
-      gsap.to(boxes, {scale:1, translateY: "-3%", duration: 0.5});
-      if (boxes != null) gsap.to(boxes[(loop.current() + 1)% boxes.length ], {scale:1.1, translateY: "1%", duration: 0.5})
+      ctx.revert()
+      gsap.to(boxes, {rotate: 3, duration: .4, ease: "elastic" , yoyo: true, yoyoEase: true, repeat: 1 });
+      ctx.ignore(() =>{
+        loop.next({duration: 0.5, ease: "power1.inOut"});
+        gsap.to(boxes, {scale:1, translateY: "-3%", duration: 0.5});
+        if (boxes != null) gsap.to(boxes[(loop.current() + 1)% boxes.length ], {scale:1.1, translateY: "1%", duration: 0.5})
+      })
     })
   }
 
   function prevClick() {
+    ctx.add(() => {
+      ctx.revert()
+      gsap.to(boxes, {rotate: -3, duration: .4, ease: "elastic" , yoyo: true, yoyoEase: true, repeat: 1 });
+    })
     loop.previous({duration: 0.5, ease: "power1.inOut"});
     gsap.to(boxes, {scale:1, translateY: "-3%", duration: 0.5});
     if (boxes != null) gsap.to(boxes[(loop.current() + 1)% boxes.length ], {scale:1.1, translateY: "1%", duration: 0.5})

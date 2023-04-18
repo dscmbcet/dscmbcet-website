@@ -1,12 +1,10 @@
 import React, {
     useContext,
     useEffect,
-    useLayoutEffect,
     useRef,
     useState,
 } from "react";
 import logo from "../assets/GDSC_logo.png";
-import styles from "./NavBar.module.css";
 import "./NavBar.css";
 import Moon from "../assets/Moon.png";
 import Sun from "../assets/Sun.svg";
