@@ -83,13 +83,14 @@
 }
 
 .home_about {
-	height: max(980px, 100vh);
+	height: max(900px, 100vh);
 	position: relative;
 } 
 
 .home_marquee {
 	padding-top: 3%;
-	font-size: 75px;
+	margin: 0%;
+	font-size: 60px;
 	color: transparent;
 	-webkit-text-stroke-width: 3px;
 }
@@ -109,11 +110,11 @@
 
 .home_about_content > p {
 	margin-bottom: 10%;
-	font-size: 22px;
+	font-size: 20px;
 }
 
 .home_about_image {
-	transform: scale(80%);
+	transform: scale(60%);
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -155,7 +156,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
- justify-content: space-between;
+justify-content: space-between;
 }
 
 .home_events h1{
@@ -253,7 +254,7 @@
 .home_story_buttons {
 	display: flex;
 	justify-content: space-between;
-	transform: translateY(-90%);
+	transform: translateY(-100%);
 }
 
 .home_earth {

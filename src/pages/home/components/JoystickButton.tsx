@@ -16,8 +16,8 @@ export default function JoystickButton({ location, onClick }:JProps) {
     const handleJoyMovement=(() => {
         ctx.add(() => {
             ctx.revert()
-            gsap.fromTo(joyStickRef.current,{rotation: 0} , {rotation: 45, duration: .5})
-            gsap.to(joyStickRef.current,{rotation: 0, duration: .5, delay: .5})
+            gsap.fromTo(joyStickRef.current,{rotation: 0} , {rotation: 45, duration: .25, ease: "power4"})
+            gsap.to(joyStickRef.current,{rotation: 0, duration: .25, delay: .25, ease: "power2"})
         })
     })
     return (
