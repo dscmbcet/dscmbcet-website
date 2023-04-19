@@ -95,6 +95,18 @@
 	-webkit-text-stroke-width: 3px;
 }
 
+.home path {
+	transition: fill 1s ease;
+}
+
+.home mask {
+	transition: fill 1s ease;
+}
+
+.home rect {
+	transition: fill 1s ease;
+}
+
 .theme-light .marquee_span {
 	color: black;
 }
@@ -152,11 +164,13 @@
 .theme-light .home_events {
     background-color: white;
     color: black;
+	transition: background-color 1s ease;
 }
 
 .theme-dark .home_events {
     background-color: #333333;;
     color: white;
+	transition: background-color 1s ease;
 }
 
 .home_events{

@@ -13,10 +13,12 @@ import SunMoon from "../assets/SunMoon.svg";
 import { ThemeContext } from "../context/theme-context";
 import FilledButton from "../components/FilledButton";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function NavBar() {
+    gsap.registerPlugin(ScrollTrigger);
     const { theme, setTheme } = useContext(ThemeContext);
-    const [tl, setTl] = useState<any>(null);
+    const [hidden, setHidden] = useState<boolean>(false);
 
     const navRef = useRef<HTMLDivElement | undefined>(undefined);
     const sunmoonRef = useRef(null);
@@ -30,21 +32,41 @@ function NavBar() {
     
 
     useEffect(() => {
-        setTimeout(() => {
             ctx.add(() => {
+                ctx.revert();
+                gsap.set(sunmoonRef.current, {x: "-50%"})
+                gsap.fromTo(sunmoonRef.current, {y: -70 }, { y: -200, scrollTrigger: {
+                    trigger: ".home_landing",
+                    start: "top top",
+                    end: "bottom 90px",
+                    scrub: 0.5,
+                    onLeave: () => {
+                        console.log("Left");
+                        setHidden(true);
+                    },
+                    onEnter: () => {
+                        console.log("Enterred");
+                        setHidden(false);
+                    },
+                    onEnterBack: () => {
+                        console.log("Enterred");
+                        setHidden(false);
+                    }
+                }})
                 if (theme == "dark") {
                     gsap.to(sunmoonRef.current, {
+                        delay: 1,
                         duration: 1,
                         rotation: "180_cw",
                     });
                 } else {
                     gsap.to(sunmoonRef.current, {
+                        delay: 1,
                         duration: 1,
                         rotation: "0_cw",
                     });
                 }
             });
-        }, 200);
         return () => ctx.revert();
     }, [])
     
@@ -72,13 +94,16 @@ function NavBar() {
         const isCurrentDark = theme === "dark";
         setTheme(isCurrentDark ? "light" : "dark");
         ctx.add(() => {
+            gsap.to(sunmoonRef.current, { y: -70, duration:1});
+            gsap.to(sunmoonRef.current, { y: -200, delay: 2, duration:1});
             if (!isCurrentDark) {
                 gsap.to(sunmoonRef.current, {
+                    delay: hidden ? 0.5 : 0,
                     duration: 1,
                     rotation: "180_cw",
                 });
             } else {
-                gsap.to(sunmoonRef.current, { duration: 1, rotation: "0_cw" });
+                gsap.to(sunmoonRef.current, { delay: hidden ? 0.5 : 0, duration: 1, rotation: "0_cw" });
             }
         });
     };

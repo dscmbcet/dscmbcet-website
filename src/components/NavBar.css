@@ -82,8 +82,7 @@
 
 .navBar_SunMoon {
 	position: absolute;
-	top: -26px;
+	top: 45px;
 	left: 50%;
 	z-index: -1;
-	transform: translate(-50%, 0%);
 }
