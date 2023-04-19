@@ -33,7 +33,7 @@ function NavBar() {
     useEffect(() => {
             ctx.add(() => {
                 ctx.revert();
-                gsap.set(sunmoonRef.current, {x: "-50%"})
+                gsap.set(sunmoonRef.current, {left: "50%", translateX: "-50%"})
                 gsap.fromTo(sunmoonRef.current, {y: -70 }, { y: -200, scrollTrigger: {
                     trigger: ".home_landing",
                     start: "top top",
