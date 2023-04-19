@@ -66,7 +66,10 @@ function Home() {
           and more through peer to peer workshops and events, and gain relevant
           industry experience.
         </p>
-        <div className="home_landing_buttons"></div>
+        <div className="home_landing_buttons">
+          <FilledButton text={"Join us"} textColor={theme === "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={false} fontSize="25px" id="joinUs"/>
+          <FilledButton text={"View Events"} textColor={theme === "dark" ? "var(--cream)" : "black"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true} fontSize="20px" />
+        </div>
         <LandingClouds theme={theme} />
       </div>
       <div className="home_about">
