@@ -83,6 +83,5 @@
 .navBar_SunMoon {
 	position: absolute;
 	top: 45px;
-	left: 50%;
 	z-index: -1;
 }

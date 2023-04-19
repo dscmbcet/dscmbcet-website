@@ -34,7 +34,7 @@ function NavBar() {
     useEffect(() => {
             ctx.add(() => {
                 ctx.revert();
-                gsap.set(sunmoonRef.current, {x: "-50%"})
+                gsap.set(sunmoonRef.current, {left: "50%", translateX: "-50%"})
                 gsap.fromTo(sunmoonRef.current, {y: -70 }, { y: -200, scrollTrigger: {
                     trigger: ".home_landing",
                     start: "top top",
@@ -94,8 +94,13 @@ function NavBar() {
         const isCurrentDark = theme === "dark";
         setTheme(isCurrentDark ? "light" : "dark");
         ctx.add(() => {
-            gsap.to(sunmoonRef.current, { y: -70, duration:1});
-            gsap.to(sunmoonRef.current, { y: -200, delay: 2, duration:1});
+            if (hidden) {
+                gsap.to(sunmoonRef.current, { y: -70, duration: 1});
+                gsap.to(sunmoonRef.current, { y: -200, delay: 2, duration:1});
+            }
+            else {
+                gsap.to(sunmoonRef.current, { y: -70, duration:1, repeat: 1, yoyo: true});
+            }
             if (!isCurrentDark) {
                 gsap.to(sunmoonRef.current, {
                     delay: hidden ? 0.5 : 0,
