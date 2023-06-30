@@ -8,6 +8,7 @@ import Linkedin from "../assets/linkedin.png";
 import Figma from "../assets/figma.png";
 import Doodles from "../assets/doodles.png";
 import FilledButton from './FilledButton';
+import './Footer.css'
 
 function Footer() {
   return (
