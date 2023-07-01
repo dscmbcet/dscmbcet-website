@@ -38,8 +38,13 @@
     border: 2px solid var(--cream);
 }
 
-.theme-dark .team_designers_images,.theme-dark .team_designers_name{
+.theme-dark .team_designers_images{
     border: 2px solid white;
+}
+
+.theme-light .team_designers_name{
+    color: white;
+    background-color: black;
 }
 
 .theme-dark .team_designers_inner h1{
@@ -215,7 +220,6 @@
     transition: opacity 0.3s ease;
     position: absolute;
     top: 120px;
-    
     background-color: white;
     color: black;
     height: 35px !important; 
