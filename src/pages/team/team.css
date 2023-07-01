@@ -210,20 +210,31 @@
     margin-top:-3%;
  }
 
+
+
 .team_designers_images{
    position: absolute;
    border: 2px solid black;
 }
 
+.team_designers_desc img{
+    position: absolute;
+    top: 165px;
+    left: 20px;
+    width: 33px;
+ }
+
 .team_designers_name{
     opacity: 0;
     transition: opacity 0.3s ease;
     position: absolute;
-    top: 120px;
+    top: 118px;
     background-color: white;
     color: black;
     height: 35px !important; 
     width:max-content !important;
     border-radius: 0 30px 30px 30px ;
     padding: 0 20px;
+    margin-top:10px;
+    margin-left: 40px;
 }
