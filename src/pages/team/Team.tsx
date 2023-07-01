@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './team.css';
 import Footer from '../../components/Footer';
+import Varsha from '../../assets/varsha.png'
 
 
 function Team() {
@@ -35,44 +36,56 @@ function Team() {
             <div className='team_developers_content_ppl'>
              <div>
               <div>
-              
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>Varsha</div>
               </div>
               <div>
-              
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>Varsha</div>
               </div>
               <div>
-              
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>Varsha</div>
               </div>
               <div>
-              
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>Varsha</div>
               </div>
               <div>
-              
-              </div>
-              </div>
-              <div>
-              <div>
-              
-              </div>
-              <div>
-              
-              </div>
-              <div>
-              
-              </div>
-              <div>
-              
-              </div>
-              <div>
-              
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>Varsha</div>
               </div>
               </div>
               <div>
               <div>
-              
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
               </div>
               <div>
-             
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
+              </div>
+              <div>
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
+              </div>
+              <div>
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
+              </div>
+              <div>
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
+              </div>
+              </div>
+              <div>
+              <div>
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
+              </div>
+              <div>
+                  <img className='team_developers_images' src={Varsha} />
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
               </div>
              
               </div>
@@ -87,51 +100,63 @@ function Team() {
             <div className='team_designers_content_ppl'>
              <div>
               <div>
-              
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
               </div>
               <div>
-              
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
               </div>
               <div>
-              
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
               </div>
               <div>
-              
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
               </div>
               <div>
-              
-              </div>
-              </div>
-              <div>
-              <div>
-              
-              </div>
-              <div>
-              
-              </div>
-              <div>
-              
-              </div>
-              <div>
-              
-              </div>
-              <div>
-              
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
               </div>
               </div>
               <div>
               <div>
-              
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
               </div>
               <div>
-             
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
+              </div>
+              <div>
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
+              </div>
+              <div>
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
+              </div>
+              <div>
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
+              </div>
+              </div>
+              <div>
+              <div>
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
+              </div>
+              <div>
+                  <img className='team_designers_images' src={Varsha} />
+                  <div className='team_designers_name'>Varsha</div>
               </div>
              
               </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
       
     
  
