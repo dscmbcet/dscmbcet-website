@@ -23,6 +23,8 @@ import LandingClouds from "./components/LandingClouds";
 import AboutClouds from "./components/AboutClouds";
 import EarthClouds from "./components/EarthClouds";
 import StoryClouds from "./components/StoryClouds";
+import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
 
 function Home() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -54,6 +56,7 @@ function Home() {
 
   return (
     <div className="home">
+      <NavBar />
       <div className="home_landing">
 		<div className="home_landing_head">
 			<h1>
@@ -175,52 +178,6 @@ function Home() {
             border={false}
           />
         </div>
-      </div>
-      <div className="home_footer">
-        <div className="home_footer_one">
-            <img src={Gdsclogocoloured}/>
-            <div className="home_footer_links">
-              <a href=""><img src={Mail}/></a>
-              <a href=""><img src={Instagram}/></a>
-              <a href=""><img src={Twitter}/></a>
-              <a href=""><img src={Youtube}/></a>
-              <a href=""><img src={Linkedin}/></a>
-              <a href=""><img src={Figma}/></a>
-              <FilledButton
-            fontSize="22px"
-            text="Join us"
-            bgColor="black"
-            textColor="#FFF8E1"
-            border={false}
-          />
-            </div>
-        </div>
-        <div className="home_footer_two">
-          <div className="home_footer_two_left">
-              <h4> © 2023 GDSC MBCET</h4>
-              <div>All Rights Reserved</div>
-          </div>
-          <div className="home_footer_two_right">
-              <div>
-                 <h4>About</h4>
-                 <p>Who we are</p>
-                 <p>Events</p>
-                 <p>Team</p>
-                 <p>Magazine</p>
-                 <p>Community Guildlines</p>
-              </div>
-              <div className="home_footer_two_curations">
-                 <h4>Curations</h4>
-                 <p>Opportunities</p>
-                 <p>Resources</p>
-              </div>
-          </div>
-        </div>
-      
-        <div className="home_footer_img">
-          <img src={Doodles}/>
-        </div>
- 
       </div>
     </div>
   );
