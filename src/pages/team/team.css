@@ -91,7 +91,7 @@
    -webkit-text-stroke: 1px black;
    font-weight: 600;
    font-size: 103px;
-   padding: 40px;
+   padding: 10px;
 }
 
 .team_developers_content_ppl{
@@ -217,7 +217,7 @@
    border: 2px solid black;
 }
 
-.team_designers_desc img{
+.team_designers_curser{
     position: absolute;
     top: 165px;
     left: 20px;

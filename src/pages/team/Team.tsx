@@ -10,14 +10,21 @@ import './team.css';
 import Footer from '../../components/Footer';
 import Varsha from '../../assets/varsha.png'
 import Curser from '../../assets/arrow.svg'
+import CurserWhite from '../../assets/arrowwhite.svg'
 import Sreelakshmi from '../../assets/sreelakshmi.png'
+import Arrow from './components/Arrow';
 
 
 function Team() {
 
   const { theme, setTheme } = useContext(ThemeContext);
+  let ImageToShow = '';
   
-
+  if(theme=='dark'){
+    ImageToShow=CurserWhite;
+  }else{
+    ImageToShow=Curser;
+  }
 
   return (
     <div className='team'>
@@ -39,11 +46,11 @@ function Team() {
              <div>
               <div>
                   <img className='team_developers_images' src={Varsha} />
-                  <div className='team_developers_name'>Varsha</div>
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
               </div>
               <div>
                   <img className='team_developers_images' src={Varsha} />
-                  <div className='team_developers_name'>Varsha</div>
+                  <div className='team_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
               </div>
               <div>
                   <img className='team_developers_images' src={Varsha} />
@@ -104,72 +111,38 @@ function Team() {
               <div>
                   <img className='team_designers_images' src={Sreelakshmi} />
                   <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
+                  
+                     <img className='team_designers_curser' src={ImageToShow}/>
+                  
+                   
                     <div className='team_designers_name'>Sreelakshmi</div>
                   </div>
               </div>
               <div>
                   <img className='team_designers_images' src={Sreelakshmi} />
                   <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
+                    <img className='team_designers_curser' src={ImageToShow}/>
                     <div className='team_designers_name'>Sreelakshmi</div>
                   </div>
               </div>
               <div>
                   <img className='team_designers_images' src={Sreelakshmi} />
                   <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
+                    <img className='team_designers_curser'src={ImageToShow}/>
                     <div className='team_designers_name'>Sreelakshmi</div>
                   </div>
               </div>
               <div>
                   <img className='team_designers_images' src={Sreelakshmi} />
                   <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
+                    <img className='team_designers_curser' src={ImageToShow}/>
                     <div className='team_designers_name'>Sreelakshmi</div>
                   </div>
               </div>
               <div>
                   <img className='team_designers_images' src={Sreelakshmi} />
                   <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
-                    <div className='team_designers_name'>Sreelakshmi</div>
-                  </div>
-              </div>
-              </div>
-              <div>
-              <div>
-                  <img className='team_designers_images' src={Sreelakshmi} />
-                  <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
-                    <div className='team_designers_name'>Sreelakshmi</div>
-                  </div>
-              </div>
-              <div>
-                  <img className='team_designers_images' src={Sreelakshmi} />
-                  <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
-                    <div className='team_designers_name'>Sreelakshmi</div>
-                  </div>
-              </div>
-              <div>
-                  <img className='team_designers_images' src={Sreelakshmi} />
-                  <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
-                    <div className='team_designers_name'>Sreelakshmi</div>
-                  </div>
-              </div>
-              <div>
-                  <img className='team_designers_images' src={Sreelakshmi} />
-                  <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
-                    <div className='team_designers_name'>Sreelakshmi</div>
-                  </div>
-              </div>
-              <div>
-                  <img className='team_designers_images' src={Sreelakshmi} />
-                  <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
+                    <img className='team_designers_curser' src={ImageToShow}/>
                     <div className='team_designers_name'>Sreelakshmi</div>
                   </div>
               </div>
@@ -178,14 +151,51 @@ function Team() {
               <div>
                   <img className='team_designers_images' src={Sreelakshmi} />
                   <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
+                    <img className='team_designers_curser' src={ImageToShow}/>
                     <div className='team_designers_name'>Sreelakshmi</div>
                   </div>
               </div>
               <div>
                   <img className='team_designers_images' src={Sreelakshmi} />
                   <div className='team_designers_desc'>
-                    <img className='team_designers_curser' src={Curser}/>
+                    <img className='team_designers_curser' src={ImageToShow}/>
+                    <div className='team_designers_name'>Sreelakshmi</div>
+                  </div>
+              </div>
+              <div>
+                  <img className='team_designers_images' src={Sreelakshmi} />
+                  <div className='team_designers_desc'>
+                    <img className='team_designers_curser' src={ImageToShow}/>
+                    <div className='team_designers_name'>Sreelakshmi</div>
+                  </div>
+              </div>
+              <div>
+                  <img className='team_designers_images' src={Sreelakshmi} />
+                  <div className='team_designers_desc'>
+                    <img className='team_designers_curser' src={ImageToShow}/>
+                    <div className='team_designers_name'>Sreelakshmi</div>
+                  </div>
+              </div>
+              <div>
+                  <img className='team_designers_images' src={Sreelakshmi} />
+                  <div className='team_designers_desc'>
+                    <img className='team_designers_curser' src={ImageToShow}/>
+                    <div className='team_designers_name'>Sreelakshmi</div>
+                  </div>
+              </div>
+              </div>
+              <div>
+              <div>
+                  <img className='team_designers_images' src={Sreelakshmi} />
+                  <div className='team_designers_desc'>
+                    <img className='team_designers_curser'src={ImageToShow}/>
+                    <div className='team_designers_name'>Sreelakshmi</div>
+                  </div>
+              </div>
+              <div>
+                  <img className='team_designers_images' src={Sreelakshmi} />
+                  <div className='team_designers_desc'>
+                    <img className='team_designers_curser' src={ImageToShow}/>
                     <div className='team_designers_name'>Sreelakshmi</div>
                   </div>
               </div>
