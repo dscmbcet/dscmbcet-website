@@ -1,0 +1,15 @@
+.container {
+    width: 251px;
+    height: 333px;
+    background-color: aqua;
+    border-radius: 15px;
+    display: flex;
+}
+
+.theme-dark .container {
+    border: 2px solid var(--cream);
+}
+
+.theme-light .container {
+    border: 2px solid var(--eerie-black);
+}
