@@ -5,6 +5,7 @@ import React, {
     useState,
 } from "react";
 import logo from "../assets/GDSC_logo.png";
+import {NavLink} from 'react-router-dom';
 import "./NavBar.css";
 import Moon from "../assets/Moon.png";
 import Sun from "../assets/Sun.svg";
@@ -14,6 +15,8 @@ import { ThemeContext } from "../context/theme-context";
 import FilledButton from "../components/FilledButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Team from "../pages/team/Team";
+import Home from "../pages/home/Home";
 
 function NavBar() {
     gsap.registerPlugin(ScrollTrigger);
