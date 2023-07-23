@@ -6,6 +6,7 @@ import FilledButton from '../../components/FilledButton'
 import './Events.css'
 import { ThemeContext } from '../../context/theme-context'
 import searchIcon from '../../assets/icons8-search-50.png'
+import EventsBalloon from './components/EventsBalloon'
 
 function Events() {
     const { theme, setTheme } = React.useContext(ThemeContext);
@@ -15,7 +16,9 @@ function Events() {
       <NavBar/>
       <div className="Events_header">
         <EarthClouds theme={theme}/>
-        Events
+        <EventsBalloon/>
+        <div style={{margin: "90px"}}></div>
+        <p>Events</p>
         <p className='Events_header_desc'>let's do cool things that matter</p>
       </div>
       <div className="events_section">
@@ -27,12 +30,12 @@ function Events() {
             <button type='reset' className='events_searchbar_clear'>X</button>
         </div>
         <div className='events_filter'>
-            <FilledButton text={"Join us"} textColor={theme === "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={false} fontSize="25px" id="joinUs"/>
-            <FilledButton text={"Join us"} textColor={theme === "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={false} fontSize="25px" id="joinUs"/>
-            <FilledButton text={"Join us"} textColor={theme === "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={false} fontSize="25px" id="joinUs"/>
-            <FilledButton text={"Join us"} textColor={theme === "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={false} fontSize="25px" id="joinUs"/>
-            <FilledButton text={"Join us"} textColor={theme === "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={false} fontSize="25px" id="joinUs"/>
-            <FilledButton text={"Join us"} textColor={theme === "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={false} fontSize="25px" id="joinUs"/>
+            <FilledButton text={"All"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true} fontSize="20px" id='events'/>
+            <FilledButton text={"Design"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true} fontSize="20px" id='events'/>
+            <FilledButton text={"Web"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true} fontSize="20px"  id='events'/>
+            <FilledButton text={"App"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true} fontSize="20px" id='events'/>
+            <FilledButton text={"AI/ML"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true} fontSize="20px" id='events'/>
+            <FilledButton text={"Others"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true} fontSize="20px" id='events'/>
         </div>
         <div className="events_container">
             <EventComp theme={theme}/>
