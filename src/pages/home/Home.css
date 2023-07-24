@@ -26,7 +26,7 @@
 
 .home_landing, .home_earth {
 	position: relative;
-	transition: all 0.5s ease;
+	transition: all 1s ease;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -82,9 +82,19 @@
 	bottom: 0;
 }
 
+.home_landing_buttons {
+	width: 40%;
+	margin-top: 2%;
+	margin-right: 2%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
 .home_about {
 	height: max(100vh, 100%);
 	position: relative;
+	transition: all 1s ease;
 } 
 
 .home_marquee {
@@ -252,6 +262,7 @@ justify-content: space-between;
 .home_story {
 	height: max(1000px, 100vh);
 	position: relative;
+	transition: all 1s ease;
 } 
 
 

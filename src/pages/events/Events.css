@@ -1,0 +1,114 @@
+    .Events_header {
+        width: 100%;
+        height: max(50vh, 550px);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 122px;
+        line-height: 90px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Events_header_desc {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .theme-dark .Events_header {
+        background-color: var(--dark-sky);
+        color: var(--cream);
+        border-bottom: 2px solid var(--cream);
+    }
+
+    .theme-light .Events_header {
+        background-color: var(--light-sky);
+        color: black;
+        border-bottom: 2px solid var(--eerie-black);
+    }
+
+    .home_earth_clouds {
+        position: absolute;
+        top: 10%;
+        transition: all 0.5s ease;
+        background-color: none;
+        margin: 0%;
+        width: 100%;
+    }
+
+    .events_section {
+        position: relative;
+        width: 100%;
+    }
+
+    .theme-dark .events_section {
+        background-color: var(--eerie-black);
+        color: var(--cream);
+        border-bottom: 2px solid var(--cream);
+    }
+
+    .theme-light .events_section {
+        background-color: var(--light-sky-2);
+        color: black;
+        border-bottom: 2px solid var(--eerie-black);
+    }
+
+    .events_searchbar{
+        width: 100%;
+        position: absolute;
+        top: -30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .events_searchbar_label {
+        background-color: rgb(56, 55, 55);
+        padding-left: 1%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border-radius: 30px 0px 0px 30px;
+    }
+
+    .events_searchbar_input {
+        padding-left: 1%;
+        width: 30%;
+        height: 60px;
+        font-size: large;
+        background-color: rgb(56, 55, 55);
+        color: white;
+        outline: none;
+    }
+
+    .events_searchbar_clear {
+        width: max(5%, 50px);
+        background-color: rgb(56, 55, 55);
+        color: dimgrey;
+        border-radius: 0px 30px 30px 0px;
+        font-size: 25px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    .events_filter{
+        position: relative;
+        margin: auto;
+        flex-wrap: wrap;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 50px;
+        gap: 25px;
+    }
+
+    .events_container {
+        position: relative;
+        padding: 100px 10%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-around;
+    }

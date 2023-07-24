@@ -1,11 +1,32 @@
-import React, { useContext, useEffect, useLayoutEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "./GEarth.css";
 import { ThemeContext } from "../../../context/theme-context";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function GEarth() {
   const { theme, setTheme } = useContext(ThemeContext);
-  const newLocal = "#E8F5E9";
+  const parentRef=useRef(null);
+  let ctx = gsap.context(() => { });
+
+  useEffect(() => {
+    ctx.add(() => {
+      gsap.to('.gEarth', {
+        rotation: 360,
+        duration: 60, 
+        repeat: -1, 
+        ease: "linear",
+        scrollTrigger: {
+          trigger: ".gEarth",
+          toggleActions: "resume pause resume pause"
+        }
+      });
+    }, parentRef);
+    return () => ctx.revert()
+  },[]);
+
   return (
+    <div className="earthContainer" ref={parentRef} >
       <svg
         className="gEarth"
         width="491"
@@ -214,6 +235,7 @@ function GEarth() {
           />
         </defs>
       </svg>
+      </div>
   );
 }
 

@@ -12,6 +12,7 @@ import Sun from "../assets/Sun.svg";
 import Marquee from "react-fast-marquee";
 import SunMoon from "../assets/SunMoon.svg";
 import { ThemeContext } from "../context/theme-context";
+import FilledButton from "../components/FilledButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Team from "../pages/team/Team";
@@ -163,7 +164,7 @@ function NavBar() {
                     <a href="">Resources</a>
                     <a href="">Team</a>
                     <a href="">Magazine</a>
-                    <button className="navBar_button">Join Us</button>
+                    <FilledButton text="Join Us" textColor="var(--eerie-black)" bgColor="var(--light-sky)" border={false} />
                 </div>
                 <img
                     className="navBar_SunMoon"

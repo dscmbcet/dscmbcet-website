@@ -6,14 +6,15 @@ type Bprops = {
     textColor: string;
     bgColor: string;
     border: boolean;
-    class?: string;
+    padding?: string; 
+    id?: string;
     fontSize?: string;
 }
 
 export default function FilledButton(props: Bprops) {
   return (
-    <div className={`FilledButton ${props.class}`}>
-      <button style={{background: props.border ? "none" : props.bgColor, color: props.textColor,border:`3px Solid ${props.bgColor}`, fontSize: props.fontSize}}>{props.text}</button>
+    <div className={'FilledButton'}>
+      <button id={props.id} style={{background: props.border ? "none" : props.bgColor, color: props.textColor,border:`3px Solid ${props.bgColor}`, fontSize: props.fontSize}}>{props.text}</button>
     </div>
   )
 }
