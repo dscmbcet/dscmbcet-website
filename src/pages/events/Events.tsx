@@ -1,4 +1,4 @@
-import React from 'react'
+import { useContext } from 'react'
 import NavBar from '../../components/NavBar'
 import EarthClouds from '../home/components/EarthClouds'
 import EventComp from './components/EventComp'
@@ -9,13 +9,13 @@ import searchIcon from '../../assets/icons8-search-50.png'
 import EventsBalloon from './components/EventsBalloon'
 
 function Events() {
-    const { theme, setTheme } = React.useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <div>
       <NavBar/>
       <div className="Events_header">
-        <EarthClouds theme={theme}/>
+        <EarthClouds theme={theme} id='Events_earth_cloud'/>
         <EventsBalloon/>
         <div style={{margin: "90px"}}></div>
         <p>Events</p>
@@ -26,8 +26,7 @@ function Events() {
             <label htmlFor="" className='events_searchbar_label'>
                 <img src={searchIcon} alt="icon" style={{scale: "50%"}}/>
             </label>
-            <input type="text" placeholder='search'  className='events_searchbar_input'/>
-            <button type='reset' className='events_searchbar_clear'>X</button>
+            <input type="search" placeholder='search'  className='events_searchbar_input'/>
         </div>
         <div className='events_filter'>
             <FilledButton text={"All"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true} fontSize="20px" id='events'/>

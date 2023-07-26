@@ -1,14 +1,13 @@
-import React from 'react'
-
 type Props = {
 	theme: string;
+	id?: string
 }
 
-function EarthClouds({theme}: Props) {
+function EarthClouds({theme, id}: Props) {
   return (
 	<svg
+	id={id}
 	preserveAspectRatio="none"
-	className="home_earth_clouds"
 	width="1280"
 	height="564"
 	viewBox="0 0 1280 564"

@@ -4,14 +4,6 @@ import llamaImg from "../../assets/llama body.png"
 import LandingImg from "../../assets/landing-img.png";
 import Event1 from "../../assets/Event1.png";
 import Event2 from "../../assets/Event2.png";
-import Gdsclogocoloured from "../../assets/gdsc_logo_coloured.png";
-import Mail from "../../assets/mail.svg";
-import Instagram from "../../assets/instagram.png";
-import Twitter from "../../assets/twitter.png";
-import Youtube from "../../assets/youtube.png";
-import Linkedin from "../../assets/linkedin.png";
-import Figma from "../../assets/figma.png";
-import Doodles from "../../assets/doodles.png";
 import { ThemeContext } from "../../context/theme-context";
 import GEarth from "./components/GEarth";
 import Carousel from './components/Carousel'
@@ -24,7 +16,6 @@ import AboutClouds from "./components/AboutClouds";
 import EarthClouds from "./components/EarthClouds";
 import StoryClouds from "./components/StoryClouds";
 import NavBar from "../../components/NavBar";
-import Footer from "../../components/Footer";
 
 function Home() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -161,7 +152,7 @@ function Home() {
       </div>
 
       <div className="home_earth">
-        <EarthClouds theme={theme} />
+        <EarthClouds theme={theme} id="home_earth_clouds"/>
         <div className="home_earth_container">
           <GEarth />
           <div className="home_earth_container_header">

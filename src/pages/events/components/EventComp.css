@@ -9,6 +9,12 @@
     color: white
 }
 
+.container_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 .container_gradient {
     position: absolute;
     width: 100%;
@@ -26,7 +32,6 @@
 
 .component_main {
     position: absolute;
-    /* background-color: green; */
     top: 0%;
     width: 100%;
     height: 100%;
@@ -74,7 +79,6 @@
 
 .component_desc {
     position: absolute;
-    /* background-color: red; */
     width: 100%;
     height: 75%;
     top: 100%;
