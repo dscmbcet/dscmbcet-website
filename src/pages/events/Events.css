@@ -29,12 +29,11 @@
         border-bottom: 2px solid var(--eerie-black);
     }
 
-    .home_earth_clouds {
+   #Events_earth_cloud {
         position: absolute;
         top: 10%;
         transition: all 0.5s ease;
         background-color: none;
-        margin: 0%;
         width: 100%;
     }
 
@@ -74,34 +73,34 @@
 
     .events_searchbar_input {
         padding-left: 1%;
-        width: 30%;
+        width: 35%;
         height: 60px;
         font-size: large;
         background-color: rgb(56, 55, 55);
         color: white;
         outline: none;
+        border-radius: 0 30px 30px 0;
     }
-
-    .events_searchbar_clear {
-        width: max(5%, 50px);
-        background-color: rgb(56, 55, 55);
-        color: dimgrey;
-        border-radius: 0px 30px 30px 0px;
-        font-size: 25px;
-        text-align: center;
-        font-weight: 400;
+    .events_searchbar_input::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border-radius:10px;
+        margin-right: 5%;
+        background:
+    linear-gradient(45deg, transparent 0%,transparent 43%,dimgray 45%,dimgray 55%,transparent 57%,transparent 100%),
+    linear-gradient(135deg, transparent 0%,transparent 43%,dimgray 45%,dimgray 55%,transparent 57%,transparent 100%);
     }
 
     .events_filter{
         position: relative;
         margin: auto;
-        flex-wrap: wrap;
-        width: 60%;
+        width: 50%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         top: 50px;
-        gap: 25px;
+        gap: 15px;
     }
 
     .events_container {
