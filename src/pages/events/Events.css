@@ -1,4 +1,5 @@
     .Events_header {
+        position: relative;
         width: 100%;
         height: max(50vh, 550px);
         text-align: center;
@@ -6,14 +7,15 @@
         align-items: center;
         justify-content: center;
         font-weight: 600;
-        font-size: 122px;
+        font-size: clamp(5em, 15vw, 122px);
         line-height: 90px;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
     }
 
     .Events_header_desc {
-        font-size: 24px;
+        font-size: clamp(.2em, 15vw, 17px);
         font-weight: 400;
     }
 
@@ -31,10 +33,22 @@
 
    #Events_earth_cloud {
         position: absolute;
-        top: 10%;
+        top: 100px;
         transition: all 0.5s ease;
         background-color: none;
         width: 100%;
+    }
+
+    .events_balloon {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    #balloon1 {
+        margin-top: 40%;
     }
 
     .events_section {
@@ -58,6 +72,7 @@
         width: 100%;
         position: absolute;
         top: -30px;
+        height: 60px;
         display: flex;
         justify-content: center;
     }
@@ -65,16 +80,15 @@
     .events_searchbar_label {
         background-color: rgb(56, 55, 55);
         padding-left: 1%;
-        height: 60px;
         display: flex;
         align-items: center;
         border-radius: 30px 0px 0px 30px;
     }
 
+
     .events_searchbar_input {
         padding-left: 1%;
-        width: 35%;
-        height: 60px;
+        width: 500px;
         font-size: large;
         background-color: rgb(56, 55, 55);
         color: white;
@@ -110,4 +124,63 @@
         flex-wrap: wrap;
         gap: 40px;
         justify-content: space-around;
+    }
+
+    @media (width <= 750px) {
+        .events_searchbar {
+            height: 45px;
+            top: -22.5px;
+        }
+
+        .events_searchbar_input {
+            width: 300px;
+            font-size: medium;
+        }
+        
+        .events_filter {
+            gap: 4px;
+            top: 40px;
+        }
+
+        .events_container {
+            padding: 70px 10%;
+        }
+
+        .Events_header{
+            height: 420px;
+        }
+
+        .Events_header_desc {
+            height: 40px;
+            margin-bottom: 10%;
+        }
+
+        #Events_earth_cloud {
+            width: 100%;
+            height: 60%;
+            margin-top: 5%;
+        }
+        
+        .events_balloon {
+            margin-top: 30%;
+        }
+
+    } 
+
+    @media (width <= 1000px) {
+        .events_balloon {
+            scale: 70%;
+            width: 200%;
+        }
+    }
+
+    @media (width <= 550px) {
+        .events_balloon {
+            scale: 40%;
+            width: 350%;
+            margin-top: 30%;
+        }
+        #Events_earth_cloud {
+            height: 70%;
+        }
     }
