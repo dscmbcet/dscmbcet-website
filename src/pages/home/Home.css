@@ -57,8 +57,8 @@
 .home_landing_head > h1 {
 	display: flex;
 	align-items: center;
-	font-size: 90px;
-	line-height: 90px;
+	font-size: clamp(2em, 15vw, 90px);
+	line-height: 101%;
 	gap: 20px;
 	width: 100%;
 }
@@ -67,8 +67,23 @@
 	width: 200px;
 }
 
+@media (max-width: 720px) {
+	.home_landing_head {
+		width: 100%;
+	}
+	.home_landing_head > h1 {
+		display: inline;
+		text-align: center;
+	}
+
+	.home_landing_head > h1 > img {
+		display: none;
+	}
+}
+
 .home_landing > p {
 	margin-top: 30px;
+	margin-bottom: 30px;
 	font-size: 20px;
 	text-align: center;
 	width: 50%;
@@ -79,16 +94,38 @@
 	background-color: none;
 	position: absolute;
 	width: 100%;
+	height: 80vh;
 	bottom: 0;
 }
 
 .home_landing_buttons {
-	width: 40%;
-	margin-top: 2%;
-	margin-right: 2%;
 	display: flex;
-	justify-content: space-evenly;
+	flex-direction: row;
+	width: 90%;
+	gap: 30px;
+	justify-content: center;
 	align-items: center;
+}
+
+.home_landing_buttons > .FilledButton > button {
+	padding: 10% 2%;
+	width: 170px;
+}
+
+@media (max-width: 720px) {
+	.home_landing_buttons {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.home_landing > p {
+		width: 90%;
+	}
+
+	.home_landing_clouds { 
+		height: 50vh;
+	}
+
 }
 
 .home_about {
