@@ -144,7 +144,7 @@ function Home() {
       <div className="home_story">
         <StoryClouds theme={theme} />
         <div className="home_story_container">
-          <Marquee style={{marginTop: "3%"}} className="home_marquee" gradient={false} speed={60}>
+          <Marquee style={{marginTop: "100px"}} className="home_marquee" gradient={false} speed={60}>
             <h1 style={theme === 'dark' ? { WebkitTextStrokeColor: "white" } : { WebkitTextStrokeColor: "black" }}>tory <span className="marquee_span">our</span> story our story <span className="marquee_span">our</span> story our s</h1>
           </Marquee>
       		<Carousel cards={cards} theme={theme} />

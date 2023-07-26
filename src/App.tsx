@@ -13,7 +13,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "*",
-      element: <><Home/><Footer/></>,
+      element: <><Home/></>,
     },
     {
       path: "/events",

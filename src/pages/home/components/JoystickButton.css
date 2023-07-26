@@ -1,4 +1,5 @@
 .buttondiv {
+    width: 70px;
     display: flex;
 }
 
