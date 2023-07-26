@@ -169,6 +169,7 @@
 }
 .home_about_content {
 	display: flex;
+	width: 100%;
 	align-items: center;
 	flex-direction: column;
 	gap: 20px;
@@ -180,14 +181,10 @@
 }
 
 .home_about_image {
-	width: 40%;
+	width: 30%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-}
-
-.home_about_image  {
-	transform: scale(60%);
 }
 
 .llama_cloud {
@@ -206,7 +203,30 @@
 	position: absolute;
 	transform: scaleY(90%) translateY(6%);
 	bottom: 0%
-} 
+}
+
+@media (max-width: 720px) {
+	.home_about_cloud {
+		height: 50vh;
+	}
+	.home_about_inner {
+		flex-direction: column-reverse;
+	}
+
+	.home_about_content {
+		text-align: center;
+	}
+
+	.home_about_content > p {
+		padding: 0;
+	}
+
+	.home_about_image {
+		margin-top: -50px;
+		scale: 80%;
+		margin-bottom: -100px;
+	}
+}
 
 .theme-light .home_events {
     background-color: white;
