@@ -1,3 +1,8 @@
+.FilledButton {
+	display: grid;
+	place-items: center;
+}
+
 .FilledButton > button {
 	padding: 15%;
 	border-radius: 280px;
