@@ -4,7 +4,9 @@ import React, {
     useRef,
     useState,
 } from "react";
-import logo from "../assets/GDSC_logo.png";
+import bigLogo from "../assets/GDSC_logo.png";
+import smallLogo from "../assets/small_GDSC_Logo.svg";
+
 import {NavLink} from 'react-router-dom';
 import "./NavBar.css";
 import Moon from "../assets/Moon.png";
@@ -15,6 +17,7 @@ import { ThemeContext } from "../context/theme-context";
 import FilledButton from "../components/FilledButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import menuIcon from './menu.svg';
 import Team from "../pages/team/Team";
 import Home from "../pages/home/Home";
 
@@ -22,16 +25,35 @@ function NavBar() {
     gsap.registerPlugin(ScrollTrigger);
     const { theme, setTheme } = useContext(ThemeContext);
     const [hidden, setHidden] = useState<boolean>(false);
-
+    const [toggle, setToggle] = useState<boolean>(true);
+    const [width, setWindowWidth] = useState<number>(0)
     const navRef = useRef<HTMLDivElement | undefined>(undefined);
     const sunmoonRef = useRef(null);
     const ctx = gsap.context(() => { }, navRef?.current);
 
-    useEffect(() => {
+    const changeToggle = () => {        
+        setToggle(!toggle);
+    }
+
+    useEffect(() => {        
       return () => {
         ctx.revert()
       }
     }, [])
+
+    useEffect(() => { 
+        updateDimensions();
+        window.addEventListener('resize', updateDimensions);
+        return () => 
+          window.removeEventListener('resize',updateDimensions);
+       }, [])
+  
+       const updateDimensions = () => {
+          const width = window.innerWidth
+          console.log(width);
+          setWindowWidth(width)
+        }
+  
     
 
     useEffect(() => {
@@ -119,59 +141,74 @@ function NavBar() {
     return (
         <div className="nav">
             <div className="navBar">
-                <img className="noselect" src={logo} />
-                <div
-                    onClick={handleThemeChange}
-                    className="navBar_toggle"
-                    style={
-                        theme === "dark"
-                            ? {
-                                backgroundColor: "var(--dark-sky)",
-                                borderColor: "var(--light-sky)",
-                            }
-                            : { backgroundColor: "var(--light-sky)" }
-                    }
-                >
+                <div className="navBar_logoContainer">
+                    {(width > 1024) ? <img className="noselect logo" src={bigLogo} /> : <img className="noselect logo" src={smallLogo} /> }
+                </div>
+                <div className="navBar_toggleContainer">
                     <div
-                        className="navBar_toggleButton"
+                        onClick={handleThemeChange}
+                        className="navBar_toggle"
                         style={
                             theme === "dark"
                                 ? {
-                                    left: "calc(100% - 23px)",
+                                    backgroundColor: "var(--dark-sky)",
                                     borderColor: "var(--light-sky)",
                                 }
-                                : { left: 3, borderColor: "var(--dark-sky)" }
+                                : { backgroundColor: "var(--light-sky)" }
                         }
-                    />
-                    <img
-                        className="noselect"
-                        src={Moon}
-                        width={15}
-                        height={15}
-                        alt=""
-                    />
-                    <img
-                        className="noselect"
-                        src={Sun}
-                        width={15}
-                        height={15}
-                        alt=""
-                    />
+                    >
+                        <div
+                            className="navBar_toggleButton"
+                            style={
+                                theme === "dark"
+                                    ? {
+                                        left: "calc(100% - 23px)",
+                                        borderColor: "var(--light-sky)",
+                                    }
+                                    : { left: 3, borderColor: "var(--dark-sky)" }
+                            }
+                        />
+                        <img
+                            className="noselect"
+                            src={Moon}
+                            width={15}
+                            height={15}
+                            alt=""
+                        />
+                        <img
+                            className="noselect"
+                            src={Sun}
+                            width={15}
+                            height={15}
+                            alt=""
+                        />
+                    </div>
                 </div>
-                <div className="navBar_links">
-                    <a href="">Who are we</a>
-                    <a href="">Events</a>
-                    <a href="">Resources</a>
-                    <a href="">Team</a>
-                    <a href="">Magazine</a>
+                <ul className={`${toggle?'navLinks menu active':'navLinks'}`}>
+                    <li><a href="">Who are we</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Resources</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Magazine</a></li>
                     <FilledButton text="Join Us" textColor="var(--eerie-black)" bgColor="var(--light-sky)" border={false} />
-                </div>
+                </ul>
+                <img className='hamburgerMenu' src={menuIcon} onClick={changeToggle} onKeyDown={changeToggle} alt="" />
+                
                 <img
                     className="navBar_SunMoon"
                     ref={sunmoonRef}
                     src={SunMoon}
                     alt=""
                 />
+                <div role='none'
+                className={toggle ? 'backgroundOverlay' : 'backgroundOverlay backgroundOverlayClosed'}
+                onClick={() => {
+                    setToggle(false);
+                }}
+                onKeyDown={() => {
+                    setToggle(false);
+                }}
+             />
             </div>
             <Marquee className="navBar_marquee" gradient={false} speed={60}>
                 UXTopia <div className="navBar_circle" /> Not just a regular

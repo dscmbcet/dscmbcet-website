@@ -125,7 +125,6 @@
 	.home_landing_clouds { 
 		height: 50vh;
 	}
-
 }
 
 .home_about {
@@ -374,7 +373,7 @@ justify-content: space-between;
 }
 
 .home_earth_container_header >  h1 {
-	font-size: 85px;
+	font-size: clamp(2em, 15vw, 85px);
 	text-align: center;
 	line-height: 100%;
 }
@@ -382,5 +381,11 @@ justify-content: space-between;
 .home_earth_container > p {
 	font-size: 21px;
 	text-align: center;
+}
+
+@media (max-width: 720px) {
+	#home_earth_clouds {
+		height: 30vh;
+	}
 }
 
