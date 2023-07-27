@@ -3,7 +3,9 @@
     flex-direction: column;
     margin-top: -70px;
     overflow: hidden;
+    background-color: var(--light-sky-2);
 }
+
 
 .theme-light .team_landing ,.theme-light .team_designers {
     background-color: var(--light-sky-2);
@@ -15,7 +17,7 @@
 	color: black;
 }
 
-.theme-dark .team_landing,.theme-dark .team_designers {
+.theme-dark .team_landing,.theme-dark .team_designers,.theme-dark .team {
     background-color: var(--dark-sky);
 	color: var(--cream);
 }
@@ -77,6 +79,35 @@
     line-height: 33.6px;
 }
 
+@media (max-width:480px){
+    .team_landing_head h1{
+        font-size: 85px;
+        line-height: 80px;
+        padding: 60px;
+    }
+
+    .team{
+
+    }
+
+    .team_landing_subhead{
+        font-size: 30px;
+        width: 500px;
+    }
+
+    .team_landing{
+        padding: 30px;
+       
+    }
+
+    .team_landing_cloud{
+        scale: 65%;
+        
+    }
+}
+
+
+
 .team_developers{
     padding: 30px;
 }
@@ -108,6 +139,21 @@
     gap: 35px;
 }
 
+@media  (max-width:740px) {
+    .team_developers{
+        margin-top: 50px;
+    }
+    .team_developers_content_ppl div{
+        flex-wrap: wrap;
+    }
+    .team_developers_inner h1{
+        font-size: 50px;
+    }
+    .team_developers_inner{
+        padding: 0 30px;
+    }
+}
+
 .team_developers_content_ppl div :hover .team_developers_name{
     opacity: 1;
 }
@@ -137,6 +183,20 @@
      
  .team_developers_content_ppl div:nth-child(3) div:nth-child(1){
     margin-top:-3%;
+ }
+
+ @media  (max-width:740px){
+    .team_developers_content_ppl div div:nth-child(2n+1){
+        margin: 0;
+    }
+
+    .team_developers_content_ppl div:nth-child(3){
+        margin: 0;
+    }
+
+    .team_developers_content_ppl div:nth-child(3) div:nth-child(1){
+        margin-top:0;
+     }
  }
 
 .team_developers_images{
@@ -176,6 +236,13 @@
     justify-content: center;
     align-items: center;
     gap: 35px;
+    flex-wrap: wrap;
+}
+
+@media (max-width:740px) {
+    .team_designers_inner h1{
+        font-size: 60px;
+    }
 }
 
 .team_designers_content_ppl div :hover .team_designers_name{
@@ -234,7 +301,7 @@
     height: 35px !important; 
     width:max-content !important;
     border-radius: 0 30px 30px 30px ;
-    padding: 0 20px;
+    padding: 0 ;
     margin-top:10px;
-    margin-left: 40px;
+    margin-left: 0px;
 }

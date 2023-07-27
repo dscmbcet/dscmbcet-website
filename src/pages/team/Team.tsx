@@ -30,7 +30,9 @@ function Team() {
     <div className='team'>
       <NavBar/>
       <div className='team_landing'>
-        <TeamHeroImg theme={theme}/>
+        <div className='team_landing_cloud'>
+        <TeamHeroImg theme={theme} />
+        </div>
           <div className='team_landing_head'>
             <h1>  behind the <br/>creation </h1> 
               <div className='team_landing_subhead'>
