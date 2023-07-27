@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useLayoutEffect, useRef } from "react";
 import "./GEarth.css";
 import { ThemeContext } from "../../../context/theme-context";
 import { gsap } from "gsap";
@@ -7,9 +7,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function GEarth() {
   const { theme, setTheme } = useContext(ThemeContext);
   const parentRef=useRef(null);
-  let ctx = gsap.context(() => { });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => { });
     ctx.add(() => {
       gsap.to('.gEarth', {
         rotation: 360,

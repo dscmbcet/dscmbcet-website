@@ -15,7 +15,9 @@ function Footer() {
     <div>
       <div className="home_footer">
         <div className="home_footer_one">
-            <img src={Gdsclogocoloured}/>
+            <div className="home_footer_one_img">
+              <img src={Gdsclogocoloured}/>
+            </div>
             <div className="home_footer_links">
               <a href=""><img src={Mail}/></a>
               <a href=""><img src={Instagram}/></a>

@@ -22,12 +22,12 @@ function Home() {
   const parentRef = useRef(null);
   const llamaref = useRef(null);
   const roperef = useRef(null)
-  let ctx = gsap.context(() => { });
   var llamatl = gsap.timeline({paused: true})
   let cards = [{title : "1"}, {title : "2"}, {title : "3"}, {title : "1"}, {title : "2"}, {title : "3"}]
 
 
   useLayoutEffect(() => {
+    let ctx = gsap.context(() => { });
     ctx.add(() => {
       ScrollTrigger.create({
         trigger: llamaref.current,

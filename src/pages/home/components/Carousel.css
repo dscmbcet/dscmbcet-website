@@ -50,3 +50,15 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+@media (max-width: 480px) {
+	.carousel > .wrapper > .box {
+		width: 100%;
+	}
+}
+
+@media only screen  and (min-width: 480px) and (max-width: 680px) {
+	.carousel > .wrapper > .box {
+		width: 100%;
+	}
+}

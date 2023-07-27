@@ -8,6 +8,7 @@ import { ThemeContext } from '../../context/theme-context'
 import searchIcon from '../../assets/icons8-search-50.png'
 import EventBalloon1 from './components/EventBalloon1'
 import EventBalloon2 from './components/EventBalloon2'
+import { eventData } from './eventData'
 
 function Events() {
     const { theme, setTheme } = useContext(ThemeContext);
@@ -32,23 +33,19 @@ function Events() {
             </label>
             <input type="search" placeholder='search'  className='events_searchbar_input'/>
         </div>
-        <div className='events_filter'>
-            <FilledButton text={"All"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
-            <FilledButton text={"Design"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
-            <FilledButton text={"Web"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}   id='events'/>
-            <FilledButton text={"App"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
-            <FilledButton text={"AI/ML"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
-            <FilledButton text={"Others"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
+        <div className="events_filter_container">
+            <div className='events_filter'>
+              <FilledButton text={"All"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
+              <FilledButton text={"Design"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
+              <FilledButton text={"Web"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}   id='events'/>
+              <FilledButton text={"App"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
+              <FilledButton text={"AI/ML"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
+              <FilledButton text={"Others"} textColor={theme != "dark" ? "black" : "white"} bgColor={theme === "dark" ? "var(--cream)" : "black" } border={true}  id='events'/>
+          </div>
         </div>
+
         <div className="events_container">
-            <EventComp theme={theme}/>
-            <EventComp theme={theme}/>
-            <EventComp theme={theme}/>
-            <EventComp theme={theme}/>
-            <EventComp theme={theme}/>
-            <EventComp theme={theme}/>
-            <EventComp theme={theme}/>
-            <EventComp theme={theme}/>
+            {eventData.map((event, index)=> <EventComp key={index} theme={theme} eventData={event}/>)}
         </div>
       </div>
     </div>

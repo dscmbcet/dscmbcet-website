@@ -1,5 +1,6 @@
 .home_footer {
 	position: relative;
+	overflow: hidden;
 }
 
 .home_footer_one{
@@ -22,6 +23,10 @@
 
 .home_footer_links a{
 	margin-right:2% ;
+}
+
+.home_footer_links > .FilledButton {
+	margin-left: 2%;
 }
 
 .home_footer_two{
@@ -61,4 +66,31 @@
 .home_footer_img > img {
 	width: 100%;
 	height: 100%;
+}
+
+@media (max-width: 720px) {
+	.home_footer_one {
+		padding: 1em;
+		gap: 1em;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.home_footer_one_img {
+		display: grid;
+		place-items: center;
+		width: 100%;
+	}
+
+	.home_footer_links {
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.home_footer_links > .FilledButton {
+		display: none;
+	}
 }

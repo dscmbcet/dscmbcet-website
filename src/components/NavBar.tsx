@@ -185,8 +185,8 @@ function NavBar() {
                     </div>
                 </div>
                 <ul className={`${toggle?'navLinks menu active':'navLinks'}`}>
-                    <li><a href="">Who are we</a></li>
-                    <li><a href="">Events</a></li>
+                    <li><a href="/">Who are we</a></li>
+                    <li><a href="/events">Events</a></li>
                     <li><a href="">Resources</a></li>
                     <li><a href="">Team</a></li>
                     <li><a href="">Magazine</a></li>
