@@ -25,7 +25,7 @@ function NavBar() {
     gsap.registerPlugin(ScrollTrigger);
     const { theme, setTheme } = useContext(ThemeContext);
     const [hidden, setHidden] = useState<boolean>(false);
-    const [toggle, setToggle] = useState<boolean>(true);
+    const [toggle, setToggle] = useState<boolean>(false);
     const [width, setWindowWidth] = useState<number>(0)
     const navRef = useRef<HTMLDivElement | undefined>(undefined);
     const sunmoonRef = useRef(null);
