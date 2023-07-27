@@ -1,4 +1,3 @@
-import React from 'react'
 import './FilledButton.css'
 
 type Bprops = {
@@ -14,7 +13,7 @@ type Bprops = {
 export default function FilledButton(props: Bprops) {
   return (
     <div className={'FilledButton'}>
-      <button id={props.id} style={{background: props.border ? "none" : props.bgColor, color: props.textColor,border:`3px Solid ${props.bgColor}`, fontSize: props.fontSize}}>{props.text}</button>
+      <button id={props.id} style={{background: props.border ? "none" : props.bgColor, color: props.textColor,border:`0.15em Solid ${props.bgColor}`, fontSize: props.fontSize}}>{props.text}</button>
     </div>
   )
 }
