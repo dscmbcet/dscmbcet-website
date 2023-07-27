@@ -198,7 +198,7 @@
 }
 
 
- .home_about_cloud {
+ .home_about_clouds {
 	width: 100%;
 	position: absolute;
 	transform: scaleY(90%) translateY(6%);
@@ -206,8 +206,8 @@
 }
 
 @media (max-width: 720px) {
-	.home_about_cloud {
-		height: 50vh;
+	.home_about_clouds {
+		height: 30vh;
 	}
 	.home_about_inner {
 		flex-direction: column-reverse;
@@ -254,10 +254,10 @@
 justify-content: space-between;
 }
 
-	.home_events h1{
+.home_events h1{
 		font-size: 96px;
 		letter-spacing: -0.02em;
-	}
+}
   
 
 
@@ -364,6 +364,12 @@ justify-content: space-between;
 .home_story_cloud {
 	position: absolute;
 	top: 0%;
+}
+
+@media (max-width:480px) {
+	.home_story_cloud{
+		height: 15%;
+	}
 }
 
 .home_story_container {
