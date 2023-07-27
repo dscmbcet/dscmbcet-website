@@ -56,23 +56,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
 }
 
 .component_main_statusBar{
     display: flex;
-    width: 140px;
-    background-color: #4B4B4B;
+    background-color: rgb(56, 55, 55);
     justify-content: center;
     align-items: center;
-    gap: 5px;
     padding: 10px;
+    gap: 5px;
     border-radius: 100px;
 }
 
 .dot {
   height: 15px;
   width: 15px;
-  background-color: #34A853;
+  background-color: green;
   border-radius: 50%;
   display: inline-block;
 }
@@ -96,14 +96,14 @@
     border-radius: 10px;
 }
 
-.component_desc_btn > a {
-    color: white;
-    text-decoration: none;
-}
-
 .component_desc_readmore{
     background-color: transparent;
     font-size: 16px;
     font-weight: 600;
+    color: white;
+}
+
+.component_desc_btn > a {
+    text-decoration: none;
     color: white;
 }
