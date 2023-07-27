@@ -86,9 +86,6 @@
         padding: 60px;
     }
 
-    .team{
-
-    }
 
     .team_landing_subhead{
         font-size: 30px;
@@ -301,7 +298,7 @@
     height: 35px !important; 
     width:max-content !important;
     border-radius: 0 30px 30px 30px ;
-    padding: 0 ;
+    padding: 0 20px ;
     margin-top:10px;
     margin-left: 0px;
 }
