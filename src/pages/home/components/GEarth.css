@@ -1,6 +1,9 @@
 .gEarth {   
     margin-top: 30%;
+    max-width: 90vw;
+    height: auto;
     border-radius: 100%;
+    aspect-ratio: 1 / 1;
 	border: 3px solid;
 }
 

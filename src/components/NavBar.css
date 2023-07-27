@@ -12,30 +12,143 @@
 	max-width: 100dvw;
 	width: 100%;
 	justify-content: space-between;
+	align-items: center;
 }
 
-.navBar_links {
+.navBar > .navLinks {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.navBar > .navLinks li > a {
+    text-decoration: none;
+	color: var(--light-sky);
+}
+
+.menu * {
+    display: block !important;
+}
+
+.menu {
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    z-index: 999;
+    width: 200px;
+    min-height: 100vh;
+	background-color: var(--eerie-black);
+    padding: 0 0px;
+    border-image: url("../../assets/images/scroll_bar.png") 30 repeat;
+    border-left: 30px solid var(--lego-yellow);
+    animation: openNav 0.2s;
+    top: 0;
+}
+
+.navLinks {
+	display: none !important;
+}
+
+.active {
+	display: flex !important;
+}
+
+.navLinks * {
+    display: none;
+}
+
+.navBar_logoContainer {
+	flex: 2;
+}
+
+.navBar_toggleContainer {
+	flex: 2;
+}
+
+.navLinks {
+	min-width: max-content;
+}
+
+.navLinks li {
+    position: relative;
+}
+
+.navLinks li > a:hover {
+    color: var(--cream) !important;
+} 
+
+.navLinks li:hover {
+    color: var(--cream) !important;
+} 
+
+.navBar > .navLinks li {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.hamburgerMenu {
+    width: 32px;
+}
+
+@keyframes openNav {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+	.navBar_logoContainer {
+		flex: 1;
+	}
+	.navBar_toggle {
+		margin-left: 30px;
+	}
+	.navBar > .navLinks {
+		flex: 2;
+		display: flex !important;
+	}
+    .navLinks * {
+        display: block;
+    }
+
+    .hamburgerMenu {
+        display: none;
+    }
+}
+
+/* .navBar_links {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	gap: 30px;
 	width: 100%;
-}
+} */
 
-.navBar_links > * {
+/* .navBar_links > * {
 	padding-right: 10px;
 	text-decoration: none;
 	color: var(--light-sky);
-}
+} */
 
 .navBar_toggle {
 	position: relative;
-	margin-left: 30px;
 	display: flex;
 	background-color: var(--light-sky);
 	border: 1px solid var(--eerie-black);
 	align-items: center;
-	min-width: 60px;
+	width: 60px;
 	height: 25px;
 	padding: 5px;
 	border-radius: 20px;
@@ -90,4 +203,24 @@
 .team .navBar_SunMoon{
 	display: none;
 }
+
+.backgroundOverlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--blasphemous-black); */
+    z-index: 996;
+}
+
+.backgroundOverlayClosed {
+    display: none;
+    width: 0%;
+    height: 0%;
+}
+
 
