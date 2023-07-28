@@ -1,0 +1,68 @@
+.teamlead2{
+    display: flex;
+    overflow: hidden;
+}
+
+.teamlead2 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 25px;
+   
+}
+
+.teamlead2 div div {
+    font-size: 20px;
+    width: 200px;
+    margin-bottom: -25px;
+}
+
+.teamlead2 div h1{
+    margin-left: 0px;
+    font-size: 40px;
+    width: 200px;
+}
+
+.designlead1{
+    width:490px
+}
+
+.operationslead{
+    width:480px 
+}
+
+.organizinglead{
+    width:450px
+}
+
+@media (max-width:720px){
+    .teamlead2{
+        display: flex;
+    }
+    
+    .teamlead2 div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 25px;
+       
+    }
+    
+    .teamlead2 div div {
+        font-size: 30px;
+        width: 200px;
+        margin-bottom: -25px;
+    }
+    
+    .teamlead2 div h1{
+        margin-left: 0px;
+        font-size: 40px;
+        width: 200px;
+    }
+    
+    .designlead1,.operationslead,.organizinglead{
+        width:390px
+    }
+    
+    
+}

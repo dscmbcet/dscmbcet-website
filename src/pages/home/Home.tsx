@@ -67,6 +67,7 @@ function Home() {
         <LandingClouds theme={theme} />
       </div>
       <div className="home_about">
+        
         <AboutClouds theme={theme} />
         <Marquee className="home_marquee" gradient={false} speed={60}>
           <h1 style={theme === 'dark' ? { WebkitTextStrokeColor: "white" } : { WebkitTextStrokeColor: "black" }}>ho <span className="marquee_span">we</span> are who <span className="marquee_span">we</span> are who <span className="marquee_span">we</span> are who <span className="marquee_span">we</span> are w</h1>
@@ -142,7 +143,9 @@ function Home() {
       </div>
 
       <div className="home_story">
+        <div className="home_story_clouds">
         <StoryClouds theme={theme} />
+        </div>
         <div className="home_story_container">
           <Marquee style={{marginTop: "100px"}} className="home_marquee" gradient={false} speed={60}>
             <h1 style={theme === 'dark' ? { WebkitTextStrokeColor: "white" } : { WebkitTextStrokeColor: "black" }}>tory <span className="marquee_span">our</span> story our story <span className="marquee_span">our</span> story our s</h1>
