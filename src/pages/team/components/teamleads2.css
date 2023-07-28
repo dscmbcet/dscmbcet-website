@@ -1,0 +1,23 @@
+.teamlead2{
+    display: flex;
+}
+
+.teamlead2 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 25px;
+   
+}
+
+.teamlead2 div div {
+    font-size: 20px;
+    width: 200px;
+    margin-bottom: -25px;
+}
+
+.teamlead2 div h1{
+    margin-left: 0px;
+    font-size: 40px;
+    width: 200px;
+}

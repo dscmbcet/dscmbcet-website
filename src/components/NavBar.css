@@ -204,6 +204,10 @@
 	display: none;
 }
 
+.creator .navBar_SunMoon{
+	display: none;
+}
+
 .backgroundOverlay {
     position: fixed;
     display: block;

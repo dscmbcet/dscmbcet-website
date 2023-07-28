@@ -1,0 +1,29 @@
+.teambox{
+    display: flex;
+    
+}
+
+.teambox div{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    margin-right: -60px;
+}
+
+.teambox div div {
+    font-size: 20px;
+    width: 180px;
+    margin-bottom: -25px;
+    padding: 20px;
+   
+}
+
+.teambox div h1{
+   width: 155px;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.teambox div img{
+    
+}

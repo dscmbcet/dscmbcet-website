@@ -1,4 +1,4 @@
-.team{
+.creator{
     display: flex;
     flex-direction: column;
     margin-top: -70px;
@@ -7,72 +7,72 @@
 }
 
 
-.theme-light .team_landing ,.theme-light .team_designers {
+.theme-light .creator_landing ,.theme-light .creator_designers {
     background-color: var(--light-sky-2);
 	color: black;
 }
 
-.theme-light .team_developers {
+.theme-light .creator_developers {
     background-color: var(--light-sky);
 	color: black;
 }
 
-.theme-dark .team_landing,.theme-dark .team_designers,.theme-dark .team {
+.theme-dark .creator_landing,.theme-dark .creator_designers,.theme-dark .creator {
     background-color: var(--dark-sky);
 	color: var(--cream);
 }
 
-.theme-dark .team_developers {
+.theme-dark .creator_developers {
 	background-color: var(--eerie-black);
 	color: var(--cream);
 }
 
-.theme-dark .team_developers_inner{
+.theme-dark .creator_developers_inner{
    border: 1px dashed rgba(255, 255, 255, 1);
 }
 
-.theme-dark .team_developers_inner h1{
+.theme-dark .creator_developers_inner h1{
     color: var(--eerie-black);
     -webkit-text-stroke: 1px var(--cream);
  }
 
-.theme-dark .team_developers_images,.theme-dark .team_developers_name{
+.theme-dark .creator_developers_images,.theme-dark .creator_developers_name{
     border: 2px solid var(--cream);
 }
 
-.theme-dark .team_designers_images{
+.theme-dark .creator_designers_images{
     border: 2px solid white;
 }
 
-.theme-light .team_designers_name{
+.theme-light .creator_designers_name{
     color: white;
     background-color: black;
 }
 
-.theme-dark .team_designers_inner h1{
+.theme-dark .creator_designers_inner h1{
     color: white
  }
 
-.team_landing{
+.creator_landing{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.team_landing_head{
+.creator_landing_head{
     position: absolute;
     top: 300px;
     text-align: center;
 }
 
-.team_landing_head h1{
+.creator_landing_head h1{
    font-weight: 600;
    font-size: 122px;
    line-height: 105.42px;  
 }
 
-.team_landing_subhead{
+.creator_landing_subhead{
     padding-top: 4px;
     font-weight: 400;
     font-size: 24px;
@@ -80,24 +80,24 @@
 }
 
 @media (max-width:480px){
-    .team_landing_head h1{
+    .creator_landing_head h1{
         font-size: 85px;
         line-height: 80px;
         padding: 60px;
     }
 
 
-    .team_landing_subhead{
+    .creator_landing_subhead{
         font-size: 30px;
         width: 500px;
     }
 
-    .team_landing{
+    .creator_landing{
         padding: 30px;
        
     }
 
-    .team_landing_cloud{
+    .creator_landing_cloud{
         scale: 65%;
         
     }
@@ -105,16 +105,16 @@
 
 
 
-.team_developers{
+.creator_developers{
     padding: 30px;
 }
 
-.team_developers_inner{
+.creator_developers_inner{
     padding: 0 50px 50px;
     border: 1px dashed black;
 }
 
-.team_developers_inner h1{
+.creator_developers_inner h1{
    color: var(--light-sky);
    -webkit-text-stroke: 1px black;
    font-weight: 600;
@@ -122,13 +122,13 @@
    padding: 10px;
 }
 
-.team_developers_content_ppl{
+.creator_developers_content_ppl{
     display:flex;
     flex-direction: column;
    
 }
 
-.team_developers_content_ppl div{
+.creator_developers_content_ppl div{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -137,25 +137,25 @@
 }
 
 @media  (max-width:740px) {
-    .team_developers{
+    .creator_developers{
         margin-top: 50px;
     }
-    .team_developers_content_ppl div{
+    .creator_developers_content_ppl div{
         flex-wrap: wrap;
     }
-    .team_developers_inner h1{
+    .creator_developers_inner h1{
         font-size: 50px;
     }
-    .team_developers_inner{
+    .creator_developers_inner{
         padding: 0 30px;
     }
 }
 
-.team_developers_content_ppl div :hover .team_developers_name{
+.creator_developers_content_ppl div :hover .creator_developers_name{
     opacity: 1;
 }
 
-.team_developers_content_ppl div div{
+.creator_developers_content_ppl div div{
     width: 187.19px;
     height: 190px;
     cursor: pointer;
@@ -164,13 +164,13 @@
     position: relative;
 }
 
-.team_developers_content_ppl div div:nth-child(2n+1){
+.creator_developers_content_ppl div div:nth-child(2n+1){
     margin-top: 10%;
     margin-bottom: -3%;
     
  }
  
- .team_developers_content_ppl div:nth-child(3) {
+ .creator_developers_content_ppl div:nth-child(3) {
      margin-top:3%;
     display: flex;
     gap: 250px;
@@ -178,30 +178,30 @@
  
  }
      
- .team_developers_content_ppl div:nth-child(3) div:nth-child(1){
+ .creator_developers_content_ppl div:nth-child(3) div:nth-child(1){
     margin-top:-3%;
  }
 
  @media  (max-width:740px){
-    .team_developers_content_ppl div div:nth-child(2n+1){
+    .creator_developers_content_ppl div div:nth-child(2n+1){
         margin: 0;
     }
 
-    .team_developers_content_ppl div:nth-child(3){
+    .creator_developers_content_ppl div:nth-child(3){
         margin: 0;
     }
 
-    .team_developers_content_ppl div:nth-child(3) div:nth-child(1){
+    .creator_developers_content_ppl div:nth-child(3) div:nth-child(1){
         margin-top:0;
      }
  }
 
-.team_developers_images{
+.creator_developers_images{
    position: absolute;
    border: 2px solid black;
 }
 
-.team_developers_name{
+.creator_developers_name{
     opacity: 0;
     transition: opacity 0.3s ease;
     position: absolute;
@@ -211,23 +211,23 @@
 }
 
 
-.team_designers_inner{
+.creator_designers_inner{
     padding: 0px 30px 60px;
 }
 
-.team_designers_inner h1{
+.creator_designers_inner h1{
    font-weight: 600;
    font-size: 103px;
    padding: 40px;
 }
 
-.team_designers_content_ppl{
+.creator_designers_content_ppl{
     display:flex;
     flex-direction: column;
    
 }
 
-.team_designers_content_ppl div{
+.creator_designers_content_ppl div{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -237,16 +237,16 @@
 }
 
 @media (max-width:740px) {
-    .team_designers_inner h1{
+    .creator_designers_inner h1{
         font-size: 60px;
     }
 }
 
-.team_designers_content_ppl div :hover .team_designers_name{
+.creator_designers_content_ppl div :hover .creator_designers_name{
     opacity: 1;
 }
 
-.team_designers_content_ppl div div{
+.creator_designers_content_ppl div div{
     width: 187.19px;
     height: 190px;
     cursor: pointer;
@@ -256,13 +256,13 @@
     
 }
 
-.team_designers_content_ppl div div:nth-child(2n+1){
+.creator_designers_content_ppl div div:nth-child(2n+1){
     margin-top: 10%;
     margin-bottom: -3%;
     
  }
  
- .team_designers_content_ppl div:nth-child(3) {
+ .creator_designers_content_ppl div:nth-child(3) {
      margin-top:3%;
     display: flex;
     gap: 250px;
@@ -270,25 +270,25 @@
  
  }
      
- .team_designers_content_ppl div:nth-child(3) div:nth-child(1){
+ .creator_designers_content_ppl div:nth-child(3) div:nth-child(1){
     margin-top:-3%;
  }
 
 
 
-.team_designers_images{
+.creator_designers_images{
    position: absolute;
    border: 2px solid black;
 }
 
-.team_designers_curser{
+.creator_designers_curser{
     position: absolute;
     top: 165px;
     left: 20px;
     width: 33px;
  }
 
-.team_designers_name{
+.creator_designers_name{
     opacity: 0;
     transition: opacity 0.3s ease;
     position: absolute;
