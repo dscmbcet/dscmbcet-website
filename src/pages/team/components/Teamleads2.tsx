@@ -4,7 +4,6 @@ import './teamleads2.css';
 interface PersonProps {
     name?: string;
     position?: string;
-    width?:string;
     height?:string;
     border?:string;
     padding?:string;
@@ -15,7 +14,7 @@ interface PersonProps {
 
 function Teamleads2(props: PersonProps){
   return (
-    <div className={`teamlead2 ${props.class}`} style={{width:props.width,border:props.border,backgroundColor:props.backgroundColor,paddingLeft:'20px',borderRadius:'20px',lineHeight:'2em'}}>
+    <div className={`teamlead2 ${props.class}`} style={{border:props.border,backgroundColor:props.backgroundColor,paddingLeft:'20px',borderRadius:'20px',lineHeight:'2em'}}>
      
      <div>
       <div>{props.position}</div>

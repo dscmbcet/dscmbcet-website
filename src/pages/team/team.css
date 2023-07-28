@@ -71,7 +71,15 @@
     gap: 20px;
 }
 
-.lead{
- 
-    
+
+
+@media(max-width:720px){
+
+    .team_headtwo{
+        top: 64%;
+    }
+
+    .team_head{
+       top: 15%;
+    }
 }

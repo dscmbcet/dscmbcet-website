@@ -1,5 +1,6 @@
 .teamboxlead{
     display: flex;
+    overflow: hidden;
 }
 
 .teamboxlead div{
@@ -20,4 +21,66 @@
     margin-left: 0px;
     font-size: 40px;
     width: 170px;
+}
+
+.gdsclead,.techlead,.designlead2{
+    width: 470px;
+}
+
+
+.firstblock{
+    width: 602px;
+}
+
+.techteam{
+    width: 420px;
+}
+
+.designteam{
+    width: 280px;
+}
+
+.organizingteam{
+    width:332px;
+}
+
+.socialmediateam{
+    width:452px
+}
+
+.secondblock{
+    width:299px ;
+}
+
+@media (max-width:720px){
+    .gdsclead,.techlead,.designlead2{
+        width: 390px;
+    }
+     
+    .teamboxlead div div {
+        font-size: 20px;
+        width: 160px;
+        margin-bottom: -25px;
+        margin-left: -30px;
+    }
+    
+    .teamboxlead div h1{
+        margin-left: -30px;
+        font-size: 30px;
+        width: 130px;
+    }
+   
+    
+    .techteam,.designteam,.organizingteam,.socialmediateam{
+        width: 390px;
+        padding-left: 90px !important;
+    }
+    
+   
+    
+    .firstblock,.secondblock,.sociallead{
+        width: 390px;
+    }
+    
+    
 }
