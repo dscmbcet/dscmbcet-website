@@ -25,7 +25,7 @@ function NavBar() {
     gsap.registerPlugin(ScrollTrigger);
     const { theme, setTheme } = useContext(ThemeContext);
     const [hidden, setHidden] = useState<boolean>(false);
-    const [toggle, setToggle] = useState<boolean>(true);
+    const [toggle, setToggle] = useState<boolean>(false);
     const [width, setWindowWidth] = useState<number>(0)
     const navRef = useRef<HTMLDivElement | undefined>(undefined);
     const sunmoonRef = useRef(null);
@@ -185,8 +185,8 @@ function NavBar() {
                     </div>
                 </div>
                 <ul className={`${toggle?'navLinks menu active':'navLinks'}`}>
-                    <li><a href="">Who are we</a></li>
-                    <li><a href="">Events</a></li>
+                    <li><a href="/">Who are we</a></li>
+                    <li><a href="/events">Events</a></li>
                     <li><a href="">Resources</a></li>
                     <li><a href="">Team</a></li>
                     <li><a href="">Magazine</a></li>
