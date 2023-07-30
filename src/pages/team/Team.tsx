@@ -46,33 +46,84 @@ function Team() {
           </div>
       </div>
       <div className='team_contents'>
+        <div className=' flex-item'>
          <Teamboxleads name='varsha renjith' position='GDSC MBCET lead'  border='none' backgroundColor='rgba(109, 185, 246, 1)' padding='0px' height='225px' img={VarshaRenjith} class='gdsclead' />
-        <Teamboxleads backgroundColor='rgba(109, 185, 246, 1)' height='225px'  class='firstblock'/>
-        <Teambox name='liya susan' position='web developer' border='rgba(229, 119, 119, 1) 2px solid' padding='0px' height='225px' img={LiyaSusan} width='290px'/>
-        <Teamboxleads name='yoosuf mohammed' position='tech lead'  border='none' backgroundColor='rgba(229, 119, 119, 1)' padding='0px'  height='225px' img={Yoosuf} class='techlead' />
-        <Teambox name='ritin george' position='web developer' border='rgba(229, 119, 119, 1) 2px solid' padding='0px' height='225px' img={Ritin}  width='288px'/>
-        <Teambox name='aditya s' position='web developer' border='rgba(229, 119, 119, 1) 2px solid' padding='0px' height='225px' img={Aditya} />
-        <Teambox name='gopal s' position='app developer' border='rgba(229, 119, 119, 1) 2px solid' padding='0px' height='225px' img={Gopal} />
-        <Teamboxleads padding='30px' name='tech team' backgroundColor='rgba(229, 119, 119, 1)' height='225px'  class='techteam'/>
-        <Teambox name='ferwin lopez' position='graphic designer' border='rgba(136, 203, 139, 1) 2px solid' padding='0px' height='225px' img={Ferwin} />
-        <Teambox name='jins k' position='video editor' border='rgba(136, 203, 139, 1) 2px solid' padding='0px' height='225px' img={Jins} />
-        <Teamleads2 name='r sreelakshmi' position='graphic design lead'  border='none' backgroundColor='rgba(136, 203, 139, 1)' padding='0px' height='225px' img={Sreelakshmi} class='designlead1'  />
-        <Teamboxleads name='k s mithun' position='motion design lead'  border='none' backgroundColor='rgba(136, 203, 139, 1)' padding='0px' height='225px' img={Mithun} class='designlead2' />
-        <Teambox name='vinu kurup' position='graphic designer' border='rgba(136, 203, 139, 1) 2px solid' padding='0px' height='225px' img={Vinu} />
-        <Teamboxleads padding='30px' name='design team' backgroundColor='rgba(136, 203, 139, 1)' height='225px'   class='designteam'/>
-        <Teamleads2 name='ben george' position='operations lead'  border='none' backgroundColor='rgba(220, 192, 101, 1)' padding='0px' height='225px' img={Ben} class='operationslead' />
-        <Teambox name='sophy maria' position='community organizer' border='rgba(220, 192, 101, 1) 2px solid' padding='0px' height='225px' img={Sophy}  />
-        <Teambox name='aaron k' position='community organizer' border='rgba(220, 192, 101, 1) 2px solid' padding='0px' height='225px' img={Aaron} />
-        
-        <Teamboxleads padding='30px' name='organizing team' backgroundColor='rgba(220, 192, 101, 1)' height='225px'  class='organizingteam'/>
-        <Teambox name='sam peter' position='community organizer' border='rgba(220, 192, 101, 1) 2px solid' padding='0px' height='225px' img={Sam} />
-        <Teamleads2 name='litto k lal' position='management lead'  border='none' backgroundColor='rgba(220, 192, 101, 1)' padding='0px' height='225px' img={Litto} class='organizinglead' />
-        <Teambox name='joel lpe' position='content curator' border='rgba(115, 187, 246, 1) 2px solid' padding='0px' height='225px' img={Joel} />
-        <Teamleads2 name='noel varughese' position='social lead'  border='none' backgroundColor='rgba(115, 187, 246, 1) ' padding='0px' height='225px'  img={Noel} class='sociallead'/>
-        <Teambox name='nandana ts' position='content curator' border='rgba(115, 187, 246, 1) 2px solid' padding='0px' height='225px' img={Nandana} />
-        <Teamboxleads padding='30px' name='social media team' backgroundColor='rgba(115, 187, 246, 1)' height='225px'  class='socialmediateam'/>
-        <Teambox name='c rachana' position='content curator' border='rgba(115, 187, 246, 1) 2px solid' padding='0px' height='225px' img={Rachana} />
-        <Teamboxleads padding='30px' backgroundColor='rgba(115, 187, 246, 1)' height='225px' class='secondblock'/>
+         </div>
+         <div className=' flex-item'>
+         <Teamboxleads padding='30px' backgroundColor='rgba(115, 187, 246, 1)' height='225px' class='firstblock flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='liya susan' position='web developer' border='rgba(229, 119, 119, 1) 2px solid' padding='0px' height='225px' img={LiyaSusan} width='290px' class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teamboxleads name='yoosuf mohammed' position='tech lead'  border='none' backgroundColor='rgba(229, 119, 119, 1)' padding='0px'  height='225px' img={Yoosuf} class='techlead flex-item' />
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='ritin george' position='web developer' border='rgba(229, 119, 119, 1) 2px solid' padding='0px' height='225px' img={Ritin}  width='288px' class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='aditya s' position='backend developer' border='rgba(229, 119, 119, 1) 2px solid' padding='0px' height='225px' img={Aditya} class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='gopal s' position='app developer' border='rgba(229, 119, 119, 1) 2px solid' padding='0px' height='225px' img={Gopal} class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teamboxleads padding='30px' name='tech team' backgroundColor='rgba(229, 119, 119, 1)' height='225px'  class='techteam flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='ferwin lopez' position='graphic designer' border='rgba(136, 203, 139, 1) 2px solid' padding='0px' height='225px' img={Ferwin} class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='jins k' position='video editor' border='rgba(136, 203, 139, 1) 2px solid' padding='0px' height='225px' img={Jins} class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teamleads2 name='r sreelakshmi' position='graphic design lead'  border='none' backgroundColor='rgba(136, 203, 139, 1)' padding='0px' height='225px' img={Sreelakshmi} class='designlead1 flex-item'  />
+        </div>
+        <div  className=' flex-item'>
+        <Teamboxleads name='k s mithun' position='motion design lead'  border='none' backgroundColor='rgba(136, 203, 139, 1)' padding='0px' height='225px' img={Mithun} class='designlead2 flex-item' />
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='vinu kurup' position='graphic designer' border='rgba(136, 203, 139, 1) 2px solid' padding='0px' height='225px' img={Vinu} class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teamboxleads padding='30px' name='design team' backgroundColor='rgba(136, 203, 139, 1)' height='225px'   class='designteam flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teamleads2 name='ben george' position='operations lead'  border='none' backgroundColor='rgba(220, 192, 101, 1)' padding='0px' height='225px' img={Ben} class='operationslead flex-item' />
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='sophy maria' position='community organizer' border='rgba(220, 192, 101, 1) 2px solid' padding='0px' height='225px' img={Sophy} class='flex-item' />
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='aaron k' position='community organizer' border='rgba(220, 192, 101, 1) 2px solid' padding='0px' height='225px' img={Aaron} class='flex-item' />
+        </div>
+        <div  className=' flex-item'>
+        <Teamboxleads padding='30px' name='organizing team' backgroundColor='rgba(220, 192, 101, 1)' height='225px'  class='organizingteam flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='sam peter' position='community organizer' border='rgba(220, 192, 101, 1) 2px solid' padding='0px' height='225px' img={Sam} class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teamleads2 name='litto k lal' position='management lead'  border='none' backgroundColor='rgba(220, 192, 101, 1)' padding='0px' height='225px' img={Litto} class='organizinglead flex-item' />
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='joel lpe' position='content curator' border='rgba(115, 187, 246, 1) 2px solid' padding='0px' height='225px' img={Joel} class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teamleads2 name='noel varughese' position='social lead'  border='none' backgroundColor='rgba(115, 187, 246, 1) ' padding='0px' height='225px'  img={Noel} class='sociallead flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='nandana ts' position='content curator' border='rgba(115, 187, 246, 1) 2px solid' padding='0px' height='225px' img={Nandana} class='flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teamboxleads padding='30px' name='social media team' backgroundColor='rgba(115, 187, 246, 1)' height='225px'  class='socialmediateam flex-item'/>
+        </div>
+        <div  className=' flex-item'>
+        <Teambox name='c rachana' position='content curator' border='rgba(115, 187, 246, 1) 2px solid' padding='0px' height='225px' img={Rachana} class='flex-item'/>
+        </div>
+        <div className=' flex-item' >
+        <Teamboxleads padding='30px' backgroundColor='rgba(115, 187, 246, 1)' height='225px' class='secondblock flex-item'/>
+        </div>
       </div>
     </div>
   )

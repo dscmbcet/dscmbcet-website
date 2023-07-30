@@ -72,10 +72,14 @@
     padding-bottom: 50px;
 }
 
+.flex-item{
+   min-height: 245px;
+    
+}
 
 
 @media(max-width:720px){
-
+    
     .team_headtwo{
         top: 64%;
     }
@@ -83,4 +87,82 @@
     .team_head{
        top: 15%;
     }
+
+   
+    .flex-item:nth-child(8){
+        order:8;
+    }
+    .flex-item:nth-child(4){
+        order:3;
+    }
+    .flex-item:nth-child(3){
+        order:5;
+    }
+    .flex-item:nth-child(5){
+        order:4;
+    }
+    .flex-item:nth-child(6){
+        order:6;
+    }
+    .flex-item:nth-child(7){
+        order:7;
+    }
+
+    .flex-item:nth-child(11){
+        order:9;
+    }
+    .flex-item:nth-child(12){
+        order:10;
+    }
+    .flex-item:nth-child(9){
+        order:11;
+    }
+    .flex-item:nth-child(10){
+        order:12;
+    }
+    .flex-item:nth-child(13){
+        order:13;
+    }
+    .flex-item:nth-child(14){
+        order:14;
+    }
+
+    .flex-item:nth-child(15){
+        order:15;
+    }
+    .flex-item:nth-child(20){
+        order:16;
+    }
+    .flex-item:nth-child(16){
+        order:17;
+    }
+    .flex-item:nth-child(17){
+        order:18;
+    }
+    .flex-item:nth-child(19){
+        order:19;
+    }
+    .flex-item:nth-child(18){
+        order:20;
+    }
+
+    .flex-item:nth-child(22){
+        order:21;
+    }
+    .flex-item:nth-child(21){
+        order:22;
+    }
+    .flex-item:nth-child(23){
+        order:23;
+    }
+    .flex-item:nth-child(25){
+        order:24;
+    }
+    .flex-item:nth-child(24){
+        order:25;
+    }
+    .flex-item:nth-child(26){
+        display: none;
+    }
+  
 }

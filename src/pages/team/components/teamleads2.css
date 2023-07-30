@@ -49,20 +49,21 @@
     }
     
     .teamlead2 div div {
-        font-size: 30px;
+        font-size: 24px;
         width: 200px;
         margin-bottom: -25px;
     }
     
     .teamlead2 div h1{
         margin-left: 0px;
-        font-size: 40px;
+        font-size: 37px;
         width: 200px;
     }
     
     .designlead1,.operationslead,.organizinglead{
         width:390px
     }
+    
     
     
 }
