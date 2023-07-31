@@ -14,13 +14,24 @@
 	color: var(--cream);
 }
 
-.theme-light .team_contents{
+.theme-light .team_content_container {
     background-color: var(--light-sky);
+}
+
+.theme-dark .team_content_container {
+    background-color: var(--eerie-black);
+}
+
+.team_contents {
+    max-width: 1390px;
+    margin: auto;
+}
+
+.theme-light .team_contents{
 	color: black;
 }
 
 .theme-dark .team_contents{
-    background-color: var(--eerie-black);
 	color: var(--cream);
 }
 
@@ -69,7 +80,7 @@
     justify-content: center;
     align-items: space-between;
     gap: 20px;
-    padding-bottom: 50px;
+    padding: 50px 0px;
 }
 
 .flex-item{

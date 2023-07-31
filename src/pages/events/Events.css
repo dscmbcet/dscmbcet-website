@@ -120,23 +120,13 @@
         gap: 15px;
     }
 
-    /* .events_filter{
-        position: relative;
-        margin: auto;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 50px;
-        gap: 15px;
-    } */
 
     .events_container {
         position: relative;
-        padding: 100px 10%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
+        padding: 100px 13%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        grid-gap: 40px;
         justify-content: space-around;
     }
 
