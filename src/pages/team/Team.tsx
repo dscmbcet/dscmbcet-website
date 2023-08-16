@@ -45,6 +45,7 @@ function Team() {
           <img src={Headtwo } className='team_headtwo'/>
           </div>
       </div>
+      <div className="team_content_container">
       <div className='team_contents'>
         <div className=' flex-item'>
          <Teamboxleads name='varsha renjith' position='GDSC MBCET lead'  border='none' backgroundColor='rgba(109, 185, 246, 1)' padding='0px' height='225px' img={VarshaRenjith} class='gdsclead' />
@@ -124,6 +125,7 @@ function Team() {
         <div className=' flex-item' >
         <Teamboxleads padding='30px' backgroundColor='rgba(115, 187, 246, 1)' height='225px' class='secondblock flex-item'/>
         </div>
+      </div>
       </div>
     </div>
   )
