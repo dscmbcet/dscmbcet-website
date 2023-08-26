@@ -7,7 +7,7 @@
 .navBar {
 	position: relative;
 	background-color: var(--eerie-black);
-	padding: 20px 20px;
+	padding: 20px 40px;
 	display: flex;
 	max-width: 100dvw;
 	width: 100%;

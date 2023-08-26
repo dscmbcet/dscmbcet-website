@@ -23,6 +23,10 @@ function App() {
     {
       path: "/team",
       element: <><Team/><Footer/></>
+    },
+    {
+      path: "/creators",
+      element: <><Creators/><Footer/></>
     }
   ]);
 
