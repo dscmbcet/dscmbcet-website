@@ -120,6 +120,7 @@
    font-weight: 600;
    font-size: 103px;
    padding: 10px;
+   margin-bottom: 100px;
 }
 
 .creator_developers_content_ppl{
@@ -168,13 +169,12 @@
 }
 
 .creator_developers_content_ppl div div:nth-child(2n+1){
-    margin-top: 10%;
+    margin-top: -10%;
     margin-bottom: -3%;
     
  }
  
  .creator_developers_content_ppl div:nth-child(3) {
-     margin-top:3%;
     display: flex;
     gap: 250px;
     align-items: center;
@@ -265,7 +265,7 @@
         top: 90px;
         left: -95px;
         padding: 17px;
-        
+        width: 600px;
     }
     .creator_designers_curser{
         visibility: hidden;
