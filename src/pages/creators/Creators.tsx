@@ -62,44 +62,12 @@ function Creators() {
                   <img className='creator_developers_images' src={Varsha} />
                   <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
               </div>
-              <div>
-                  <img className='creator_developers_images' src={Varsha} />
-                  <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
-              </div>
-              </div>
-              <div>
-              <div>
-                  <img className='creator_developers_images' src={Varsha} />
-                  <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
-              </div>
-              <div>
-                  <img className='creator_developers_images' src={Varsha} />
-                  <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
-              </div>
-              <div>
-                  <img className='creator_developers_images' src={Varsha} />
-                  <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
-              </div>
-              <div>
-                  <img className='creator_developers_images' src={Varsha} />
-                  <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
-              </div>
-              <div>
-                  <img className='creator_developers_images' src={Varsha} />
-                  <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
-              </div>
-              </div>
-              <div>
-              <div>
-                  <img className='creator_developers_images' src={Varsha} />
-                  <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
-              </div>
-              <div>
-                  <img className='creator_developers_images' src={Varsha} />
-                  <div className='creator_developers_name'>&lt;p&gt;Varsha&lt;/p&gt;</div>
+              
               </div>
              
-              </div>
+             
+             
+              
             </div>
           </div>
         </div>
@@ -110,6 +78,7 @@ function Creators() {
           <div className='creator_designers_content'>
             <div className='creator_designers_content_ppl'>
              <div>
+              
               <div>
                   <img className='creator_designers_images' src={Sreelakshmi} />
                   <div className='creator_designers_desc'>
@@ -186,11 +155,30 @@ function Creators() {
                   </div>
               </div>
               </div>
-              <div>
+              <div className='creator_designers_row3'>
+              
               <div>
                   <img className='creator_designers_images' src={Sreelakshmi} />
                   <div className='creator_designers_desc'>
-                    <img className='creator_designers_curser'src={ImageToShow}/>
+                  
+                     <img className='creator_designers_curser' src={ImageToShow}/>
+                  
+                   
+                    <div className='creator_designers_name'>Sreelakshmi</div>
+                  </div>
+              </div>
+              <div>
+                  <img className='creator_designers_images' src={Sreelakshmi} />
+                  <div className='creator_designers_desc'>
+                    <img className='creator_designers_curser' src={ImageToShow}/>
+                    <div className='creator_designers_name'>Sreelakshmi</div>
+                  </div>
+              </div>
+              
+              <div>
+                  <img className='creator_designers_images' src={Sreelakshmi} />
+                  <div className='creator_designers_desc'>
+                    <img className='creator_designers_curser' src={ImageToShow}/>
                     <div className='creator_designers_name'>Sreelakshmi</div>
                   </div>
               </div>
@@ -202,6 +190,7 @@ function Creators() {
                   </div>
               </div>
               </div>
+              
             </div>
           </div>
         </div>
