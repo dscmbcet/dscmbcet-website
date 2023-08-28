@@ -130,6 +130,15 @@
         justify-content: space-around;
     }
 
+    .events_no_results {
+        position: relative;
+        min-height: 500px;
+        padding: 100px 13%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     @media (width <= 750px) {
         .events_searchbar {
             height: 45px;
