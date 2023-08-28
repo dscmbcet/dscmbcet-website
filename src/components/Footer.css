@@ -19,10 +19,13 @@
 .home_footer_links{
 	display: flex;
 	flex-direction: row;
+	z-index: 10;
 }
 
-.home_footer_links a{
+
+.home_footer_links > a{
 	margin-right:2% ;
+	cursor: pointer;
 }
 
 .home_footer_links > .FilledButton {

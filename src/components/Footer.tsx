@@ -31,6 +31,7 @@ function Footer() {
             bgColor="black"
             textColor="#FFF8E1"
             border={false}
+            onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'; }}
           />
             </div>
         </div>
