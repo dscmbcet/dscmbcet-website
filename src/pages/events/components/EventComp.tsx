@@ -66,6 +66,14 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
     }
   }
 
+  type Dictionary = { [index: string]: string };
+
+  const dotColor: Dictionary = {
+      Completed: 'gray',
+      Ongoing: 'green',
+      Upcoming: 'yellow'
+  };
+
   return (
     <div className='container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>\
       <img src={eventData.imgSrc} alt="eventData.name"  className='container_bg'/>
@@ -76,7 +84,7 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
           <div className='component_main_info'>
             <p>{formatDate(eventData.date)[0]} {formatDate(eventData.date)[1]}{' '}</p>
             <div className='component_main_statusBar'>
-              <span className="dot"></span>
+              <span className="dot" style={{background: dotColor[eventData.status]}}></span>
               <p>{eventData.status}</p>
             </div>
           </div>
@@ -84,7 +92,7 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
       </div>
       <div className='component_desc' ref={descRef}>
         <div>
-          <h2 className='component_main_header' style={{marginBottom: "1%"}}>Event name</h2>
+          <h2 className='component_main_header' style={{marginBottom: "1%"}}>{eventData.name}</h2>
           {eventData.desc.length > 80 ?
             <>
               <p>{eventData.desc.slice(0, 80)}{ content === "less"? <span>{eventData.desc.slice(81, eventData.desc.length - 1)}</span> : <span>...</span> }</p>
