@@ -287,6 +287,11 @@ justify-content: space-between;
     margin-top: 16%;
 }
 
+.home_events_list1 > img, .home_events_list2 > img, .home_events_list3 > img {
+	width: 255px;
+	height: 255px;
+}
+
 
 .home_events_list2 p{
     width: 225.17px;
