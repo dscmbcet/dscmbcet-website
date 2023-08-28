@@ -32,7 +32,7 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
     ctx.add(() => {
       gsap.to(gradRef.current,
         {
-          background: "linear-gradient(to bottom, rgba(30, 28, 28,.2) 80%, rgba(30, 28, 28, .9))"
+          background: "linear-gradient(to bottom, rgba(30, 28, 28,.2) 20%, rgba(30, 28, 28, 1))"
         })
       gsap.to(mainRef.current, {translateY: "0%", duration: 1})
       gsap.to(descRef.current, {translateY: "0%", duration: 1})
