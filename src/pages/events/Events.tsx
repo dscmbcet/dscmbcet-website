@@ -21,6 +21,7 @@ function Events() {
   const [filteredEvents, setFilteredEvents] = useState<DocumentData[]>([]);
 
   useEffect(() => {
+    console.log("filtering");
     const filtered =
       docs?.filter((data) => {
         if (
@@ -36,7 +37,7 @@ function Events() {
         } else return false;
       }) ?? [];
     setFilteredEvents([...filtered]);
-  }, [filter, search]);
+  }, [docs]);
   useEffect(() => {
     setEventsLoading(true);
     const unsub = onSnapshot(collection(db, "events"), (snapshot) => {
@@ -135,7 +136,7 @@ function Events() {
           </div>
         ) : (
           <div className="events_no_results">
-            <h3>No Results Found</h3>
+            <h3>{eventsLoading ? `Loading Events` : `No Results Found`}</h3>
           </div>
         )}
       </div>
