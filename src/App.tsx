@@ -7,6 +7,7 @@ import Home from './pages/home/Home';
 import Team from './pages/team/Team';
 import Events from './pages/events/Events';
 import Footer from './components/Footer';
+import Creators from './pages/creators/Creators';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -22,6 +23,10 @@ function App() {
     {
       path: "/team",
       element: <><Team/><Footer/></>
+    },
+    {
+      path: "/creators",
+      element: <><Creators/><Footer/></>
     }
   ]);
 

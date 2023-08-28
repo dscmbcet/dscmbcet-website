@@ -187,9 +187,10 @@ function NavBar() {
                 <ul className={`${toggle?'navLinks menu active':'navLinks'}`}>
                     <li><a href="/">Who are we</a></li>
                     <li><a href="/events">Events</a></li>
-                    <li><a href="">Resources</a></li>
-                    <li><a href="">Team</a></li>
-                    <li><a href="">Magazine</a></li>
+                {/*  <li><a href="">Resources</a></li>*/}   
+                    <li><a href="/team">Team</a></li>
+                 {/*  <li><a href="">Magazine</a></li> */} 
+                    <li><a href="/creators">Creators</a></li>
                     <FilledButton text="Join Us" textColor="var(--eerie-black)" bgColor="var(--light-sky)" border={false} />
                 </ul>
                 <img className='hamburgerMenu' src={menuIcon} onClick={changeToggle} onKeyDown={changeToggle} alt="" />
