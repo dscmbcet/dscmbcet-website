@@ -4,13 +4,13 @@ import { useContext, useEffect, useState } from "react";
 import NavBar from "../../components/NavBar";
 import EarthClouds from "../home/components/EarthClouds";
 import EventComp from "./components/EventComp";
-import FilledButton from "../../components/FilledButton";
 import { ThemeContext } from "../../context/theme-context";
 import searchIcon from "../../assets/icons8-search-50.png";
 import EventBalloon1 from "./components/EventBalloon1";
 import EventBalloon2 from "./components/EventBalloon2";
 import { DocumentData, collection, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase-config";
+import FilterButton from "./components/FilterButton";
 
 function Events() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -41,7 +41,6 @@ function Events() {
 
   const handleClick = (e: any) => {
     setFilter(e.target.value);
-    console.log(filter)
   }
 
   return (
@@ -71,52 +70,40 @@ function Events() {
         </div>
         <div className="events_filter_container">
           <div className="events_filter">
-            <FilledButton
+            <FilterButton
               text={"All"}
-              textColor={theme != "dark" ? "black" : "white"}
-              bgColor={theme != "dark" ? "black" : "var(--cream)"}
-              border={true}
               id="events"
+              selected={filter === "All" ? true : false}
               onClick={handleClick}
             />
-            <FilledButton
+            <FilterButton
               text={"Design"}
-              textColor={theme != "dark" ? "black" : "white"}
-              bgColor={theme === "dark" ? "var(--cream)" : "black"}
-              border={true}
               id="events"
+              selected={filter === "Design" ? true : false}
               onClick={handleClick}
             />
-            <FilledButton
+            <FilterButton
               text={"Web"}
-              textColor={theme != "dark" ? "black" : "white"}
-              bgColor={theme === "dark" ? "var(--cream)" : "black"}
-              border={true}
               id="events"
+              selected={filter === "Web" ? true : false}
               onClick={handleClick}
             />
-            <FilledButton
+            <FilterButton
               text={"App"}
-              textColor={theme != "dark" ? "black" : "white"}
-              bgColor={theme === "dark" ? "var(--cream)" : "black"}
-              border={true}
               id="events"
+              selected={filter === "App" ? true : false}
               onClick={handleClick}
             />
-            <FilledButton
+            <FilterButton
               text={"AI/ML"}
-              textColor={theme != "dark" ? "black" : "white"}
-              bgColor={theme === "dark" ? "var(--cream)" : "black"}
-              border={true}
               id="events"
+              selected={filter === "AI/ML" ? true : false}
               onClick={handleClick}
             />
-            <FilledButton
+            <FilterButton
               text={"Others"}
-              textColor={theme != "dark" ? "black" : "white"}
-              bgColor={theme === "dark" ? "var(--cream)" : "black"}
-              border={true}
               id="events"
+              selected={filter === "Others" ? true : false}
               onClick={handleClick}
             />
           </div>

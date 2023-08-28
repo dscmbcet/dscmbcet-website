@@ -94,6 +94,7 @@ function Home() {
             border={false}
             fontSize="25px"
             id="joinUs"
+            onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'; }}
           />
           <FilledButton
             text={"View Events"}

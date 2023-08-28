@@ -6,7 +6,6 @@ type Bprops = {
   textColor: string;
   bgColor: string;
   border: boolean;
-  padding?: string;
   id?: string;
   fontSize?: string;
   onClick?: MouseEventHandler | undefined;
@@ -19,6 +18,7 @@ export default function FilledButton(props: Bprops) {
       <button
         id={props.id}
         style={{
+          cursor: "pointer",
           background: props.border ? "none" : props.bgColor,
           color: props.textColor,
           border: `0.15em Solid ${props.bgColor}`,
