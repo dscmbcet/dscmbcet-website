@@ -21,22 +21,22 @@ function Events() {
   const [filteredEvents, setFilteredEvents] = useState<DocumentData[]>([]);
 
   useEffect(() => {
-    const filtered = docs?.filter((data) => {
-      if (
-        filter === "All" &&
-        data.name.toLowerCase().includes(search.toLowerCase())
-      ) {
-        return true;
-      } else if (
-        data.domains.includes(filter) &&
-        data.name.includes(search)
-      ) {
-        return true;
-      }
-      else return false;
-    }) ?? [];
+    const filtered =
+      docs?.filter((data) => {
+        if (
+          filter === "All" &&
+          data.name.toLowerCase().includes(search.toLowerCase())
+        ) {
+          return true;
+        } else if (
+          data.domains.includes(filter) &&
+          data.name.includes(search)
+        ) {
+          return true;
+        } else return false;
+      }) ?? [];
     setFilteredEvents([...filtered]);
-  }, [filter, search])
+  }, [filter, search]);
   useEffect(() => {
     setEventsLoading(true);
     const unsub = onSnapshot(collection(db, "events"), (snapshot) => {
@@ -60,7 +60,7 @@ function Events() {
 
   const handleClick = (e: any) => {
     setFilter(e.target.value);
-  }
+  };
 
   return (
     <div>
@@ -127,14 +127,17 @@ function Events() {
             />
           </div>
         </div>
-        {(filteredEvents && filteredEvents.length > 0) ?
+        {filteredEvents && filteredEvents.length > 0 ? (
           <div className="events_container">
-          
-            {filteredEvents.map((evnt, index) => <EventComp key={index} theme={theme} eventData={evnt} />)}
+            {filteredEvents.map((evnt, index) => (
+              <EventComp key={index} theme={theme} eventData={evnt} />
+            ))}
           </div>
-          :
-          <div className="events_no_results"><h3>No Results Found</h3></div>
-        }
+        ) : (
+          <div className="events_no_results">
+            <h3>No Results Found</h3>
+          </div>
+        )}
       </div>
     </div>
   );
