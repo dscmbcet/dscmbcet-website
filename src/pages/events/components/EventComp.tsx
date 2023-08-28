@@ -29,6 +29,7 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
   }
 
   const handleMouseLeave = () => {
+    setcontent("more")
     ctx.add(() => {
       gsap.to(gradRef.current,
         {
@@ -102,7 +103,7 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
           }
 
         </div>
-        {eventData.registerURL && <button className='component_desc_btn'><a href={eventData.registerURL}>Register Now</a></button>}
+        {(eventData.registerURL && content === "more") && <button className='component_desc_btn'><a href={eventData.registerURL}>Register Now</a></button>}
       </div>
     </div>
   )
