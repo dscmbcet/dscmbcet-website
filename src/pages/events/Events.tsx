@@ -34,7 +34,11 @@ function Events() {
           data.name.includes(search)
         ) {
           return true;
-        } else return false;
+        } 
+        else if (filter === "Others") {
+          return !data.domains.some((v: string) => ["design", "web", "app", "ai/ml"].indexOf(v.toLowerCase()) !== -1)
+        }
+        else return false;
       }) ?? [];
     setFilteredEvents([...filtered]);
   }, [docs, filter, search]);
