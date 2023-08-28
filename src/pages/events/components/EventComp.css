@@ -19,7 +19,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(30, 28, 28,.2) 80%, rgba(30, 28, 28, .9)) ;
+    background-image: linear-gradient(to bottom, rgba(30, 28, 28,.2), rgba(30, 28, 28, .9));
 }
 
 .theme-dark .container {
