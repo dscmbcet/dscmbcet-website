@@ -161,7 +161,7 @@ function NavBar() {
 
   return (
     <div className="nav">
-      <div className="navBar" style={{height: !showMarquee ? '95px' : 'max-content'}}>
+      <div className="navBar" style={{height: !showMarquee ? '100px' : 'max-content'}}>
         <div className="navBar_logoContainer">
           {width > 1024 ? (
             <img className="noselect logo" src={bigLogo} />
