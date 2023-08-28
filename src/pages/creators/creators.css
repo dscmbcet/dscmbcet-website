@@ -6,6 +6,10 @@
     background-color: var(--light-sky-2);
 }
 
+.creator_landing_cloud {
+    width: 100vw;
+}
+
 
 .theme-light .creator_landing ,.theme-light .creator_designers {
     background-color: var(--light-sky-2);
@@ -73,10 +77,11 @@
 }
 
 .creator_landing_subhead{
+    margin-top: 20px;
     padding-top: 4px;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 33.6px;
+    font-size: 30px;
+    line-height: 40px;
 }
 
 @media (max-width:480px){
@@ -88,7 +93,7 @@
 
 
     .creator_landing_subhead{
-        font-size: 30px;
+        font-size: 24px;
         width: 500px;
     }
 
@@ -97,10 +102,6 @@
        
     }
 
-    .creator_landing_cloud{
-        scale: 65%;
-        
-    }
 }
 
 

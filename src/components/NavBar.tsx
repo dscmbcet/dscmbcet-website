@@ -191,7 +191,13 @@ function NavBar() {
                     <li><a href="/team">Team</a></li>
                  {/*  <li><a href="">Magazine</a></li> */} 
                     <li><a href="/creators">Creators</a></li>
-                    <FilledButton text="Join Us" textColor="var(--eerie-black)" bgColor="var(--light-sky)" border={false} />
+                    <FilledButton
+                        text="Join Us" textColor="var(--eerie-black)" 
+                        bgColor="var(--light-sky)" 
+                        border={false} 
+                        onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'; }}
+
+                    />
                 </ul>
                 <img className='hamburgerMenu' src={menuIcon} onClick={changeToggle} onKeyDown={changeToggle} alt="" />
                 

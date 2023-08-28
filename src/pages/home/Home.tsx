@@ -20,6 +20,7 @@ import AboutClouds from "./components/AboutClouds";
 import EarthClouds from "./components/EarthClouds";
 import StoryClouds from "./components/StoryClouds";
 import NavBar from "../../components/NavBar";
+import { useNavigate } from "react-router-dom";
 import {
   query,
   orderBy,
@@ -32,6 +33,7 @@ import { db } from "../../firebase-config";
 
 function Home() {
   const { theme, setTheme } = useContext(ThemeContext);
+  const navigate = useNavigate()
   const parentRef = useRef(null);
   const llamaref = useRef(null);
   const roperef = useRef(null);
@@ -127,6 +129,7 @@ function Home() {
             border={false}
             fontSize="25px"
             id="joinUs"
+            onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'; }}
           />
           <FilledButton
             text={"View Events"}
@@ -134,6 +137,7 @@ function Home() {
             bgColor={theme === "dark" ? "var(--cream)" : "black"}
             border={true}
             fontSize="20px"
+            onClick={() => {navigate("/events")}}
           />
         </div>
         <LandingClouds theme={theme} />
@@ -211,7 +215,7 @@ function Home() {
       <div className="home_events">
         <div className="home_events_head">
           <h1>events</h1>
-          <a href="">view more</a>
+          <a href="/events">view more</a>
         </div>
 
         {latest3Events && (
@@ -344,6 +348,7 @@ function Home() {
             bgColor={theme === "dark" ? "var(--cream)" : "black"}
             textColor={theme === "dark" ? "black" : "white"}
             border={false}
+            onClick={() => {navigate("/team")}}
           />
         </div>
       </div>

@@ -75,7 +75,7 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
   };
 
   return (
-    <div className='container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>\
+    <div className='container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <img src={eventData.imgSrc} alt="eventData.name"  className='container_bg'/>
       <div className='container_gradient' ref={gradRef}/>
       <div className='component_main' ref={mainRef}>
