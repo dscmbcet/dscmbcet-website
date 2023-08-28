@@ -3,10 +3,11 @@ import './EventComp.css'
 import gsap from 'gsap'
 import { Event } from '../Event';
 import { eventData } from '../eventData';
+import { DocumentData, Timestamp } from 'firebase/firestore';
 
 type EventCompProps = {
     theme: string;
-    eventData: Event;
+    eventData: DocumentData;
 }
 
 export default function EventComp( {theme, eventData}: EventCompProps) {
@@ -15,7 +16,6 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
   const mainRef = useRef(null);
   const descRef = useRef(null)
   const gradRef = useRef(null)
-  const {name, desc, date, imgSrc, status, registerURL} = eventData;
 
   const handleMouseEnter = () => {
     ctx.add(() => {
@@ -39,6 +39,24 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
     })
   }
 
+  const formatDate = (t: Timestamp): string[] => {
+    const date = t.toDate();
+    const day = date.getDate();
+    let daySuffix = 'th';
+
+    if (day === 1 || day === 21 || day === 31) {
+        daySuffix = 'st';
+    } else if (day === 2 || day === 22) {
+        daySuffix = 'nd';
+    } else if (day === 3 || day === 23) {
+        daySuffix = 'rd';
+    }
+    const month = date.toLocaleString('default', { month: 'short' });
+    const year = date.toLocaleString('default', { year: 'numeric' });
+
+    return [`${day}${daySuffix}`, month, year];
+};
+
   const handleReadMore = () => {
     if(content === "more") {
       setcontent("less")
@@ -50,16 +68,16 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
 
   return (
     <div className='container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>\
-      <img src={imgSrc} alt=""  className='container_bg'/>
+      <img src={eventData.imgSrc} alt="eventData.name"  className='container_bg'/>
       <div className='container_gradient' ref={gradRef}/>
       <div className='component_main' ref={mainRef}>
         <div className='component_main_content'>
-          <h2 className='component_main_header'>{name}</h2>
+          <h2 className='component_main_header'>{eventData.name}</h2>
           <div className='component_main_info'>
-            <p>{date}</p>
+            <p>{formatDate(eventData.date)[0]} {formatDate(eventData.date)[1]}{' '}</p>
             <div className='component_main_statusBar'>
               <span className="dot"></span>
-              <p>{status}</p>
+              <p>{eventData.status}</p>
             </div>
           </div>
         </div>
@@ -67,16 +85,16 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
       <div className='component_desc' ref={descRef}>
         <div>
           <h2 className='component_main_header' style={{marginBottom: "1%"}}>Event name</h2>
-          {desc.length > 80 ?
+          {eventData.desc.length > 80 ?
             <>
-              <p>{desc.slice(0, 80)}{ content === "less"? <span>{desc.slice(81, desc.length - 1)}</span> : <span>...</span> }</p>
+              <p>{eventData.desc.slice(0, 80)}{ content === "less"? <span>{eventData.desc.slice(81, eventData.desc.length - 1)}</span> : <span>...</span> }</p>
               <button className='component_desc_readmore' onClick={handleReadMore}><u>read {content}</u></button>
             </>
-            : <p>{desc}</p>
+            : <p>{eventData.desc}</p>
           }
 
         </div>
-        {registerURL && <button className='component_desc_btn'><a href={registerURL}>Register Now</a></button>}
+        {eventData.registerURL && <button className='component_desc_btn'><a href={eventData.registerURL}>Register Now</a></button>}
       </div>
     </div>
   )
