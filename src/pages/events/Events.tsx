@@ -1,6 +1,6 @@
 import './Events.css'
 
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import NavBar from '../../components/NavBar'
 import EarthClouds from '../home/components/EarthClouds'
 import EventComp from './components/EventComp'
@@ -10,9 +10,25 @@ import searchIcon from '../../assets/icons8-search-50.png'
 import EventBalloon1 from './components/EventBalloon1'
 import EventBalloon2 from './components/EventBalloon2'
 import { eventData } from './eventData'
+import { DocumentData, collection, onSnapshot } from 'firebase/firestore'
+import { db } from '../../firebase-config'
 
 function Events() {
     const { theme, setTheme } = useContext(ThemeContext);
+    const [eventsLoading, setEventsLoading] = useState(false);
+    const [docs, setDocs] = useState<DocumentData[] | null>(null);
+    useEffect(() => {
+        setEventsLoading(true);
+        const unsub = onSnapshot(collection(db, 'events'), (snapshot) => {
+            setDocs(snapshot.docs.map((doc) => {return {...doc.data(), id: doc.id}}));
+            setEventsLoading(false);
+        });
+        return () => {
+            console.log(docs); 
+            setEventsLoading(false);
+            unsub();
+        };
+    }, []);
 
   return (
     <div>
@@ -46,7 +62,8 @@ function Events() {
         </div>
 
         <div className="events_container">
-            {eventData.map((event, index)=> <EventComp key={index} theme={theme} eventData={event}/>)}
+                {docs?.map((data, ind) => <EventComp key={ind} theme={theme} eventData={data}/>)}
+            {/* {eventData.map((event, index)=> <EventComp key={index} theme={theme} eventData={event}/>)} */}
         </div>
       </div>
     </div>
