@@ -67,7 +67,7 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
   }
 
   return (
-    <div className='container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>\
+    <div className='container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <img src={eventData.imgSrc} alt="eventData.name"  className='container_bg'/>
       <div className='container_gradient' ref={gradRef}/>
       <div className='component_main' ref={mainRef}>
@@ -84,7 +84,7 @@ export default function EventComp( {theme, eventData}: EventCompProps) {
       </div>
       <div className='component_desc' ref={descRef}>
         <div>
-          <h2 className='component_main_header' style={{marginBottom: "1%"}}>Event name</h2>
+          <h2 className='component_main_header' style={{marginBottom: "1%"}}>{eventData.name}</h2>
           {eventData.desc.length > 80 ?
             <>
               <p>{eventData.desc.slice(0, 80)}{ content === "less"? <span>{eventData.desc.slice(81, eventData.desc.length - 1)}</span> : <span>...</span> }</p>
