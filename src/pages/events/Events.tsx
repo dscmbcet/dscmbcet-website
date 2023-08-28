@@ -1,9 +1,10 @@
+import './Events.css'
+
 import { useContext } from 'react'
 import NavBar from '../../components/NavBar'
 import EarthClouds from '../home/components/EarthClouds'
 import EventComp from './components/EventComp'
 import FilledButton from '../../components/FilledButton'
-import './Events.css'
 import { ThemeContext } from '../../context/theme-context'
 import searchIcon from '../../assets/icons8-search-50.png'
 import EventBalloon1 from './components/EventBalloon1'
@@ -17,7 +18,7 @@ function Events() {
     <div>
         <NavBar/>
       <div className="Events_header">
-        <EarthClouds theme={theme} id='Events_earth_cloud'/>
+        <EarthClouds theme={theme} id='Events_cloud'/>
         <div className='events_balloon'>
           <EventBalloon1/>
           <EventBalloon2/>

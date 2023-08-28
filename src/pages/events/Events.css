@@ -31,7 +31,7 @@
         border-bottom: 2px solid var(--eerie-black);
     }
 
-   #Events_earth_cloud {
+   #Events_cloud {
         position: absolute;
         top: 100px;
         transition: all 0.5s ease;
@@ -159,7 +159,7 @@
             margin-bottom: 10%;
         }
 
-        #Events_earth_cloud {
+        #Events_cloud {
             width: 100%;
             height: 60%;
         }
@@ -183,7 +183,7 @@
             width: 400%;
             margin-top: 30%;
         }
-        #Events_earth_cloud {
+        #Events_cloud {
             height: 70%;
         }
     }
