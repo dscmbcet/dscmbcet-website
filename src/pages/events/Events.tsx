@@ -38,7 +38,7 @@ function Events() {
           return !data.domains.some(
             (v: string) =>
               ["design", "web", "app", "ai/ml"].indexOf(v.toLowerCase()) !== -1
-          );
+          ) && data.name.includes(search);
         } else return false;
       }) ?? [];
     setFilteredEvents([...filtered]);
