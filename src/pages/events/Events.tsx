@@ -37,7 +37,7 @@ function Events() {
         } else return false;
       }) ?? [];
     setFilteredEvents([...filtered]);
-  }, [docs]);
+  }, [docs, filter, search]);
   useEffect(() => {
     setEventsLoading(true);
     const unsub = onSnapshot(collection(db, "events"), (snapshot) => {
