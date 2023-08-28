@@ -235,7 +235,7 @@ function Home() {
                 className="home_events_cloud_left"
                 width="248"
                 height="394"
-                viewBox="0 0 248 394"
+                viewBox="35 35 248 394"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -286,7 +286,7 @@ function Home() {
                 className="home_events_cloud_right"
                 width="234"
                 height="419"
-                viewBox="0 0 234 419"
+                viewBox="-20 50 234 419"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
