@@ -40,6 +40,7 @@ function Home() {
   const [latest3Events, setLatest3Events] = useState<DocumentData[] | null>(
     null
   );
+  const [content, setcontent] = useState("more")
   var llamatl = gsap.timeline({ paused: true });
   let cards = [
     { title: "1" },
@@ -104,6 +105,15 @@ function Home() {
     }, parentRef);
     return () => ctx.revert();
   }, []);
+
+  const handleReadMore = () => {
+    if(content === "more") {
+      setcontent("less")
+    }
+    else {
+      setcontent("more")
+    }
+  }
 
   return (
     <div className="home">
@@ -252,20 +262,24 @@ function Home() {
                 />
               </svg>
               <div className="home_events_list1">
-                <img src={latest3Events[0]?.imgSrc} />
+                <img style={{objectFit: 'cover'}} src={latest3Events[0]?.imgSrc} />
                 <h3>{latest3Events[0]?.name}</h3>
               </div>
             </div>
             <div className="home_events_list2">
-              <img src={latest3Events[1]?.imgSrc} />
+              <img style={{objectFit: 'cover'}} src={latest3Events[1]?.imgSrc} />
               <h3>{latest3Events[1]?.name}</h3>
-              <p>
-              {latest3Events[1]?.desc}
-              </p>
+              {latest3Events[1]?.desc.length > 80 ?
+            <>
+              <p>{latest3Events[1]?.desc.slice(0, 80)}{ content === "less"? <span>{latest3Events[1]?.desc.slice(81, latest3Events[1]?.desc.length - 1)}</span> : <span>...</span> }</p>
+              <button className='home_events_readmore' onClick={handleReadMore}><u>read {content}</u></button>
+            </>
+            : <p>{latest3Events[1]?.desc}</p>
+          }
             </div>
             <div className="home_events_list_right">
               <div className="home_events_list3">
-                <img src={latest3Events[2]?.imgSrc} />
+                <img style={{objectFit: 'cover'}} src={latest3Events[2]?.imgSrc} />
                 <h3>{latest3Events[2]?.name}</h3>
               </div>
               <svg

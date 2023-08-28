@@ -100,6 +100,7 @@
     font-size: 16px;
     font-weight: 600;
     color: white;
+    cursor: pointer;
 }
 
 .component_desc_btn > a {

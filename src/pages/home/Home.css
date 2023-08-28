@@ -294,9 +294,15 @@ justify-content: space-between;
 
 
 .home_events_list2 p{
-    width: 225.17px;
-    height: 67.88px;
-    
+    width: 225.17px;    
+}
+
+.home_events_readmore {
+	background-color: transparent;
+	cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
 }
 
 .theme-light .home_events_list1 img,.theme-light .home_events_list2 img,.theme-light .home_events_list3 img{
