@@ -54,7 +54,7 @@ function Home() {
     const q = query(
       collection(db, "events"),
       orderBy("date", "desc"),
-      limit(2)
+      limit(3)
     );
     const unsub = onSnapshot(q, (snapshot) => {
       setLatest3Events(
