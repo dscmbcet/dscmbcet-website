@@ -10,7 +10,7 @@
 	padding: 20px 40px;
 	display: flex;
 	max-width: 100dvw;
-	width: 100%;
+	width: 100dvw;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -177,11 +177,19 @@
 }
 
 .navBar_circle {
+	position: relative;
 	width: 10px;
 	height: 10px;
-	margin: 0 10px;
 	background-color: black;
 	border-radius: 100%;
+}
+
+.marquee_val {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 20px;
+	margin-right: 20px;
 }
 
 .navBar_button {

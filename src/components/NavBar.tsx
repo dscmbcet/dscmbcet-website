@@ -1,13 +1,8 @@
-import React, {
-    useContext,
-    useEffect,
-    useRef,
-    useState,
-} from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import bigLogo from "../assets/GDSC_logo.png";
 import smallLogo from "../assets/small_GDSC_Logo.svg";
 
-import {NavLink} from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import Moon from "../assets/Moon.png";
 import Sun from "../assets/Sun.svg";
@@ -17,212 +12,258 @@ import { ThemeContext } from "../context/theme-context";
 import FilledButton from "../components/FilledButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import menuIcon from './menu.svg';
+import menuIcon from "./menu.svg";
 import Team from "../pages/team/Team";
 import Home from "../pages/home/Home";
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "../firebase-config";
 
 function NavBar() {
-    gsap.registerPlugin(ScrollTrigger);
-    const { theme, setTheme } = useContext(ThemeContext);
-    const [hidden, setHidden] = useState<boolean>(false);
-    const [toggle, setToggle] = useState<boolean>(false);
-    const [width, setWindowWidth] = useState<number>(0)
-    const navRef = useRef<HTMLDivElement | undefined>(undefined);
-    const sunmoonRef = useRef(null);
-    const ctx = gsap.context(() => { }, navRef?.current);
+  gsap.registerPlugin(ScrollTrigger);
+  const { theme, setTheme } = useContext(ThemeContext);
+  const [hidden, setHidden] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(false);
+  const [width, setWindowWidth] = useState<number>(0);
+  const [marquee, setMarquee] = useState<string[]>([]);
+  const [showMarquee, setShowMarquee] = useState<boolean>(false);
 
-    const changeToggle = () => {        
-        setToggle(!toggle);
-    }
+  const navRef = useRef<HTMLDivElement | undefined>(undefined);
+  const sunmoonRef = useRef(null);
+  const ctx = gsap.context(() => {}, navRef?.current);
 
-    useEffect(() => {        
-      return () => {
-        ctx.revert()
-      }
-    }, [])
+  const changeToggle = () => {
+    setToggle(!toggle);
+  };
 
-    useEffect(() => { 
-        updateDimensions();
-        window.addEventListener('resize', updateDimensions);
-        return () => 
-          window.removeEventListener('resize',updateDimensions);
-       }, [])
-  
-       const updateDimensions = () => {
-          const width = window.innerWidth
-          console.log(width);
-          setWindowWidth(width)
-        }
-  
-    
-
-    useEffect(() => {
-            ctx.add(() => {
-                ctx.revert();
-                gsap.set(sunmoonRef.current, {left: "50%", translateX: "-50%"})
-                gsap.fromTo(sunmoonRef.current, {y: -70 }, { y: -200, scrollTrigger: {
-                    trigger: ".home_landing",
-                    start: "top top",
-                    end: "bottom 90px",
-                    scrub: 0.5,
-                    onLeave: () => {
-                        console.log("Left");
-                        setHidden(true);
-                    },
-                    onEnter: () => {
-                        console.log("Enterred");
-                        setHidden(false);
-                    },
-                    onEnterBack: () => {
-                        console.log("Enterred");
-                        setHidden(false);
-                    }
-                }})
-                if (theme == "dark") {
-                    gsap.to(sunmoonRef.current, {
-                        delay: 1,
-                        duration: 1,
-                        rotation: "180_cw",
-                    });
-                } else {
-                    gsap.to(sunmoonRef.current, {
-                        delay: 1,
-                        duration: 1,
-                        rotation: "0_cw",
-                    });
-                }
-            });
-        return () => ctx.revert();
-    }, [])
-    
-
-    // useLayoutEffect(() => {
-    //     setTimeout(() => {
-    //         ctx.add(() => {
-    //             if (theme == "dark") {
-    //                 gsap.to(sunmoonRef.current, {
-    //                     duration: 1,
-    //                     rotation: "180_cw",
-    //                 });
-    //             } else {
-    //                 gsap.to(sunmoonRef.current, {
-    //                     duration: 1,
-    //                     rotation: "0_cw",
-    //                 });
-    //             }
-    //         });
-    //     }, 200);
-    //     return () => ctx.revert();
-    // }, []);
-
-    const handleThemeChange = () => {
-        const isCurrentDark = theme === "dark";
-        setTheme(isCurrentDark ? "light" : "dark");
-        ctx.add(() => {
-            if (hidden) {
-                gsap.to(sunmoonRef.current, { y: -70, duration: 1});
-                gsap.to(sunmoonRef.current, { y: -200, delay: 2, duration:1});
-            }
-            else {
-                gsap.to(sunmoonRef.current, { y: -70, duration:1, repeat: 1, yoyo: true});
-            }
-            if (!isCurrentDark) {
-                gsap.to(sunmoonRef.current, {
-                    delay: hidden ? 0.5 : 0,
-                    duration: 1,
-                    rotation: "180_cw",
-                });
-            } else {
-                gsap.to(sunmoonRef.current, { delay: hidden ? 0.5 : 0, duration: 1, rotation: "0_cw" });
-            }
-        });
+  useEffect(() => {
+    return () => {
+      ctx.revert();
     };
+  }, []);
 
-    return (
-        <div className="nav">
-            <div className="navBar">
-                <div className="navBar_logoContainer">
-                    {(width > 1024) ? <img className="noselect logo" src={bigLogo} /> : <img className="noselect logo" src={smallLogo} /> }
-                </div>
-                <div className="navBar_toggleContainer">
-                    <div
-                        onClick={handleThemeChange}
-                        className="navBar_toggle"
-                        style={
-                            theme === "dark"
-                                ? {
-                                    backgroundColor: "var(--dark-sky)",
-                                    borderColor: "var(--light-sky)",
-                                }
-                                : { backgroundColor: "var(--light-sky)" }
-                        }
-                    >
-                        <div
-                            className="navBar_toggleButton"
-                            style={
-                                theme === "dark"
-                                    ? {
-                                        left: "calc(100% - 23px)",
-                                        borderColor: "var(--light-sky)",
-                                    }
-                                    : { left: 3, borderColor: "var(--dark-sky)" }
-                            }
-                        />
-                        <img
-                            className="noselect"
-                            src={Moon}
-                            width={15}
-                            height={15}
-                            alt=""
-                        />
-                        <img
-                            className="noselect"
-                            src={Sun}
-                            width={15}
-                            height={15}
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <ul className={`${toggle?'navLinks menu active':'navLinks'}`}>
-                    <li><a href="/">Who are we</a></li>
-                    <li><a href="/events">Events</a></li>
-                {/*  <li><a href="">Resources</a></li>*/}   
-                    <li><a href="/team">Team</a></li>
-                 {/*  <li><a href="">Magazine</a></li> */} 
-                    <li><a href="/creators">Creators</a></li>
-                    <FilledButton text="Join Us" textColor="var(--eerie-black)" bgColor="var(--light-sky)" border={false} />
-                </ul>
-                <img className='hamburgerMenu' src={menuIcon} onClick={changeToggle} onKeyDown={changeToggle} alt="" />
-                
-                <img
-                    className="navBar_SunMoon"
-                    ref={sunmoonRef}
-                    src={SunMoon}
-                    alt=""
-                />
-                <div role='none'
-                className={toggle ? 'backgroundOverlay' : 'backgroundOverlay backgroundOverlayClosed'}
-                onClick={() => {
-                    setToggle(false);
-                }}
-                onKeyDown={() => {
-                    setToggle(false);
-                }}
-             />
-            </div>
-            <Marquee className="navBar_marquee" gradient={false} speed={60}>
-                UXTopia <div className="navBar_circle" /> Not just a regular
-                design event <div className="navBar_circle" /> Nov 15-21 UXTopia{" "}
-                <div className="navBar_circle" /> Not just a regular design
-                event <div className="navBar_circle" /> Nov 15-21 UXTopia{" "}
-                <div className="navBar_circle" /> Not just a regular design
-                event <div className="navBar_circle" /> Nov 15-21 UXTopia{" "}
-                <div className="navBar_circle" /> Not just a regular design
-                event <div className="navBar_circle" /> Nov 15-21
-            </Marquee>
+  useEffect(() => {
+    const unsub = onSnapshot(doc(db, "marquee", "marqueeData"), (doc) => {
+      if (doc.data()?.marquee) setMarquee(doc.data()?.marquee);
+      if (doc.data()?.show) setShowMarquee(doc.data()?.show);
+    });
+    return () => {
+      unsub();
+    };
+  }, []);
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    console.log(width);
+    setWindowWidth(width);
+  };
+
+  useEffect(() => {
+    ctx.add(() => {
+      ctx.revert();
+      gsap.set(sunmoonRef.current, { left: "50%", translateX: "-50%" });
+      gsap.fromTo(
+        sunmoonRef.current,
+        { y: -70 },
+        {
+          y: -200,
+          scrollTrigger: {
+            trigger: ".home_landing",
+            start: "top top",
+            end: "bottom 90px",
+            scrub: 0.5,
+            onLeave: () => {
+              console.log("Left");
+              setHidden(true);
+            },
+            onEnter: () => {
+              console.log("Enterred");
+              setHidden(false);
+            },
+            onEnterBack: () => {
+              console.log("Enterred");
+              setHidden(false);
+            },
+          },
+        }
+      );
+      if (theme == "dark") {
+        gsap.to(sunmoonRef.current, {
+          delay: 1,
+          duration: 1,
+          rotation: "180_cw",
+        });
+      } else {
+        gsap.to(sunmoonRef.current, {
+          delay: 1,
+          duration: 1,
+          rotation: "0_cw",
+        });
+      }
+    });
+    return () => ctx.revert();
+  }, []);
+
+  // useLayoutEffect(() => {
+  //     setTimeout(() => {
+  //         ctx.add(() => {
+  //             if (theme == "dark") {
+  //                 gsap.to(sunmoonRef.current, {
+  //                     duration: 1,
+  //                     rotation: "180_cw",
+  //                 });
+  //             } else {
+  //                 gsap.to(sunmoonRef.current, {
+  //                     duration: 1,
+  //                     rotation: "0_cw",
+  //                 });
+  //             }
+  //         });
+  //     }, 200);
+  //     return () => ctx.revert();
+  // }, []);
+
+  const handleThemeChange = () => {
+    const isCurrentDark = theme === "dark";
+    setTheme(isCurrentDark ? "light" : "dark");
+    ctx.add(() => {
+      if (hidden) {
+        gsap.to(sunmoonRef.current, { y: -70, duration: 1 });
+        gsap.to(sunmoonRef.current, { y: -200, delay: 2, duration: 1 });
+      } else {
+        gsap.to(sunmoonRef.current, {
+          y: -70,
+          duration: 1,
+          repeat: 1,
+          yoyo: true,
+        });
+      }
+      if (!isCurrentDark) {
+        gsap.to(sunmoonRef.current, {
+          delay: hidden ? 0.5 : 0,
+          duration: 1,
+          rotation: "180_cw",
+        });
+      } else {
+        gsap.to(sunmoonRef.current, {
+          delay: hidden ? 0.5 : 0,
+          duration: 1,
+          rotation: "0_cw",
+        });
+      }
+    });
+  };
+
+  return (
+    <div className="nav">
+      <div className="navBar" style={{height: !showMarquee ? '95px' : 'max-content'}}>
+        <div className="navBar_logoContainer">
+          {width > 1024 ? (
+            <img className="noselect logo" src={bigLogo} />
+          ) : (
+            <img className="noselect logo" src={smallLogo} />
+          )}
         </div>
-    );
+        <div className="navBar_toggleContainer">
+          <div
+            onClick={handleThemeChange}
+            className="navBar_toggle"
+            style={
+              theme === "dark"
+                ? {
+                    backgroundColor: "var(--dark-sky)",
+                    borderColor: "var(--light-sky)",
+                  }
+                : { backgroundColor: "var(--light-sky)" }
+            }
+          >
+            <div
+              className="navBar_toggleButton"
+              style={
+                theme === "dark"
+                  ? {
+                      left: "calc(100% - 23px)",
+                      borderColor: "var(--light-sky)",
+                    }
+                  : { left: 3, borderColor: "var(--dark-sky)" }
+              }
+            />
+            <img
+              className="noselect"
+              src={Moon}
+              width={15}
+              height={15}
+              alt=""
+            />
+            <img className="noselect" src={Sun} width={15} height={15} alt="" />
+          </div>
+        </div>
+        <ul className={`${toggle ? "navLinks menu active" : "navLinks"}`}>
+          <li>
+            <a href="/">Who are we</a>
+          </li>
+          <li>
+            <a href="/events">Events</a>
+          </li>
+          {/*  <li><a href="">Resources</a></li>*/}
+          <li>
+            <a href="/team">Team</a>
+          </li>
+          {/*  <li><a href="">Magazine</a></li> */}
+          <li>
+            <a href="/creators">Creators</a>
+          </li>
+          <FilledButton
+            text="Join Us"
+            textColor="var(--eerie-black)"
+            bgColor="var(--light-sky)"
+            border={false}
+          />
+        </ul>
+        <img
+          className="hamburgerMenu"
+          src={menuIcon}
+          onClick={changeToggle}
+          onKeyDown={changeToggle}
+          alt=""
+        />
+
+        <img className="navBar_SunMoon" ref={sunmoonRef} src={SunMoon} alt="" />
+        <div
+          role="none"
+          className={
+            toggle
+              ? "backgroundOverlay"
+              : "backgroundOverlay backgroundOverlayClosed"
+          }
+          onClick={() => {
+            setToggle(false);
+          }}
+          onKeyDown={() => {
+            setToggle(false);
+          }}
+        />
+      </div>
+      {showMarquee && marquee[0] && (
+        <Marquee className="navBar_marquee" gradient={false} speed={60} loop={0}>
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+            {marquee.map((val, ind) => <div key={ind} className="marquee_val"><div className="navBar_circle"/>{val}</div>)}
+        </Marquee>
+      )}
+    </div>
+  );
 }
 
 export default NavBar;
