@@ -70,7 +70,6 @@ function Events() {
 
   return (
     <div>
-      <NavBar />
       <div className="Events_header">
         <EarthClouds theme={theme} id="Events_cloud" />
         <div className="events_balloon">

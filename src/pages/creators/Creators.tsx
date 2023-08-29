@@ -45,7 +45,6 @@ function Creators() {
 
   return (
     <div className='creator'>
-      <NavBar/>
       <div className='creator_landing'>
         <div className='creator_landing_cloud'>
         <TeamHeroImg theme={theme} />
@@ -79,12 +78,7 @@ function Creators() {
                   <img className='creator_developers_images' src={Varsha} />
                   <div className='creator_developers_name'>&lt;p&gt;Yoosuf&lt;/p&gt;</div>
               </div>
-              
-              </div>
-             
-             
-             
-              
+              </div>     
             </div>
           </div>
         </div>

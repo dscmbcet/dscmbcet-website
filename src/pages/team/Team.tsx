@@ -36,7 +36,6 @@ function Team() {
 
   return (
     <div className='team'>
-      <NavBar/>
       <div className='team_landing'>
         <div>
           <img src={Head } className='team_head'/>
