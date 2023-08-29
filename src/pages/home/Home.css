@@ -121,10 +121,6 @@
 	.home_landing > p {
 		width: 90%;
 	}
-
-	.home_landing_clouds { 
-		height: 50vh;
-	}
 }
 
 
@@ -209,7 +205,16 @@
 	bottom: 0%
 }
 
+@media (max-width: 1100px) {
+	.home_landing_clouds {
+		height: 50vh;
+	}
+}
+
 @media (max-width: 720px) {
+	.home_landing_clouds {
+		height: 30vh;
+	}
 	.home_about_clouds {
 		height: 30vh;
 	}

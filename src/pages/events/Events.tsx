@@ -1,7 +1,6 @@
 import "./Events.css";
 
 import { useContext, useEffect, useState } from "react";
-import NavBar from "../../components/NavBar";
 import EarthClouds from "../home/components/EarthClouds";
 import EventComp from "./components/EventComp";
 import { ThemeContext } from "../../context/theme-context";
