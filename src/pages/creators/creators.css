@@ -266,7 +266,7 @@
         padding: 17px;
         width: 600px;
     }
-    .creator_designers_curser{
+    .creator_designers_cursor{
         visibility: hidden;
     }
     
@@ -306,7 +306,7 @@
    border: 2px solid black;
 }
 
-.creator_designers_curser{
+.creator_designers_cursor{
     position: absolute;
     top: 165px;
     left: 20px;

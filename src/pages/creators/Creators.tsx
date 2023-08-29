@@ -1,18 +1,11 @@
-import React, { useContext, useLayoutEffect, useRef } from 'react'
-import NavBar from '../../components/NavBar';
+import { useContext } from 'react'
 import TeamHeroImg from '../creators/components/CloudGroupHero';
 import { ThemeContext } from "../../context/theme-context";
-import Doodles from "../../assets/doodles.png";
-import llamaImg from "../../assets/llama body.png"
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './creators.css';
-import Footer from '../../components/Footer';
 import Varsha from '../../assets/varsha.png'
 import Cursor from '../../assets/arrow.svg'
 import CursorWhite from '../../assets/arrowwhite.svg'
 import Sreelakshmi from '../../assets/sreelakshmi.png'
-import Arrow from '../creators/components/Arrow';
 import Ritin from './components/images/ritin.png';
 import Vinu from './components/images/vinu.png';
 import Liya from './components/images/liya.png';
