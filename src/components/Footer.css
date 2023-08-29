@@ -19,17 +19,31 @@
 .home_footer_links{
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	z-index: 10;
+	gap: 10px;
 }
 
 
 .home_footer_links > a{
-	margin-right:2% ;
+	display: grid;
+	place-items: center;
+	color: var(--eerie-black);
+	border: 2px solid var(--eerie-black);
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.home_footer_links > a:hover {
+	background-color: var(--eerie-black);
+	color: var(--cream);
 }
 
 .home_footer_links > .FilledButton {
-	margin-left: 2%;
+	margin-left: 20px;
 }
 
 .home_footer_two{

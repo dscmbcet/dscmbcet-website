@@ -1,8 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-import bigLogo from "../assets/GDSC_logo.png";
+import { useContext, useEffect, useRef, useState } from "react";
+import bigLogo from "../assets/GDSC_logo.svg";
 import smallLogo from "../assets/small_GDSC_Logo.svg";
-
-import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import Moon from "../assets/Moon.png";
 import Sun from "../assets/Sun.svg";
@@ -13,8 +11,6 @@ import FilledButton from "../components/FilledButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import menuIcon from "./menu.svg";
-import Team from "../pages/team/Team";
-import Home from "../pages/home/Home";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase-config";
 
@@ -109,25 +105,6 @@ function NavBar() {
     return () => ctx.revert();
   }, []);
 
-  // useLayoutEffect(() => {
-  //     setTimeout(() => {
-  //         ctx.add(() => {
-  //             if (theme == "dark") {
-  //                 gsap.to(sunmoonRef.current, {
-  //                     duration: 1,
-  //                     rotation: "180_cw",
-  //                 });
-  //             } else {
-  //                 gsap.to(sunmoonRef.current, {
-  //                     duration: 1,
-  //                     rotation: "0_cw",
-  //                 });
-  //             }
-  //         });
-  //     }, 200);
-  //     return () => ctx.revert();
-  // }, []);
-
   const handleThemeChange = () => {
     const isCurrentDark = theme === "dark";
     setTheme(isCurrentDark ? "light" : "dark");
@@ -210,11 +187,9 @@ function NavBar() {
           <li>
             <a href="/events">Events</a>
           </li>
-          {/*  <li><a href="">Resources</a></li>*/}
           <li>
             <a href="/team">Team</a>
           </li>
-          {/*  <li><a href="">Magazine</a></li> */}
           <li>
             <a href="/creators">Creators</a>
           </li>
