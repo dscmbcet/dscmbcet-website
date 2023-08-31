@@ -69,17 +69,14 @@ export const designers = [
     },
     {
         name: "Medlyn",
-        imgSrc: Medlyn,
+        imgSrc: Karthika,
     },
     {
         name: "Meenakshi",
         imgSrc: Meenakshi,
     },
 ],[
-    {
-        name: "Karthika",
-        imgSrc: Karthika,
-    },
+    
     {
         name: "Shibin",
         imgSrc: Shibin,
