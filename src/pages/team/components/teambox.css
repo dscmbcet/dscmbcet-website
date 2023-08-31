@@ -1,6 +1,6 @@
 .teambox{
     display: flex;
-    
+    overflow: hidden;
 }
 
 .teambox div{
