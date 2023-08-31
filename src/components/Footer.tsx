@@ -20,7 +20,7 @@ function Footer() {
               <a href="https://youtube.com/@DSCMBCET"><FaYoutube size={'1.5em'} /></a>
               <a href="https://www.linkedin.com/company/dsc-mbcet/
 "><FaLinkedin size={'1.5em'} /></a>
-              <a href=""><FaFigma size={'1.5em'} /></a>
+              <a href="https://www.figma.com/community/tag/gdscmbcet"><FaFigma size={'1.5em'} /></a>
               <FilledButton
             fontSize="22px"
             text="Join us"
