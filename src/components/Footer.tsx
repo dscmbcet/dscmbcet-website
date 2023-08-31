@@ -13,11 +13,13 @@ function Footer() {
               <img src={Gdsclogocoloured}/>
             </div>
             <div className="home_footer_links">
-              <a href=""><FaEnvelope size={'1.5em'} /></a>
-              <a href=""><FaInstagram size={'1.5em'} /></a>
-              <a href=""><FaTwitter size={'1.5em'} /></a>
-              <a href=""><FaYoutube size={'1.5em'} /></a>
-              <a href=""><FaLinkedin size={'1.5em'} /></a>
+              <a href="mailto:dscmbcet@gmail.com"><FaEnvelope size={'1.5em'} /></a>
+              <a href="https://instagram.com/gdscmbcet"><FaInstagram size={'1.5em'} /></a>
+              <a href="https://x.com/gdscmbcet
+"><FaTwitter size={'1.5em'} /></a>
+              <a href="https://youtube.com/@DSCMBCET"><FaYoutube size={'1.5em'} /></a>
+              <a href="https://www.linkedin.com/company/dsc-mbcet/
+"><FaLinkedin size={'1.5em'} /></a>
               <a href=""><FaFigma size={'1.5em'} /></a>
               <FilledButton
             fontSize="22px"
