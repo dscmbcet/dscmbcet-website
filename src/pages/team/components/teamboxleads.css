@@ -54,32 +54,46 @@
 
 @media (max-width:720px){
     .gdsclead,.techlead,.designlead2{
-        width: 390px;
+        width: 330px;
     }
+
+    .teamboxlead{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .teamboxlead div{
+        margin: 30px;
+        padding-bottom: 25px;
+    }
+
      
     .teamboxlead div div {
         font-size: 20px;
-        width: 160px;
+        padding-bottom:25px ;
         margin-bottom: -25px;
         margin-left: -30px;
     }
     
+
     .teamboxlead div h1{
         margin-left: -30px;
-        font-size: 30px;
-        width: 130px;
+        font-size: 40px;
+        
     }
    
     
     .techteam,.designteam,.organizingteam,.socialmediateam{
-        width: 390px;
+        width: 330px;
         padding-left: 90px !important;
     }
     
    
     
     .firstblock,.secondblock,.sociallead{
-        width: 390px;
+        width: 330px;
     }
     
     

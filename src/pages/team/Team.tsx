@@ -72,7 +72,6 @@ function Team() {
               padding="0px"
               height="225px"
               img={LiyaSusan}
-              width="290px"
               class="flex-item"
             />
           </div>
@@ -96,7 +95,6 @@ function Team() {
               padding="0px"
               height="225px"
               img={Ritin}
-              width="288px"
               class="flex-item"
             />
           </div>

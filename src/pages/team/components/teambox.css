@@ -24,6 +24,9 @@
     padding: 20px;
 }
 
-.teambox div img{
-    
+
+@media (max-width:720px){
+    .teambox{
+        width: 330px;
+    }
 }
