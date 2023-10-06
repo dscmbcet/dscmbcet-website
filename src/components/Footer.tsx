@@ -1,13 +1,7 @@
-import React from 'react'
 import Gdsclogocoloured from '../assets/gdsc_logo_coloured.png';
-import Mail from '../assets/mail.svg';
-import Instagram from "../assets/instagram.png";
-import Twitter from "../assets/twitter.png";
-import Youtube from "../assets/youtube.png";
-import Linkedin from "../assets/linkedin.png";
-import Figma from "../assets/figma.png";
 import Doodles from "../assets/doodles.png";
 import FilledButton from './FilledButton';
+import { FaEnvelope, FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaFigma } from "react-icons/fa";
 import './Footer.css'
 
 function Footer() {
@@ -19,12 +13,14 @@ function Footer() {
               <img src={Gdsclogocoloured}/>
             </div>
             <div className="home_footer_links">
-              <a href=""><img src={Mail}/></a>
-              <a href=""><img src={Instagram}/></a>
-              <a href=""><img src={Twitter}/></a>
-              <a href=""><img src={Youtube}/></a>
-              <a href=""><img src={Linkedin}/></a>
-              <a href=""><img src={Figma}/></a>
+              <a href="mailto:dscmbcet@gmail.com"><FaEnvelope size={'1.5em'} /></a>
+              <a href="https://instagram.com/gdscmbcet"><FaInstagram size={'1.5em'} /></a>
+              <a href="https://x.com/gdscmbcet
+"><FaTwitter size={'1.5em'} /></a>
+              <a href="https://youtube.com/@DSCMBCET"><FaYoutube size={'1.5em'} /></a>
+              <a href="https://www.linkedin.com/company/dsc-mbcet/
+"><FaLinkedin size={'1.5em'} /></a>
+              <a href="https://www.figma.com/community/tag/gdscmbcet"><FaFigma size={'1.5em'} /></a>
               <FilledButton
             fontSize="22px"
             text="Join us"

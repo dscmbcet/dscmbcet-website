@@ -117,7 +117,6 @@ function Home() {
 
   return (
     <div className="home">
-      <NavBar />
       <div className="home_landing">
         <div className="home_landing_head">
           <h1>

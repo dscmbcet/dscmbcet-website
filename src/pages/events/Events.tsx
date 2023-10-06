@@ -1,7 +1,6 @@
 import "./Events.css";
 
 import { useContext, useEffect, useState } from "react";
-import NavBar from "../../components/NavBar";
 import EarthClouds from "../home/components/EarthClouds";
 import EventComp from "./components/EventComp";
 import { ThemeContext } from "../../context/theme-context";
@@ -11,6 +10,7 @@ import EventBalloon2 from "./components/EventBalloon2";
 import { DocumentData, collection, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import FilterButton from "./components/FilterButton";
+import {FaSearch} from "react-icons/fa";
 
 function Events() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -70,7 +70,6 @@ function Events() {
 
   return (
     <div>
-      <NavBar />
       <div className="Events_header">
         <EarthClouds theme={theme} id="Events_cloud" />
         <div className="events_balloon">
@@ -84,7 +83,7 @@ function Events() {
       <div className="events_section">
         <div className="events_searchbar">
           <label htmlFor="" className="events_searchbar_label">
-            <img src={searchIcon} alt="icon" style={{ scale: "50%" }} />
+            <FaSearch size={'1.5em'} color="dimgrey"/>
           </label>
           <input
             type="search"

@@ -6,6 +6,8 @@
     background-color: var(--light-sky-2);
 }
 
+
+
 .creator_landing_cloud {
     width: 100vw;
 }
@@ -78,7 +80,7 @@
 
 .creator_landing_subhead{
     margin-top: 20px;
-    padding-top: 4px;
+    padding: 4px;
     font-weight: 400;
     font-size: 30px;
     line-height: 40px;
@@ -99,9 +101,12 @@
 
     .creator_landing{
         padding: 30px;
+        height: 90vh;
+    }
+    .creator_landing_cloud {
+       margin-top: -150px;
        
     }
-
 }
 
 
@@ -149,7 +154,7 @@
         font-size: 50px;
     }
     .creator_developers_inner{
-        padding: 30 30px;
+        padding: 90px 30px;
     }
     .creator_developers_content_ppl div .creator_developers_name{
         opacity: 1;
@@ -250,10 +255,11 @@
     .creator_designers_content_ppl div  {
         margin: 50px;
     }
+
+
     .creator_designers_content_ppl div div {
         margin: 50px;
         position: relative;
-        
     }
    
     .creator_designers_content_ppl div  .creator_designers_name{
@@ -266,7 +272,8 @@
         padding: 17px;
         width: 600px;
     }
-    .creator_designers_curser{
+
+    .creator_designers_cursor{
         visibility: hidden;
     }
     
@@ -306,7 +313,7 @@
    border: 2px solid black;
 }
 
-.creator_designers_curser{
+.creator_designers_cursor{
     position: absolute;
     top: 165px;
     left: 20px;

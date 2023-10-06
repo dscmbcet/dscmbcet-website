@@ -8,8 +8,8 @@ import {
 import Home from "./pages/home/Home";
 import Team from "./pages/team/Team";
 import Events from "./pages/events/Events";
-import Footer from "./components/Footer";
 import Creators from "./pages/creators/Creators";
+import Layout from "./Layout";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -26,40 +26,29 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "*",
-      element: (
-        <>
-          <Home />
-          <Footer />
-        </>
+      path: "/",
+      element: <Layout />,
+      errorElement: (
+        <h1>Page Not Found</h1>
       ),
-    },
-    {
-      path: "/events",
-      element: (
-        <>
-          <Events />
-          <Footer />
-        </>
-      ),
-    },
-    {
-      path: "/team",
-      element: (
-        <>
-          <Team />
-          <Footer />
-        </>
-      ),
-    },
-    {
-      path: "/creators",
-      element: (
-        <>
-          <Creators />
-          <Footer />
-        </>
-      ),
+      children: [
+        {
+          path: "",
+          element: <Home />
+        },
+        {
+          path: "events",
+          element: <Events />
+        },
+        {
+          path: "team",
+          element: <Team />
+        },
+        {
+          path: "creators",
+          element: <Creators />
+        },
+      ]
     },
   ]);
 
@@ -67,12 +56,6 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme-${theme}`}>
         <RouterProvider router={router} />
-        {/* <Events/><Footer/> */}
-
-        {/* <Routes>
-          <Route path='/' element={<><Home/><Footer/></>} />
-          <Route path='/events' element={<><Events/><Footer/></>} />
-        </Routes> */}
       </div>
     </ThemeContext.Provider>
   );

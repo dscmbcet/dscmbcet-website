@@ -1,8 +1,6 @@
 import { useState, useRef } from 'react'
 import './EventComp.css'
 import gsap from 'gsap'
-import { Event } from '../Event';
-import { eventData } from '../eventData';
 import { DocumentData, Timestamp } from 'firebase/firestore';
 
 type EventCompProps = {
