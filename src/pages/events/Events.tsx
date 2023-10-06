@@ -78,7 +78,7 @@ function Events() {
           <EventBalloon2 />
         </div>
         <div style={{ margin: "90px" }}></div>
-        <p>Events</p>
+        <p style={{ zIndex: "10" }}>Events</p>
         <p className="Events_header_desc">let's do cool things that matter</p>
       </div>
       <div className="events_section">
