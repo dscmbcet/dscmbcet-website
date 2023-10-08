@@ -83,7 +83,7 @@ function Events() {
       <div className="events_section">
         <div className="events_searchbar">
           <label htmlFor="" className="events_searchbar_label">
-            <FaSearch size={'1.5em'} color="dimgrey"/>
+            <FaSearch size={'1.25em'} color="dimgrey"/>
           </label>
           <input
             type="search"

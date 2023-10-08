@@ -4,6 +4,7 @@
 	overflow: hidden;
 }
 
+
 .theme-light .home_about, .theme-light .home_story {
 	background-color: var(--light-sky);
 	color: black;

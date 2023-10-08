@@ -198,6 +198,7 @@ function NavBar() {
             textColor="var(--eerie-black)"
             bgColor="var(--light-sky)"
             border={false}
+            id="navbar-joinus"
             onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'}}
           />
         </ul>
