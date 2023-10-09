@@ -2,7 +2,7 @@ import React, { useContext, useLayoutEffect, useRef } from "react";
 import "./GEarth.css";
 import { ThemeContext } from "../../../context/theme-context";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 function GEarth() {
   const { theme, setTheme } = useContext(ThemeContext);
