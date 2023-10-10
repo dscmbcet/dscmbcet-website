@@ -23,5 +23,17 @@
     "@vitejs/plugin-react-swc": "^3.0.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dscmbcet/dscmbcet-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dscmbcet/dscmbcet-website/issues"
+  },
+  "homepage": "https://github.com/dscmbcet/dscmbcet-website#readme",
+  "description": ""
 }

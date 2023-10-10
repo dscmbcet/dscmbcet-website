@@ -10,7 +10,7 @@ function Footer() {
       <div className="home_footer">
         <div className="home_footer_one">
             <div className="home_footer_one_img">
-              <img src={Gdsclogocoloured}/>
+              <img src={Gdsclogocoloured} width={'270px'}/>
             </div>
             <div className="home_footer_links">
               <a href="mailto:dscmbcet@gmail.com"><FaEnvelope size={'1.5em'} /></a>
@@ -51,13 +51,15 @@ function Footer() {
                  <p>Resources</p>
               </div>
           </div>
+          
         </div>
-      
-        <div className="home_footer_img">
+      <div className="home_footer_image">
           <img src={Doodles}/>
         </div>
+        
  
       </div>
+      
     </div>
   )
 }
