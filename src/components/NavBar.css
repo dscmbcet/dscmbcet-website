@@ -4,6 +4,12 @@
 	top: 0;
 }
 
+#navbar-joinus {
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: 400;
+}
+
 .navBar {
 	position: relative;
 	background-color: var(--eerie-black);

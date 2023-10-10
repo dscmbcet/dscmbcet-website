@@ -77,13 +77,13 @@ function Events() {
           <EventBalloon2 />
         </div>
         <div style={{ margin: "90px" }}></div>
-        <p>Events</p>
+        <p style={{ zIndex: "10" }}>Events</p>
         <p className="Events_header_desc">let's do cool things that matter</p>
       </div>
       <div className="events_section">
         <div className="events_searchbar">
           <label htmlFor="" className="events_searchbar_label">
-            <FaSearch size={'1.5em'} color="dimgrey"/>
+            <FaSearch size={'1.25em'} color="dimgrey"/>
           </label>
           <input
             type="search"

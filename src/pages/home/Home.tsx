@@ -7,7 +7,7 @@ import {
 } from "react";
 import "./Home.css";
 import llamaImg from "../../assets/llama body.png";
-import LandingImg from "../../assets/landing-img.png";
+import landingImg from "../../assets/landingImg.png"
 import { ThemeContext } from "../../context/theme-context";
 import GEarth from "./components/GEarth";
 import Carousel from "./components/Carousel";
@@ -19,7 +19,6 @@ import LandingClouds from "./components/LandingClouds";
 import AboutClouds from "./components/AboutClouds";
 import EarthClouds from "./components/EarthClouds";
 import StoryClouds from "./components/StoryClouds";
-import NavBar from "../../components/NavBar";
 import { useNavigate } from "react-router-dom";
 import {
   query,
@@ -121,7 +120,7 @@ function Home() {
         <div className="home_landing_head">
           <h1>
             beyond just{" "}
-            <img className="home_landingImg" src={LandingImg} alt="" />
+            <img src={landingImg} alt="" style={{border: "2px solid", borderRadius: "100px", borderColor: theme == "dark" ? "#FFF8E1" : "#000000"}}/>
           </h1>
           <h1>the technicality</h1>
         </div>

@@ -4,6 +4,7 @@
 	overflow: hidden;
 }
 
+
 .theme-light .home_about, .theme-light .home_story {
 	background-color: var(--light-sky);
 	color: black;
@@ -108,7 +109,7 @@
 }
 
 .home_landing_buttons > .FilledButton > button {
-	padding: 10% 2%;
+	padding: 12% 2%;
 	width: 170px;
 }
 
