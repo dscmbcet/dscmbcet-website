@@ -47,7 +47,7 @@
 }
 
 .home_footer_two{
-	background: linear-gradient(0deg, black, black);
+	background-color: var(--eerie-black);
     color:white;
      padding: 4%;
 	display: flex;
@@ -80,8 +80,12 @@
 	height: 100%;
 }
 
+.home_footer_image img {
+	width: 100%;
+}
+
 .home_footer_image{
-	background-color: black;
+	background-color: var(--eerie-black);
 }
 
 .home_footer_img > img {
