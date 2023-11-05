@@ -61,14 +61,14 @@ function Team() {
               padding="30px"
               backgroundColor="rgba(115, 187, 246, 1)"
               height="225px"
-              class="firstblock flex-item"
+              class="firstblock flex-item empty"
             />
           </div>
           <div className=" flex-item">
             <Teambox
               name="liya susan"
               position="web developer"
-              border="rgba(229, 119, 119, 1) 2px solid"
+              border="rgba(229, 119, 119, 1) 3px solid"
               padding="0px"
               height="225px"
               img={LiyaSusan}
@@ -91,7 +91,7 @@ function Team() {
             <Teambox
               name="ritin george"
               position="web developer"
-              border="rgba(229, 119, 119, 1) 2px solid"
+              border="rgba(229, 119, 119, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Ritin}
@@ -102,7 +102,7 @@ function Team() {
             <Teambox
               name="aditya s"
               position="backend developer"
-              border="rgba(229, 119, 119, 1) 2px solid"
+              border="rgba(229, 119, 119, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Aditya}
@@ -113,7 +113,7 @@ function Team() {
             <Teambox
               name="gopal s"
               position="app developer"
-              border="rgba(229, 119, 119, 1) 2px solid"
+              border="rgba(229, 119, 119, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Gopal}
@@ -133,7 +133,7 @@ function Team() {
             <Teambox
               name="ferwin lopez"
               position="graphic designer"
-              border="rgba(136, 203, 139, 1) 2px solid"
+              border="rgba(136, 203, 139, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Ferwin}
@@ -144,7 +144,7 @@ function Team() {
             <Teambox
               name="jins k"
               position="video editor"
-              border="rgba(136, 203, 139, 1) 2px solid"
+              border="rgba(136, 203, 139, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Jins}
@@ -179,7 +179,7 @@ function Team() {
             <Teambox
               name="vinu kurup"
               position="graphic designer"
-              border="rgba(136, 203, 139, 1) 2px solid"
+              border="rgba(136, 203, 139, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Vinu}
@@ -211,7 +211,7 @@ function Team() {
             <Teambox
               name="sophy maria"
               position="community organizer"
-              border="rgba(220, 192, 101, 1) 2px solid"
+              border="rgba(220, 192, 101, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Sophy}
@@ -222,7 +222,7 @@ function Team() {
             <Teambox
               name="aaron k"
               position="community organizer"
-              border="rgba(220, 192, 101, 1) 2px solid"
+              border="rgba(220, 192, 101, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Aaron}
@@ -242,7 +242,7 @@ function Team() {
             <Teambox
               name="sam peter"
               position="community organizer"
-              border="rgba(220, 192, 101, 1) 2px solid"
+              border="rgba(220, 192, 101, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Sam}
@@ -265,7 +265,7 @@ function Team() {
             <Teambox
               name="joel lpe"
               position="content curator"
-              border="rgba(115, 187, 246, 1) 2px solid"
+              border="rgba(115, 187, 246, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Joel}
@@ -288,7 +288,7 @@ function Team() {
             <Teambox
               name="nandana ts"
               position="content curator"
-              border="rgba(115, 187, 246, 1) 2px solid"
+              border="rgba(115, 187, 246, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Nandana}
@@ -308,7 +308,7 @@ function Team() {
             <Teambox
               name="c rachana"
               position="content curator"
-              border="rgba(115, 187, 246, 1) 2px solid"
+              border="rgba(115, 187, 246, 1) 3px solid"
               padding="0px"
               height="225px"
               img={Rachana}

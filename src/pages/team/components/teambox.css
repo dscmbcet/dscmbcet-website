@@ -1,6 +1,11 @@
 .teambox{
+    position: relative;
     display: flex;
     overflow: hidden;
+}
+
+.teambox > img {
+    transform: translate(10px, 10px);
 }
 
 .teambox div{
@@ -28,5 +33,9 @@
 @media (max-width:720px){
     .teambox{
         width: 330px;
+    }
+
+    .teambox > img {
+        transform: translate(45px, 7px);
     }
 }

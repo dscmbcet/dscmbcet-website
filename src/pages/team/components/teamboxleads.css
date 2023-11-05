@@ -52,14 +52,14 @@
     width:299px ;
 }
 
-@media (max-width:720px){
+@media (max-width:680px){
     .gdsclead,.techlead,.designlead2{
         width: 330px;
     }
 
     .teamboxlead{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }

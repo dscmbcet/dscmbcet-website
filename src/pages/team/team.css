@@ -15,7 +15,7 @@
 }
 
 .theme-light .team_content_container {
-    background-color: var(--light-sky);
+    background-color: var(--light-sky-2);
 }
 
 .theme-dark .team_content_container {
@@ -88,7 +88,11 @@
     
 }
 
-
+@media(max-width:1200px){
+    .flex-item:nth-child(2){
+        display: none;
+    }
+}
 @media(max-width:720px){
     
     .team_headtwo{
@@ -98,7 +102,6 @@
     .team_head{
        top: 15%;
     }
-
    
     .flex-item:nth-child(8){
         order:8;

@@ -3,6 +3,10 @@
     overflow: hidden;
 }
 
+.teamlead2 > img {
+    transform: translate(20px, 10px);
+}
+
 .teamlead2 div{
     display: flex;
     flex-direction: column;
@@ -35,9 +39,13 @@
     width:450px
 }
 
-@media (max-width:720px){
+@media (max-width:680px){
     .teamlead2{
         display: flex;
+    }
+
+    .teamlead2 > img {
+        transform: translate(40px, 40px);
     }
     
     .teamlead2 div{
