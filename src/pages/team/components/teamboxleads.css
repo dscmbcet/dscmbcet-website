@@ -17,7 +17,7 @@
     margin-bottom: -25px;
 }
 
-.teamboxlead div h1{
+.teamboxlead div div h1{
     margin-left: 0px;
     font-size: 40px;
     width: 170px;
@@ -93,7 +93,7 @@
    
     
     .firstblock,.secondblock,.sociallead{
-        width: 330px;
+        width: 330px  ;
     }
     
     

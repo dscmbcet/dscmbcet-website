@@ -19,7 +19,7 @@ function Teambox(props: PersonProps) {
         className="teambox "
         style={{
           width: props.width,
-          height: "255px",
+          height: props.height,
           border: props.border,
           backgroundColor: props.backgroundColor,
           padding: props.padding,

@@ -51,7 +51,7 @@ function Team() {
               border="none"
               backgroundColor="rgba(109, 185, 246, 1)"
               padding="0px"
-              height="225px"
+              height="245px"
               img={VarshaRenjith}
               class="gdsclead"
             />
@@ -61,7 +61,8 @@ function Team() {
               padding="30px"
               backgroundColor="rgba(115, 187, 246, 1)"
               height="225px"
-              class="firstblock flex-item empty"
+              width="590px"
+              class="flex-item empty"
             />
           </div>
           <div className=" flex-item">
@@ -70,7 +71,7 @@ function Team() {
               position="web developer"
               border="rgba(229, 119, 119, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="242px"
               img={LiyaSusan}
               class="flex-item"
             />
@@ -93,7 +94,7 @@ function Team() {
               position="web developer"
               border="rgba(229, 119, 119, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="242px"
               img={Ritin}
               class="flex-item"
             />
@@ -104,7 +105,7 @@ function Team() {
               position="backend developer"
               border="rgba(229, 119, 119, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="242px"
               img={Aditya}
               class="flex-item"
             />
@@ -115,7 +116,7 @@ function Team() {
               position="app developer"
               border="rgba(229, 119, 119, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="242px"
               img={Gopal}
               class="flex-item"
             />
@@ -126,6 +127,7 @@ function Team() {
               name="tech team"
               backgroundColor="rgba(229, 119, 119, 1)"
               height="225px"
+              width="440px"
               class="techteam flex-item"
             />
           </div>
@@ -135,9 +137,10 @@ function Team() {
               position="graphic designer"
               border="rgba(136, 203, 139, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="260px"
               img={Ferwin}
               class="flex-item"
+              width="285px"
             />
           </div>
           <div className=" flex-item">
@@ -146,7 +149,7 @@ function Team() {
               position="video editor"
               border="rgba(136, 203, 139, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="260px"
               img={Jins}
               class="flex-item"
             />
@@ -158,7 +161,7 @@ function Team() {
               border="none"
               backgroundColor="rgba(136, 203, 139, 1)"
               padding="0px"
-              height="225px"
+              height="220px"
               img={Sreelakshmi}
               class="designlead1 flex-item"
             />
@@ -181,7 +184,7 @@ function Team() {
               position="graphic designer"
               border="rgba(136, 203, 139, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="245px"
               img={Vinu}
               class="flex-item"
             />
@@ -213,7 +216,7 @@ function Team() {
               position="community organizer"
               border="rgba(220, 192, 101, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="249px"
               img={Sophy}
               class="flex-item"
             />
@@ -224,7 +227,7 @@ function Team() {
               position="community organizer"
               border="rgba(220, 192, 101, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="249px"
               img={Aaron}
               class="flex-item"
             />
@@ -244,7 +247,7 @@ function Team() {
               position="community organizer"
               border="rgba(220, 192, 101, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="249px"
               img={Sam}
               class="flex-item"
             />
@@ -256,7 +259,7 @@ function Team() {
               border="none"
               backgroundColor="rgba(220, 192, 101, 1)"
               padding="0px"
-              height="225px"
+              height="205px"
               img={Litto}
               class="organizinglead flex-item"
             />
@@ -267,7 +270,7 @@ function Team() {
               position="content curator"
               border="rgba(115, 187, 246, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="245px"
               img={Joel}
               class="flex-item"
             />
@@ -290,7 +293,7 @@ function Team() {
               position="content curator"
               border="rgba(115, 187, 246, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="245px"
               img={Nandana}
               class="flex-item"
             />
@@ -310,7 +313,8 @@ function Team() {
               position="content curator"
               border="rgba(115, 187, 246, 1) 3px solid"
               padding="0px"
-              height="225px"
+              height="255px"
+              width="300px"
               img={Rachana}
               class="flex-item"
             />
