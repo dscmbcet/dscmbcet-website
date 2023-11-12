@@ -137,7 +137,7 @@ function Team() {
               position="graphic designer"
               border="rgba(136, 203, 139, 1) 3px solid"
               padding="0px"
-              height="260px"
+              height="250px"
               img={Ferwin}
               class="flex-item"
               width="285px"
@@ -149,7 +149,7 @@ function Team() {
               position="video editor"
               border="rgba(136, 203, 139, 1) 3px solid"
               padding="0px"
-              height="260px"
+              height="250px"
               img={Jins}
               class="flex-item"
             />
