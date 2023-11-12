@@ -303,8 +303,9 @@ function Team() {
               padding="30px"
               name="social media team"
               backgroundColor="rgba(115, 187, 246, 1)"
-              height="225px"
-              class="socialmediateam flex-item"
+              height="250px"
+              width="450px"
+              class=" flex-item"
             />
           </div>
           <div className=" flex-item">
@@ -323,8 +324,9 @@ function Team() {
             <Teamboxleads
               padding="30px"
               backgroundColor="rgba(115, 187, 246, 1)"
-              height="225px"
-              class="secondblock flex-item"
+              height="250px"
+              width="300px"
+              class=" flex-item"
             />
           </div>
         </div>
