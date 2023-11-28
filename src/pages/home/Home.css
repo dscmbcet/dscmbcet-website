@@ -206,6 +206,12 @@
 	bottom: 0%
 }
 
+.home_earth_buttons {
+	display: flex;
+	gap: 50px;
+}
+
+
 @media (max-width: 1100px) {
 	.home_landing_clouds {
 		height: 50vh;
@@ -471,3 +477,10 @@ justify-content: space-between;
 	}
 }
 
+
+@media  (width <= 400px) {
+	.home_earth_buttons {
+		flex-direction: column;
+		gap: 10px
+	}
+}

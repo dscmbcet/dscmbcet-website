@@ -354,14 +354,24 @@ function Home() {
             plant lovers coming from all over the world to bring our mission to
             life.
           </p>
+          <div className="home_earth_buttons">
           <FilledButton
-            fontSize="18px"
+            fontSize="15px"
             text="Meet The Team"
             bgColor={theme === "dark" ? "var(--cream)" : "black"}
             textColor={theme === "dark" ? "black" : "white"}
             border={false}
             onClick={() => {navigate("/team")}}
           />
+          <FilledButton
+            fontSize="15px"
+            text="Meet The creator"
+            bgColor={theme === "dark" ? "var(--cream)" : "black"}
+            textColor={theme === "dark" ? "var(--cream)" : "black"}
+            border={true}
+            onClick={() => {navigate("/creators")}}
+          />
+          </div>
         </div>
       </div>
     </div>
