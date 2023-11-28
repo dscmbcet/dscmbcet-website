@@ -357,15 +357,17 @@ function Home() {
           <div className="home_earth_buttons">
           <FilledButton
             fontSize="15px"
-            text="Meet The Team"
+            text="Meet The Core Team"
             bgColor={theme === "dark" ? "var(--cream)" : "black"}
+            id="joinUs"
             textColor={theme === "dark" ? "black" : "white"}
             border={false}
             onClick={() => {navigate("/team")}}
           />
           <FilledButton
             fontSize="15px"
-            text="Meet The creator"
+            text="Meet The creators"
+            id="joinUs"
             bgColor={theme === "dark" ? "var(--cream)" : "black"}
             textColor={theme === "dark" ? "var(--cream)" : "black"}
             border={true}
