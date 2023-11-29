@@ -118,7 +118,7 @@ function Home() {
     <div className="home">
       <div className="home_landing">
           {Array.from({length: 16}, (_, index) => {
-            return <div className="star-container" style={{
+            return <div key={index} className="star-container" style={{
               position: 'absolute',
               animation: `twinkle ${Math.random() * 5 + 5}s linear ${Math.random() * 5 + 5}s infinite`,
               transform: `rotate(${Math.random() * 360}deg)`,
@@ -273,12 +273,12 @@ function Home() {
                   mask="url(#path-1-inside-1_202_12104)"
                 />
               </svg>
-              <div className="home_events_list1">
+              <div className="home_events_list1 home_events_list_item">
                 <img style={{objectFit: 'cover'}} src={latest3Events[0]?.imgSrc} />
                 <h3>{latest3Events[0]?.name}</h3>
               </div>
             </div>
-            <div className="home_events_list2">
+            <div className="home_events_list2 home_events_list_item">
               <img style={{objectFit: 'cover'}} src={latest3Events[1]?.imgSrc} />
               <h3>{latest3Events[1]?.name}</h3>
               {latest3Events[1]?.desc.length > 80 ?
@@ -290,7 +290,7 @@ function Home() {
           }
             </div>
             <div className="home_events_list_right">
-              <div className="home_events_list3">
+              <div className="home_events_list3 home_events_list_item">
                 <img style={{objectFit: 'cover'}} src={latest3Events[2]?.imgSrc} />
                 <h3>{latest3Events[2]?.name}</h3>
               </div>
@@ -357,7 +357,7 @@ function Home() {
 
       <div className="home_earth">
         {Array.from({length: 16}, (_, index) => {
-            return <div className="star-container" style={{
+            return <div key={index} className="star-container" style={{
               position: 'absolute',
               animation: `twinkle ${Math.random() * 5 + 5}s linear ${Math.random() * 5 + 5}s infinite`,
               transform: `rotate(${Math.random() * 360}deg)`,
