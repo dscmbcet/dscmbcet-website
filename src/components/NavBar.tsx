@@ -189,13 +189,16 @@ function NavBar() {
             onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'}}
           />
         </ul>
-        <img
-          className="hamburgerMenu"
-          src={menuIcon}
-          onClick={changeToggle}
-          onKeyDown={changeToggle}
-          alt=""
-        />
+        <div className="hamburger_container">
+          <img
+            className="hamburgerMenu"
+            src={menuIcon}
+            onClick={changeToggle}
+            onKeyDown={changeToggle}
+            alt=""
+          />
+        </div>
+
 
         <img className="navBar_SunMoon" ref={sunmoonRef} src={SunMoon} alt="" />
         <div

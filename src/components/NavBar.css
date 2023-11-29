@@ -19,7 +19,7 @@
 	width: 100vw;
 	justify-content: space-between;
 	align-items: center;
-}
+} 	
 
 .navBar > .navLinks {
     list-style: none;
@@ -68,13 +68,22 @@
     display: none;
 }
 
-.navBar_logoContainer {
-	flex: 2;
+.navBar_logoContainer, .navBar_toggleContainer, .hamburger_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
-.navBar_toggleContainer {
-	flex: 2;
+.navBar_logoContainer {
+	justify-content: flex-start;
 }
+
+.hamburger_container {
+	justify-content: flex-end;
+}
+
+
 
 .navLinks {
 	min-width: max-content;
@@ -101,6 +110,10 @@
     color: #FFFFFF;
 }
 
+.hamburger_container {
+	width: 100%;
+}
+
 .hamburgerMenu {
     width: 32px;
 }
@@ -115,19 +128,28 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.navBar_logoContainer {
-		flex: 1;
+	.nav {
+		width: 100%;
+		display: flex;
+	}
+	.navBar {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 	}
 	.navBar_toggle {
 		margin-left: 30px;
 	}
 	.navBar > .navLinks {
-		flex: 2;
 		display: flex !important;
 	}
     .navLinks * {
         display: block;
     }
+
+	.hamburger_container {
+		display: none;
+	}
 
     .hamburgerMenu {
         display: none;
