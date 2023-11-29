@@ -51,7 +51,6 @@
     min-height: 100vh;
 	background-color: var(--eerie-black);
     padding: 0 0px;
-    border-image: url("../../assets/images/scroll_bar.png") 30 repeat;
     border-left: 30px solid var(--lego-yellow);
     animation: openNav 0.2s;
     top: 0;
