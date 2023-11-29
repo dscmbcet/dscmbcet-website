@@ -64,7 +64,6 @@ function Home() {
       );
     });
     return () => {
-      console.log(latest3Events);
       unsub();
     };
   }, []);
@@ -393,7 +392,7 @@ function Home() {
             />
             <FilledButton
               fontSize="18px"
-              text="Meet The Team"
+              text="Meet The Core Team"
               bgColor={theme === "dark" ? "var(--cream)" : "black"}
               textColor={theme === "dark" ? "black" : "white"}
               border={false}
