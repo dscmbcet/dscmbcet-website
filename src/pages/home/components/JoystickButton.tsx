@@ -31,7 +31,7 @@ export default function JoystickButton({ location, onClick }:JProps) {
                 </svg>
             </button>
             <div ref={joyStickRef} className="joystick">
-            <svg width="143" height="103" viewBox="0 0 143 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100" height="103" viewBox="0 0 143 103" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_202_12186)">
                     <g clipPath="url(#clip1_202_12186)">
                         <rect x="8.34097" y="64.9167" width="122.86" height="21" rx="10.5" transform="rotate(-21.8142 8.34097 64.9167)" fill={theme === "dark" ? "#373737" : "white"} stroke={theme === "dark" ? "white" : "black"} strokeWidth="2" />

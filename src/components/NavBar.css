@@ -135,6 +135,13 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+	.navBar_SunMoon {
+		width: 200px;
+		height: 250px;
+	}
+}
+
 /* .navBar_links {
 	display: flex;
 	align-items: center;

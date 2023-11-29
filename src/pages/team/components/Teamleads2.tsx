@@ -10,11 +10,12 @@ interface PersonProps {
     backgroundColor?:string;
     img?:string;
     class?:string;
+    width?:string
   }
 
 function Teamleads2(props: PersonProps){
   return (
-    <div className={`teamlead2 ${props.class}`} style={{border:props.border,backgroundColor:props.backgroundColor,paddingLeft:'20px',borderRadius:'20px',lineHeight:'2em'}}>
+    <div className={`teamlead2 ${props.class}`} style={{border:props.border,backgroundColor:props.backgroundColor,paddingLeft:'20px',borderRadius:'20px',lineHeight:'2em',height:props.height}}>
      
      <div>
       <div>{props.position}</div>

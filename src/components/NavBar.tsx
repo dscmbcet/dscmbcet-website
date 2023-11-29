@@ -55,7 +55,6 @@ function NavBar() {
 
   const updateDimensions = () => {
     const width = window.innerWidth;
-    console.log(width);
     setWindowWidth(width);
   };
 
