@@ -7,7 +7,7 @@ import {
 } from "react";
 import "./Home.css";
 import llamaImg from "../../assets/llama body.png";
-import landingImg from "../../assets/landingImg.png"
+import landingImg from "../../assets/landingImg.png";
 import { ThemeContext } from "../../context/theme-context";
 import GEarth from "./components/GEarth";
 import Carousel from "./components/Carousel";
@@ -34,14 +34,14 @@ import { WindowSizeContext } from "../../context/window-size";
 function Home() {
   const { theme, setTheme } = useContext(ThemeContext);
   const { windowSize } = useContext(WindowSizeContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const parentRef = useRef(null);
   const llamaref = useRef(null);
   const roperef = useRef(null);
   const [latest3Events, setLatest3Events] = useState<DocumentData[] | null>(
     null
   );
-  const [content, setcontent] = useState("more")
+  const [content, setcontent] = useState("more");
   const [width, setWindowWidth] = useState<number>(0);
   var llamatl = gsap.timeline({ paused: true });
   let cards = [
@@ -72,29 +72,30 @@ function Home() {
   }, []);
 
   useEffect(() => {
-      const stars = document.querySelectorAll('.star') as NodeListOf<HTMLElement>;
-      const landing_text = document.getElementById('home_landing_content');
-      const earth_text = document.getElementById('home_earth_content');
+    const stars = document.querySelectorAll(".star") as NodeListOf<HTMLElement>;
+    const landing_text = document.getElementById("home_landing_content");
+    const earth_text = document.getElementById("home_earth_content");
 
-      const landingTextRect = landing_text?.getBoundingClientRect();
-      const earthTextRect = earth_text?.getBoundingClientRect();
-      
-      stars.forEach((star)=> {
-        const divRect = star?.getBoundingClientRect();
-        if (
-          (landingTextRect &&
-          divRect.right > landingTextRect.left&&
+    const landingTextRect = landing_text?.getBoundingClientRect();
+    const earthTextRect = earth_text?.getBoundingClientRect();
+
+    stars.forEach((star) => {
+      const divRect = star?.getBoundingClientRect();
+      if (
+        (landingTextRect &&
+          divRect.right > landingTextRect.left &&
           divRect.left < landingTextRect.right &&
           divRect.bottom > landingTextRect.top &&
-          divRect.top < landingTextRect.bottom
-        ) || (earthTextRect &&
-          divRect.right > earthTextRect.left&&
+          divRect.top < landingTextRect.bottom) ||
+        (earthTextRect &&
+          divRect.right > earthTextRect.left &&
           divRect.left < earthTextRect.right &&
           divRect.bottom > earthTextRect.top &&
-          divRect.top < earthTextRect.bottom)) {
-          star.remove();
-        }
-      })
+          divRect.top < earthTextRect.bottom)
+      ) {
+        star.remove();
+      } 
+    });
   }, [theme, windowSize]);
 
   useLayoutEffect(() => {
@@ -134,35 +135,59 @@ function Home() {
   }, []);
 
   const handleReadMore = () => {
-    if(content === "more") {
-      setcontent("less")
+    if (content === "more") {
+      setcontent("less");
+    } else {
+      setcontent("more");
     }
-    else {
-      setcontent("more")
-    }
-  }
+  };
 
   return (
     <div className="home">
       <div className="home_landing">
-          {Array.from({length: 16}, (_, index) => {
-            return <div key={index} className="star-container" style={{
-              position: 'absolute',
-              animation: `twinkle ${Math.random() * 5 + 5}s linear ${Math.random() * 5 + 5}s infinite`,
-              transform: `rotate(${Math.random() * 360}deg)`,
-              top: `${Math.random() * window.innerHeight}px`,
-              left: `${Math.random() * window.innerWidth}px`
-            }}>
-                <svg className="star" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-                  <path d="M8.00904 1.99874C8.00904 1.99874 13.8995 8.20181 18.899 9.45341C23.8986 10.705 32.0169 8.00897 32.0169 8.00897C32.0169 8.00897 25.8138 13.8995 24.5622 18.899C23.3106 23.8985 26.0067 32.0168 26.0067 32.0168C26.0067 32.0168 20.1162 25.8138 15.1167 24.5622C10.1171 23.3106 1.99882 26.0066 1.99882 26.0066C1.99882 26.0066 8.20189 20.1161 9.45348 15.1166C10.7051 10.1171 8.00904 1.99874 8.00904 1.99874Z" fill="white"/>
-                </svg>
-              
+        {Array.from({ length: 16 }, (_, index) => {
+          return (
+            <div
+              key={index}
+              className="star-container"
+              style={{
+                position: "absolute",
+                animation: `twinkle ${Math.random() * 5 + 5}s linear ${
+                  Math.random() * 5 + 5
+                }s infinite`,
+                transform: `rotate(${Math.random() * 360}deg)`,
+                top: `${Math.random() * window.innerHeight}px`,
+                left: `${Math.random() * window.innerWidth}px`,
+              }}
+            >
+              <svg
+                className="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 35 35"
+                fill="none"
+              >
+                <path
+                  d="M8.00904 1.99874C8.00904 1.99874 13.8995 8.20181 18.899 9.45341C23.8986 10.705 32.0169 8.00897 32.0169 8.00897C32.0169 8.00897 25.8138 13.8995 24.5622 18.899C23.3106 23.8985 26.0067 32.0168 26.0067 32.0168C26.0067 32.0168 20.1162 25.8138 15.1167 24.5622C10.1171 23.3106 1.99882 26.0066 1.99882 26.0066C1.99882 26.0066 8.20189 20.1161 9.45348 15.1166C10.7051 10.1171 8.00904 1.99874 8.00904 1.99874Z"
+                  fill="white"
+                />
+              </svg>
             </div>
-          })}
+          );
+        })}
         <div className="home_landing_head">
           <h1>
             beyond just{" "}
-            <img src={landingImg} alt="" style={{border: "2px solid", borderRadius: "100px", borderColor: theme == "dark" ? "#FFF8E1" : "#000000"}}/>
+            <img
+              src={landingImg}
+              alt=""
+              style={{
+                border: "2px solid",
+                borderRadius: "100px",
+                borderColor: theme == "dark" ? "#FFF8E1" : "#000000",
+              }}
+            />
           </h1>
           <h1>the technicality</h1>
         </div>
@@ -179,7 +204,11 @@ function Home() {
             border={false}
             fontSize="20px"
             id="joinUs"
-            onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'; }}
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href =
+                "https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/";
+            }}
           />
           <FilledButton
             text={"View Events"}
@@ -187,7 +216,9 @@ function Home() {
             bgColor={theme === "dark" ? "var(--cream)" : "black"}
             border={true}
             fontSize="20px"
-            onClick={() => {navigate("/events")}}
+            onClick={() => {
+              navigate("/events");
+            }}
           />
         </div>
         <LandingClouds theme={theme} />
@@ -302,24 +333,51 @@ function Home() {
                 />
               </svg>
               <div className="home_events_list1 home_events_list_item">
-                <img style={{objectFit: 'cover'}} src={latest3Events[0]?.imgSrc} />
+                <img
+                  style={{ objectFit: "cover" }}
+                  src={latest3Events[0]?.imgSrc}
+                />
                 <h3>{latest3Events[0]?.name}</h3>
               </div>
             </div>
             <div className="home_events_list2 home_events_list_item">
-              <img style={{objectFit: 'cover'}} src={latest3Events[1]?.imgSrc} />
+              <img
+                style={{ objectFit: "cover" }}
+                src={latest3Events[1]?.imgSrc}
+              />
               <h3>{latest3Events[1]?.name}</h3>
-              {latest3Events[1]?.desc.length > 80 ?
-            <>
-              <p>{latest3Events[1]?.desc.slice(0, 80)}{ content === "less"? <span>{latest3Events[1]?.desc.slice(81, latest3Events[1]?.desc.length - 1)}</span> : <span>...</span> }</p>
-              <button className='home_events_readmore' onClick={handleReadMore}><u>read {content}</u></button>
-            </>
-            : <p>{latest3Events[1]?.desc}</p>
-          }
+              {latest3Events[1]?.desc.length > 80 ? (
+                <>
+                  <p>
+                    {latest3Events[1]?.desc.slice(0, 80)}
+                    {content === "less" ? (
+                      <span>
+                        {latest3Events[1]?.desc.slice(
+                          81,
+                          latest3Events[1]?.desc.length - 1
+                        )}
+                      </span>
+                    ) : (
+                      <span>...</span>
+                    )}
+                  </p>
+                  <button
+                    className="home_events_readmore"
+                    onClick={handleReadMore}
+                  >
+                    <u>read {content}</u>
+                  </button>
+                </>
+              ) : (
+                <p>{latest3Events[1]?.desc}</p>
+              )}
             </div>
             <div className="home_events_list_right">
               <div className="home_events_list3 home_events_list_item">
-                <img style={{objectFit: 'cover'}} src={latest3Events[2]?.imgSrc} />
+                <img
+                  style={{ objectFit: "cover" }}
+                  src={latest3Events[2]?.imgSrc}
+                />
                 <h3>{latest3Events[2]?.name}</h3>
               </div>
               <svg
@@ -384,20 +442,37 @@ function Home() {
       </div>
 
       <div className="home_earth">
-        {Array.from({length: 16}, (_, index) => {
-            return <div key={index} className="star-container" style={{
-              position: 'absolute',
-              animation: `twinkle ${Math.random() * 5 + 5}s linear ${Math.random() * 5 + 5}s infinite`,
-              transform: `rotate(${Math.random() * 360}deg)`,
-              top: `${Math.random() * window.innerHeight}px`,
-              left: `${Math.random() * window.innerWidth}px`
-            }}>
-                <svg className="star" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-                  <path d="M8.00904 1.99874C8.00904 1.99874 13.8995 8.20181 18.899 9.45341C23.8986 10.705 32.0169 8.00897 32.0169 8.00897C32.0169 8.00897 25.8138 13.8995 24.5622 18.899C23.3106 23.8985 26.0067 32.0168 26.0067 32.0168C26.0067 32.0168 20.1162 25.8138 15.1167 24.5622C10.1171 23.3106 1.99882 26.0066 1.99882 26.0066C1.99882 26.0066 8.20189 20.1161 9.45348 15.1166C10.7051 10.1171 8.00904 1.99874 8.00904 1.99874Z" fill="white"/>
-                </svg>
-              
+        {Array.from({ length: 16 }, (_, index) => {
+          return (
+            <div
+              key={index}
+              className="star-container"
+              style={{
+                position: "absolute",
+                animation: `twinkle ${Math.random() * 5 + 5}s linear ${
+                  Math.random() * 5 + 5
+                }s infinite`,
+                transform: `rotate(${Math.random() * 360}deg)`,
+                top: `${Math.random() * window.innerHeight}px`,
+                left: `${Math.random() * window.innerWidth}px`,
+              }}
+            >
+              <svg
+                className="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 35 35"
+                fill="none"
+              >
+                <path
+                  d="M8.00904 1.99874C8.00904 1.99874 13.8995 8.20181 18.899 9.45341C23.8986 10.705 32.0169 8.00897 32.0169 8.00897C32.0169 8.00897 25.8138 13.8995 24.5622 18.899C23.3106 23.8985 26.0067 32.0168 26.0067 32.0168C26.0067 32.0168 20.1162 25.8138 15.1167 24.5622C10.1171 23.3106 1.99882 26.0066 1.99882 26.0066C1.99882 26.0066 8.20189 20.1161 9.45348 15.1166C10.7051 10.1171 8.00904 1.99874 8.00904 1.99874Z"
+                  fill="white"
+                />
+              </svg>
             </div>
-          })}
+          );
+        })}
         <EarthClouds theme={theme} id="home_earth_clouds" />
         <div className="home_earth_container">
           <GEarth />
@@ -413,19 +488,23 @@ function Home() {
           <div className="home_earth_buttons_container">
             <FilledButton
               fontSize="18px"
-              text="Meet The Website Creators"
-              bgColor={theme === "dark" ? "var(--cream)" : "black"}
-              textColor={theme === "dark" ? "var(--cream)" : "black"}
-              border={true}
-              onClick={() => {navigate("/creators")}}
-            />
-            <FilledButton
-              fontSize="18px"
               text="Meet The Core Team"
               bgColor={theme === "dark" ? "var(--cream)" : "black"}
               textColor={theme === "dark" ? "black" : "white"}
               border={false}
-              onClick={() => {navigate("/team")}}
+              onClick={() => {
+                navigate("/team");
+              }}
+            />
+            <FilledButton
+              fontSize="18px"
+              text="Meet The Website Creators"
+              bgColor={theme === "dark" ? "var(--cream)" : "black"}
+              textColor={theme === "dark" ? "black" : "white"}
+              border={false}
+              onClick={() => {
+                navigate("/creators");
+              }}
             />
           </div>
         </div>

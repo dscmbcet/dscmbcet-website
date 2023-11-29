@@ -129,8 +129,8 @@
 }
 
 .theme-dark .home_landing > p {
-	background-color: var(--dark-sky);
-} 
+  background-color: var(--dark-sky);
+}
 
 .home_landing_clouds {
   transition: all 0.5s ease;
@@ -153,14 +153,15 @@
 }
 
 @media (max-width: 480px) {
-	.home_landing_buttons, .home_landing_buttons > .FilledButton > button {
-		width: 100%;
-	}
-} 
+  .home_landing_buttons,
+  .home_landing_buttons > .FilledButton > button {
+    width: 100%;
+  }
+}
 
 @media (max-width: 720px) {
   .home_landing_buttons {
-	padding: 5%;
+    padding: 5%;
     flex-direction: column;
     gap: 10px;
   }
@@ -243,7 +244,7 @@
   width: 100%;
   position: absolute;
   transform: scaleY(90%) translateY(6%);
-  bottom: 0%;
+  bottom: -0.2%;
 }
 
 @media (max-width: 1100px) {
@@ -437,7 +438,7 @@
 
 .home_story_cloud {
   position: absolute;
-  top: 0%;
+  top: -0.5%;
 }
 
 @media (max-width: 480px) {
@@ -503,7 +504,7 @@
 
 .home_earth_buttons_container {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 
 .home_earth_container > p {
