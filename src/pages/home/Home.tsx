@@ -389,7 +389,7 @@ function Home() {
               bgColor={theme === "dark" ? "var(--cream)" : "black"}
               textColor={theme === "dark" ? "var(--cream)" : "black"}
               border={true}
-              onClick={() => {navigate("/team")}}
+              onClick={() => {navigate("/creators")}}
             />
             <FilledButton
               fontSize="18px"
