@@ -13,13 +13,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import menuIcon from "./menu.svg";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase-config";
+import { WindowSizeContext } from "../context/window-size";
 
 function NavBar() {
   gsap.registerPlugin(ScrollTrigger);
   const { theme, setTheme } = useContext(ThemeContext);
+  const { windowSize } = useContext(WindowSizeContext);
   const [hidden, setHidden] = useState<boolean>(false);
   const [toggle, setToggle] = useState<boolean>(false);
-  const [width, setWindowWidth] = useState<number>(0);
   const [marquee, setMarquee] = useState<string[]>([]);
   const [showMarquee, setShowMarquee] = useState<boolean>(false);
 
@@ -47,16 +48,6 @@ function NavBar() {
     };
   }, []);
 
-  useEffect(() => {
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
-
-  const updateDimensions = () => {
-    const width = window.innerWidth;
-    setWindowWidth(width);
-  };
 
   useEffect(() => {
     ctx.add(() => {
@@ -73,15 +64,12 @@ function NavBar() {
             end: "bottom 90px",
             scrub: 0.5,
             onLeave: () => {
-              console.log("Left");
               setHidden(true);
             },
             onEnter: () => {
-              console.log("Enterred");
               setHidden(false);
             },
             onEnterBack: () => {
-              console.log("Enterred");
               setHidden(false);
             },
           },
@@ -139,7 +127,7 @@ function NavBar() {
     <div className="nav">
       <div className="navBar" style={{height: !showMarquee ? '100px' : 'max-content'}}>
         <div className="navBar_logoContainer">
-          {width > 1024 ? (
+          {windowSize > 1024 ? (
             <img className="noselect logo" src={bigLogo} />
           ) : (
             <img className="noselect logo" src={smallLogo} />

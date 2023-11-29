@@ -122,9 +122,15 @@
   margin-bottom: 30px;
   font-size: 20px;
   text-align: center;
+  background-color: var(--light-sky-2);
   width: 50%;
   z-index: 2;
+  transition: background-color 1s ease;
 }
+
+.theme-dark .home_landing > p {
+	background-color: var(--dark-sky);
+} 
 
 .home_landing_clouds {
   transition: all 0.5s ease;

@@ -29,9 +29,11 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "../../firebase-config";
+import { WindowSizeContext } from "../../context/window-size";
 
 function Home() {
   const { theme, setTheme } = useContext(ThemeContext);
+  const { windowSize } = useContext(WindowSizeContext);
   const navigate = useNavigate()
   const parentRef = useRef(null);
   const llamaref = useRef(null);
@@ -40,6 +42,7 @@ function Home() {
     null
   );
   const [content, setcontent] = useState("more")
+  const [width, setWindowWidth] = useState<number>(0);
   var llamatl = gsap.timeline({ paused: true });
   let cards = [
     { title: "1" },
@@ -67,6 +70,32 @@ function Home() {
       unsub();
     };
   }, []);
+
+  useEffect(() => {
+      const stars = document.querySelectorAll('.star') as NodeListOf<HTMLElement>;
+      const landing_text = document.getElementById('home_landing_content');
+      const earth_text = document.getElementById('home_earth_content');
+
+      const landingTextRect = landing_text?.getBoundingClientRect();
+      const earthTextRect = earth_text?.getBoundingClientRect();
+      
+      stars.forEach((star)=> {
+        const divRect = star?.getBoundingClientRect();
+        if (
+          (landingTextRect &&
+          divRect.right > landingTextRect.left&&
+          divRect.left < landingTextRect.right &&
+          divRect.bottom > landingTextRect.top &&
+          divRect.top < landingTextRect.bottom
+        ) || (earthTextRect &&
+          divRect.right > earthTextRect.left&&
+          divRect.left < earthTextRect.right &&
+          divRect.bottom > earthTextRect.top &&
+          divRect.top < earthTextRect.bottom)) {
+          star.remove();
+        }
+      })
+  }, [theme, windowSize]);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {});
@@ -137,7 +166,7 @@ function Home() {
           </h1>
           <h1>the technicality</h1>
         </div>
-        <p>
+        <p id="home_landing_content">
           We are an initiative to grow their knowledge on developer technologies
           and more through peer to peer workshops and events, and gain relevant
           industry experience.
@@ -376,7 +405,7 @@ function Home() {
             <h1>the gears</h1>
             <h1>behind it all</h1>
           </div>
-          <p>
+          <p id="home_earth_content">
             We are a committed and eclectic team of scientists, engineers and
             plant lovers coming from all over the world to bring our mission to
             life.
