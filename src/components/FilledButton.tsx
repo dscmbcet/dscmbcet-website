@@ -21,7 +21,8 @@ export default function FilledButton(props: Bprops) {
           cursor: "pointer",
           background: props.border ? "none" : props.bgColor,
           color: props.textColor,
-          border: `0.15em Solid ${props.bgColor}`,
+          padding: '13px',
+          border: `0.15em solid ${props.bgColor}`,
           fontSize: props.fontSize,
           zIndex: "10"
         }}

@@ -117,6 +117,20 @@ function Home() {
   return (
     <div className="home">
       <div className="home_landing">
+          {Array.from({length: 16}, (_, index) => {
+            return <div className="star-container" style={{
+              position: 'absolute',
+              animation: `twinkle ${Math.random() * 5 + 5}s linear ${Math.random() * 5 + 5}s infinite`,
+              transform: `rotate(${Math.random() * 360}deg)`,
+              top: `${Math.random() * window.innerHeight}px`,
+              left: `${Math.random() * window.innerWidth}px`
+            }}>
+                <svg className="star" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                  <path d="M8.00904 1.99874C8.00904 1.99874 13.8995 8.20181 18.899 9.45341C23.8986 10.705 32.0169 8.00897 32.0169 8.00897C32.0169 8.00897 25.8138 13.8995 24.5622 18.899C23.3106 23.8985 26.0067 32.0168 26.0067 32.0168C26.0067 32.0168 20.1162 25.8138 15.1167 24.5622C10.1171 23.3106 1.99882 26.0066 1.99882 26.0066C1.99882 26.0066 8.20189 20.1161 9.45348 15.1166C10.7051 10.1171 8.00904 1.99874 8.00904 1.99874Z" fill="white"/>
+                </svg>
+              
+            </div>
+          })}
         <div className="home_landing_head">
           <h1>
             beyond just{" "}
@@ -135,7 +149,7 @@ function Home() {
             textColor={theme === "dark" ? "black" : "white"}
             bgColor={theme === "dark" ? "var(--cream)" : "black"}
             border={false}
-            fontSize="25px"
+            fontSize="20px"
             id="joinUs"
             onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'; }}
           />
@@ -342,6 +356,20 @@ function Home() {
       </div>
 
       <div className="home_earth">
+        {Array.from({length: 16}, (_, index) => {
+            return <div className="star-container" style={{
+              position: 'absolute',
+              animation: `twinkle ${Math.random() * 5 + 5}s linear ${Math.random() * 5 + 5}s infinite`,
+              transform: `rotate(${Math.random() * 360}deg)`,
+              top: `${Math.random() * window.innerHeight}px`,
+              left: `${Math.random() * window.innerWidth}px`
+            }}>
+                <svg className="star" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                  <path d="M8.00904 1.99874C8.00904 1.99874 13.8995 8.20181 18.899 9.45341C23.8986 10.705 32.0169 8.00897 32.0169 8.00897C32.0169 8.00897 25.8138 13.8995 24.5622 18.899C23.3106 23.8985 26.0067 32.0168 26.0067 32.0168C26.0067 32.0168 20.1162 25.8138 15.1167 24.5622C10.1171 23.3106 1.99882 26.0066 1.99882 26.0066C1.99882 26.0066 8.20189 20.1161 9.45348 15.1166C10.7051 10.1171 8.00904 1.99874 8.00904 1.99874Z" fill="white"/>
+                </svg>
+              
+            </div>
+          })}
         <EarthClouds theme={theme} id="home_earth_clouds" />
         <div className="home_earth_container">
           <GEarth />

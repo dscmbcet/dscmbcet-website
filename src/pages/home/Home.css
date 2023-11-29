@@ -35,6 +35,34 @@
 	border-bottom: 2px solid var(--eerie-black);
 }
 
+.theme-light .star {
+	display: none;
+}
+
+.star {
+	fill: #FFF;
+	stroke-width: 2px;
+	stroke: rgba(66, 133, 244, 0.20);
+}
+
+  @keyframes twinkle {
+	0% {
+	  transform: scale(1, 1), rotate(0);
+	  background: rgba(255,255,255,0.0);
+	  animation-timing-function: ease-in;
+	}
+	60% {
+	  transform: scale(0.4, 0.4);
+	  animation-timing-function: ease-out;
+	}
+	80% {
+	  transform: scale(1, 1);
+	}
+	100% {
+	  transform: scale(1, 1), rotate(360deg);
+	}
+  }
+
 .theme-dark .home_landing, .theme-dark .home_story {
 	border-bottom: 2px solid var(--cream);
 }
@@ -62,10 +90,12 @@
 	line-height: 101%;
 	gap: 20px;
 	width: 100%;
+	z-index: 2;
 }
 
 .home_landing_head > h1 > img {
 	width: 200px;
+	z-index: 2;
 }
 
 @media (max-width: 720px) {
@@ -88,6 +118,7 @@
 	font-size: 20px;
 	text-align: center;
 	width: 50%;
+	z-index: 2;
 }
 
 .home_landing_clouds {
@@ -102,15 +133,12 @@
 .home_landing_buttons {
 	display: flex;
 	flex-direction: row;
-	width: 90%;
-	gap: 30px;
-	justify-content: center;
-	align-items: center;
+	gap: 10px;
 }
 
 .home_landing_buttons > .FilledButton > button {
 	padding: 12% 2%;
-	width: 170px;
+	width: 150px;
 }
 
 @media (max-width: 720px) {
@@ -122,11 +150,6 @@
 	.home_landing > p {
 		width: 90%;
 	}
-}
-
-
-#joinUs {
-	padding: 15px;
 }
 
 .home_about {
