@@ -460,6 +460,10 @@ justify-content: space-between;
 	padding-bottom: 7%;
 }
 
+.home_earth > * {
+	z-index: 3;
+}
+
 #home_earth_clouds {
 	position: absolute;
 	top: 0%;
@@ -483,9 +487,25 @@ justify-content: space-between;
 	line-height: 100%;
 }
 
+.home_earth_buttons_container {
+	display: flex;
+	gap: 10px;
+}
+
 .home_earth_container > p {
 	font-size: 21px;
 	text-align: center;
+}
+
+@media (max-width:480px) {
+	.home_earth_buttons_container{
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.home_earth_buttons_container >  .FilledButton > button {
+		width: 100%;
+	}
 }
 
 @media (max-width: 720px) {
