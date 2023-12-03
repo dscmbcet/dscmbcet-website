@@ -241,18 +241,9 @@ function Home() {
         </Marquee>
         <div className="home_about_inner">
           <div className="home_about_content">
-            <p>
-              Google Developer Student Club MBCET, powered by Google Developers
-              is an initiative to grow their knowledge on developer technologies
-              and more through peer to peer workshops and events, and gain
-              relevant industry experience.
-            </p>
-            <p>
-              Google Developer Student Club MBCET, powered by Google Developers
-              is an initiative to grow their knowledge on developer technologies
-              and more through peer to peer workshops and events, and gain
-              relevant industry experience.
-            </p>
+            <p>A community that <b>grows and builds</b> together! From the tech domain to the social domain, we do <b>the cool things that matter</b>.
+              <br></br><br></br>
+              This ain't your regular club, so are you ready to <b>take on the challenge to level up</b>?</p>
           </div>
           <div className="home_about_image" ref={parentRef}>
             <svg
