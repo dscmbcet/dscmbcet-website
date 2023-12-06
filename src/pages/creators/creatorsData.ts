@@ -68,7 +68,7 @@ export const designers = [
         imgSrc: Medlyn,
     },
     {
-        name: "Medlyn",
+        name: "Karthika",
         imgSrc: Karthika,
     },
     {
