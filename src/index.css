@@ -1,78 +1,78 @@
 @font-face {
-  font-family: 'GoogleSans';
-  src: url('./assets/fonts/GoogleSans-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+	font-family: "GoogleSans";
+	src: url("./assets/fonts/GoogleSans-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'GoogleSans-VariableItalic';
-  src: url('./assets/fonts/GoogleSans-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'GoogleSans';
-  src:  url('./assets/fonts/GoogleSans-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GoogleSans';
-  src: url('./assets/fonts/GoogleSans-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
+	font-family: "GoogleSans-VariableItalic";
+	src: url("./assets/fonts/GoogleSans-Italic.ttf") format("truetype");
+	font-weight: 400;
+	font-style: italic;
 }
 
 @font-face {
-  font-family: 'GoogleSans';
-  src: url('./assets/fonts/GoogleSans-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+	font-family: "GoogleSans";
+	src: url("./assets/fonts/GoogleSans-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'GoogleSans';
-  src: url('./assets/fonts/GoogleSans-BoldItalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
+	font-family: "GoogleSans";
+	src: url("./assets/fonts/GoogleSans-MediumItalic.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GoogleSans";
+	src: url("./assets/fonts/GoogleSans-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "GoogleSans";
+	src: url("./assets/fonts/GoogleSans-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
 }
 :root {
-  font-family: 'GoogleSans', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	font-family: "GoogleSans", system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 }
 
 :root {
-  --pattens-blue: #E3F2FD;
-  --eerie-black: #1A1A1A;
-  --dark-sky: #222830;
-  --light-silver: #D9D9D9;
-  --cream: #FFF8E1;
-  --light-sky: #E8F5E9;
-  --light-sky-2: #E3F2FD;
-  --dark-cloud: #333333;
+	--pattens-blue: #e3f2fd;
+	--eerie-black: #1a1a1a;
+	--dark-sky: #222830;
+	--light-silver: #d9d9d9;
+	--cream: #fff8e1;
+	--light-sky: #e8f5e9;
+	--light-sky-2: #e3f2fd;
+	--dark-cloud: #333333;
 }
 
-*  { 
-    margin: 0; 
-    padding: 0; 
-    border: 0; 
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }

@@ -86,8 +86,8 @@
    
     
     .techteam,.designteam,.organizingteam,.socialmediateam{
-        width: 330px;
-        padding-left: 90px !important;
+        width: 335px !important;
+        padding-left: 50px !important;
     }
     
    
@@ -96,5 +96,7 @@
         width: 330px  ;
     }
     
-    
+    .techlead{
+        padding-left: 20px !important;
+    }
 }
