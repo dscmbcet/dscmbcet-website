@@ -74,9 +74,13 @@ function Home() {
 	useEffect(() => {
 		const stars = document.querySelectorAll(".star") as NodeListOf<HTMLElement>;
 		const landing_text = document.getElementById("home_landing_content");
+		const landing_heading_text = document.getElementById("home_landing_head_top");
+		const landing_heading_text_bottom = document.getElementById("home_landing_head_bottom");
 		const earth_text = document.getElementById("home_earth_content");
 
 		const landingTextRect = landing_text?.getBoundingClientRect();
+		const landingHeadingTextRect = landing_heading_text?.getBoundingClientRect();
+		const landingHeadingTextBottomRect = landing_heading_text_bottom?.getBoundingClientRect();
 		const earthTextRect = earth_text?.getBoundingClientRect();
 
 		stars.forEach((star) => {
@@ -87,13 +91,26 @@ function Home() {
 					divRect.left < landingTextRect.right &&
 					divRect.bottom > landingTextRect.top &&
 					divRect.top < landingTextRect.bottom) ||
+				(landingHeadingTextRect &&
+					divRect.right > landingHeadingTextRect.left &&
+					divRect.left < landingHeadingTextRect.right &&
+					divRect.bottom > landingHeadingTextRect.top &&
+					divRect.top < landingHeadingTextRect.bottom) ||
+				(landingHeadingTextBottomRect &&
+					divRect.right > landingHeadingTextBottomRect.left &&
+					divRect.left < landingHeadingTextBottomRect.right &&
+					divRect.bottom > landingHeadingTextBottomRect.top &&
+					divRect.top < landingHeadingTextBottomRect.bottom) ||
 				(earthTextRect &&
 					divRect.right > earthTextRect.left &&
 					divRect.left < earthTextRect.right &&
 					divRect.bottom > earthTextRect.top &&
 					divRect.top < earthTextRect.bottom)
 			) {
-				star.remove();
+				star.style.opacity = "0";
+			}
+			else {
+				star.style.opacity = "100";
 			}
 		});
 	}, [theme, windowSize]);
@@ -145,7 +162,7 @@ function Home() {
 	return (
 		<div className="home">
 			<div className="home_landing">
-				{Array.from({ length: 16 }, (_, index) => {
+				{Array.from({ length: 20 }, (_, index) => {
 					return (
 						<div
 							key={index}
@@ -177,7 +194,7 @@ function Home() {
 					);
 				})}
 				<div className="home_landing_head">
-					<h1>
+					<h1 id="home_landing_head_top">
 						beyond just{" "}
 						<img
 							src={landingImg}
@@ -189,7 +206,7 @@ function Home() {
 							}}
 						/>
 					</h1>
-					<h1>the technicality</h1>
+					<h1 id="home_landing_head_bottom">the technicality</h1>
 				</div>
 				<p id="home_landing_content">
 					We are an initiative to grow their knowledge on developer technologies
