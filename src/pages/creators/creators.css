@@ -351,4 +351,9 @@
  .creator_designers_row3{
     margin-top: 50px;
  }
+
+ .creator_designers_name{
+    width:100% !important;
+
+ }
 }
