@@ -199,8 +199,6 @@ function NavBar() {
             alt=""
           />
         </div>
-
-
 				<img className="navBar_SunMoon" ref={sunmoonRef} src={SunMoon} alt="" />
 				<div
 					role="none"

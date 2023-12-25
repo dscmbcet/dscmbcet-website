@@ -101,7 +101,7 @@
 	color: var(--cream) !important;
 }
 
-.navBar > .navLinks li {
+.navBar > .navLinks li, .navBar > .navLinks > .FilledButton {
 	cursor: pointer;
 	font-weight: 400;
 	font-size: min(90%, 20px);
