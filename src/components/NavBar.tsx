@@ -14,6 +14,7 @@ import menuIcon from "./menu.svg";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase-config";
 import { WindowSizeContext } from "../context/window-size";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   gsap.registerPlugin(ScrollTrigger);
@@ -90,7 +91,7 @@ function NavBar() {
       }
     });
     return () => ctx.revert();
-  }, []);
+  }, [theme]);
 
   const handleThemeChange = () => {
     const isCurrentDark = theme === "dark";
@@ -169,16 +170,16 @@ function NavBar() {
         </div>
         <ul className={`${toggle ? "navLinks menu active" : "navLinks"}`}>
           <li>
-            <a href="/">Who are we</a>
+            <Link to="/">Who are we</Link>
           </li>
           <li>
-            <a href="/events">Events</a>
+            <Link to="/events">Events</Link>
           </li>
           <li>
-            <a href="/team">Team</a>
+            <Link to="/team">Team</Link>
           </li>
           <li>
-            <a href="/creators">Creators</a>
+            <Link to="/creators">Creators</Link>
           </li>
           <FilledButton
             text="Join Us"
