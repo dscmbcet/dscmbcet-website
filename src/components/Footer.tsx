@@ -43,7 +43,7 @@ function Footer() {
                  <p>Events</p>
                  <p>Team</p>
                  <p>Magazine</p>
-                 <p>Community Guildlines</p>
+                 <p>Community Guidelines</p>
               </div>
               <div className="home_footer_two_curations">
                  <h4>Curations</h4>
