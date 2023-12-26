@@ -139,6 +139,8 @@
         justify-content: center;
     }
 
+    
+
     @media (width <= 750px) {
         .events_searchbar {
             height: 45px;
@@ -207,5 +209,15 @@
         #events {
             width: max(48px, 10vw);
             font-size: 10px;
+        }
+    }
+
+    @media (width <= 375px) {
+        .events_balloon {
+            display: none;
+        }
+
+        .events_searchbar{
+            height:40px;
         }
     }

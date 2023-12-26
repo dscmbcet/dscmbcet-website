@@ -247,6 +247,12 @@
 	bottom: -0.2%;
 }
 
+.home_earth_buttons {
+	display: flex;
+	gap: 50px;
+}
+
+
 @media (max-width: 1100px) {
 	.home_landing_clouds {
 		height: 50dvh;
