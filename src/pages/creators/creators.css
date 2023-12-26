@@ -334,3 +334,26 @@
     margin-top:10px;
     margin-left: 0px;
 }
+
+
+@media(max-width:1146px) {
+    
+.creator_designers_content_ppl div div:nth-child(2n+1){
+    margin-top: 0;
+    margin-bottom: 0;
+    
+ }
+
+ .creator_designers_row2{
+    margin-top: 50px;
+ }
+
+ .creator_designers_row3{
+    margin-top: 50px;
+ }
+
+ .creator_designers_name{
+    width:100% !important;
+
+ }
+}
