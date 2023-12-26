@@ -6,8 +6,8 @@
 
 #navbar-joinus {
 	padding: 10px 20px;
-	font-size: min(90% ,20px);
-    font-weight: 400;
+	font-size: min(90%, 20px);
+	font-weight: 400;
 }
 
 .navBar {
@@ -22,39 +22,38 @@
 }
 
 .navBar > .navLinks {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 40px;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 40px;
 	padding-right: 20px;
 }
 
 .navBar > .navLinks li > a {
-    text-decoration: none;
+	text-decoration: none;
 	color: var(--light-sky);
 }
 
 .menu * {
-    display: block !important;
+	display: block !important;
 }
 
 .menu {
-    position: fixed;
-    right: 0;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center !important;
-    z-index: 999;
-    width: 200px;
-    min-height: 100vh;
+	position: fixed;
+	right: 0;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	justify-content: center !important;
+	z-index: 999;
+	width: 200px;
+	min-height: 100vh;
 	background-color: var(--eerie-black);
-    padding: 0 0px;
-    border-image: url("../../assets/images/scroll_bar.png") 30 repeat;
-    border-left: 30px solid var(--lego-yellow);
-    animation: openNav 0.2s;
-    top: 0;
+	padding: 0 0px;
+	border-left: 30px solid var(--lego-yellow);
+	animation: openNav 0.2s;
+	top: 0;
 }
 
 .navLinks {
@@ -66,15 +65,24 @@
 }
 
 .navLinks * {
-    display: none;
+	display: none;
+}
+
+.navBar_logoContainer,
+.navBar_toggleContainer,
+.hamburger_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
 .navBar_logoContainer {
-	flex: 2;
+	justify-content: flex-start;
 }
 
-.navBar_toggleContainer {
-	flex: 2;
+.hamburger_container {
+	justify-content: flex-end;
 }
 
 .navLinks {
@@ -82,57 +90,70 @@
 }
 
 .navLinks li {
-    position: relative;
+	position: relative;
 }
 
 .navLinks li > a:hover {
-    color: var(--cream) !important;
-} 
+	color: var(--cream) !important;
+}
 
 .navLinks li:hover {
-    color: var(--cream) !important;
-} 
+	color: var(--cream) !important;
+}
 
-.navBar > .navLinks li {
-    cursor: pointer;
-    font-weight: 400;
-    font-size: min(90% ,20px);;
-    line-height: 36px;
-    /* identical to box height */
-    color: #FFFFFF;
+.navBar > .navLinks li, .navBar > .navLinks > .FilledButton {
+	cursor: pointer;
+	font-weight: 400;
+	font-size: min(90%, 20px);
+	line-height: 36px;
+	/* identical to box height */
+	color: #ffffff;
+}
+
+.hamburger_container {
+	width: 100%;
 }
 
 .hamburgerMenu {
-    width: 32px;
+	width: 32px;
 }
 
 @keyframes openNav {
-    0% {
-        right: -200px;
-    }
-    100% {
-        right: 0;
-    }
+	0% {
+		right: -200px;
+	}
+	100% {
+		right: 0;
+	}
 }
 
 @media screen and (min-width: 1024px) {
-	.navBar_logoContainer {
-		flex: 1;
+	.nav {
+		width: 100%;
+		display: flex;
+	}
+	.navBar {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 	}
 	.navBar_toggle {
 		margin-left: 30px;
 	}
 	.navBar > .navLinks {
-		flex: 2;
 		display: flex !important;
 	}
-    .navLinks * {
-        display: block;
-    }
+	.navLinks * {
+		display: block;
+	}
 
-    .hamburgerMenu {
-        display: none;
-    }
+	.hamburger_container {
+		display: none;
+	}
+
+	.hamburgerMenu {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -219,35 +240,33 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 35px;
+	top: 0px;
 	z-index: -1;
 }
 
-.team .navBar_SunMoon{
+.team .navBar_SunMoon {
 	display: none;
 }
 
-.creator .navBar_SunMoon{
+.creator .navBar_SunMoon {
 	display: none;
 }
 
 .backgroundOverlay {
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    /* background-color: var(--blasphemous-black); */
-    z-index: 996;
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+	/* background-color: var(--blasphemous-black); */
+	z-index: 996;
 }
 
 .backgroundOverlayClosed {
-    display: none;
-    width: 0%;
-    height: 0%;
+	display: none;
+	width: 0%;
+	height: 0%;
 }
-
-

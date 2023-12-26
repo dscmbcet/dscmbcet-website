@@ -10,9 +10,22 @@ import Team from "./pages/team/Team";
 import Events from "./pages/events/Events";
 import Creators from "./pages/creators/Creators";
 import Layout from "./Layout";
+import { WindowSizeContext } from "./context/window-size";
 
 function App() {
   const [theme, setTheme] = useState("light");
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
+  };
 
   useEffect(() => {
     const prefersDark = window.matchMedia(
@@ -54,9 +67,11 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`theme-${theme}`}>
-        <RouterProvider router={router} />
-      </div>
+      <WindowSizeContext.Provider value={{windowSize: windowWidth}}>
+        <div className={`theme-${theme}`}>
+          <RouterProvider router={router} />
+        </div>
+      </WindowSizeContext.Provider>
     </ThemeContext.Provider>
   );
 }
