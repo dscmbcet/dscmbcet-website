@@ -35,7 +35,7 @@ export default function JoystickButton({ location, onClick }:JProps) {
                 <g clipPath="url(#clip0_202_12186)">
                     <g clipPath="url(#clip1_202_12186)">
                         <rect x="0.34097" y="64.9167" width="122.86" height="21" rx="10.5" transform="rotate(-21.8142 8.34097 64.9167)" fill={theme === "dark" ? "#373737" : "white"} stroke={theme === "dark" ? "white" : "black"} strokeWidth="2" />
-                        <circle cx="20.5" cy="10.5" r="10.5" transform="matrix(-0.928394 0.371597 0.371597 0.928394 27.8369 57.1129)" fill="#2C2C2C" fillOpacity="0.2" />
+                        <circle cx="20.5" cy="10.5" r="10.5" transform="matrix(-0.928394 0.371597 0.371597 0.928394 27.8369 57.1129)" fill={theme === "dark" ? "#1A1A1A" : "#2C2C2C"} fillOpacity="0.2" />
                     </g>
                     <circle cx="29" cy="29" r="28" transform="matrix(-0.928394 0.371597 0.371597 0.928394 120.022 0.827698)" fill="#82C685" stroke={theme === "dark" ? "white" : "black"} strokeWidth="2" />
                 </g>
