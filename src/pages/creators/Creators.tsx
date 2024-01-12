@@ -60,7 +60,7 @@ function Creators() {
                       src={val.imgSrc}
                     />
                     <div className="creator_developers_name">
-                      &lt;p&gt;{val.name}&lt;/p&gt;
+                      <p>{val.name}</p>
                     </div>
                   </div>
                 ))}
