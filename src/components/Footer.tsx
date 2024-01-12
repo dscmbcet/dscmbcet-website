@@ -39,11 +39,11 @@ function Footer() {
           <div className="home_footer_two_right">
               <div>
                  <h4>About</h4>
-                 <p>Who we are</p>
-                 <p>Events</p>
-                 <p>Team</p>
-                 <p>Magazine</p>
-                 <p>Community Guidelines</p>
+                 <a href="/"><p>Who we are</p></a>
+                 <a href="/events"><p>Events</p></a>
+                 <a href="/team"><p>Team</p></a>
+                 <a href="/creators"><p>Creators</p></a>
+                 <a href="https://docs.google.com/document/d/1Od688-UePXywsN-KMFVcGkngTlvQioQRHbl2Zts8Hzc/edit"><p>Community Guidelines</p></a>
               </div>
               <div className="home_footer_two_curations">
                  <h4>Curations</h4>
