@@ -14,7 +14,7 @@ import Meenakshi from "./assets/meenakshi.png";
 import Karthika from "./assets/karthika.png";
 import Shibin from "./assets/shibin.png";
 import Vlad from "./assets/vlad.png";
-import Abhigail from "./assets/abhigayil.png";
+import Abigail from "./assets/abhigayil.png";
 import Amrutha from "./assets/amrutha.png";
 
 export const developers = [
@@ -86,8 +86,8 @@ export const designers = [
         imgSrc: Vlad,
     },
     {
-        name: "Abhigail",
-        imgSrc: Abhigail,
+        name: "Abigail",
+        imgSrc: Abigail,
     },
     {
         name: "Amrutha",
