@@ -43,7 +43,7 @@ function Footer() {
                  <a href="/events"><p>Events</p></a>
                  <a href="/team"><p>Team</p></a>
                  <a href="/creators"><p>Creators</p></a>
-                 <a href="https://docs.google.com/document/d/1Od688-UePXywsN-KMFVcGkngTlvQioQRHbl2Zts8Hzc/edit"><p>Community Guidelines</p></a>
+                 <a href="https://docs.google.com/document/d/1Od688-UePXywsN-KMFVcGkngTlvQioQRHbl2Zts8Hzc/edit" target="_blank"><p>Community Guidelines</p></a>
               </div>
               <div className="home_footer_two_curations">
                  <h4>Curations</h4>
