@@ -738,6 +738,11 @@ postcss@^8.4.21:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+prettier@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-3.2.1.tgz"
+  integrity sha512-qSUWshj1IobVbKc226Gw2pync27t0Kf0EdufZa9j7uBSJay1CC+B3K5lAAZoqgX3ASiKuWsk6OmzKRetXNObWg==
+
 protobufjs@^7.2.4:
   version "7.2.5"
   resolved "https://registry.npmjs.org/protobufjs/-/protobufjs-7.2.5.tgz"

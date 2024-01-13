@@ -75,10 +75,13 @@ function Creators() {
           <div className="creator_designers_content">
             <div className="creator_designers_content_ppl">
               {designers.map((row, ind) => (
-                <div key={ind} className={`creator_designers_row${ind+1}`}>
+                <div key={ind} className={`creator_designers_row${ind + 1}`}>
                   {row.map((val, ind) => (
                     <div key={ind}>
-                      <img className="creator_designers_images" src={val.imgSrc} />
+                      <img
+                        className="creator_designers_images"
+                        src={val.imgSrc}
+                      />
                       <div className="creator_designers_desc">
                         <Cursor
                           className="creator_designers_cursor"

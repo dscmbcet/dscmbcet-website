@@ -76,7 +76,6 @@ function Team() {
             />
           </div>
           <div className=" flex-item">
-            
             <Teamboxleads
               name="yoosuf mohammed"
               position="tech lead"
@@ -139,7 +138,6 @@ function Team() {
               height="255px"
               img={Ferwin}
               class="flex-item"
-              
             />
           </div>
           <div className=" flex-item">

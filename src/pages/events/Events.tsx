@@ -10,7 +10,7 @@ import EventBalloon2 from "./components/EventBalloon2";
 import { DocumentData, collection, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import FilterButton from "./components/FilterButton";
-import {FaSearch} from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 
 function Events() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -35,10 +35,13 @@ function Events() {
         ) {
           return true;
         } else if (filter === "Others") {
-          return !data.domains.some(
-            (v: string) =>
-              ["design", "web", "app", "ai/ml"].indexOf(v.toLowerCase()) !== -1
-          ) && data.name.includes(search);
+          return (
+            !data.domains.some(
+              (v: string) =>
+                ["design", "web", "app", "ai/ml"].indexOf(v.toLowerCase()) !==
+                -1,
+            ) && data.name.includes(search)
+          );
         } else return false;
       }) ?? [];
     setFilteredEvents([...filtered]);
@@ -49,7 +52,7 @@ function Events() {
       setDocs(
         snapshot.docs.map((doc) => {
           return { ...doc.data(), id: doc.id };
-        })
+        }),
       );
       setEventsLoading(false);
     });
@@ -83,7 +86,7 @@ function Events() {
       <div className="events_section">
         <div className="events_searchbar">
           <label htmlFor="" className="events_searchbar_label">
-            <FaSearch size={'1.25em'} color="dimgrey"/>
+            <FaSearch size={"1.25em"} color="dimgrey" />
           </label>
           <input
             type="search"

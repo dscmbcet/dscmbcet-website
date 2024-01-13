@@ -13,11 +13,11 @@ const firebaseConfig = {
   projectId: "dscmbcet-admin",
   storageBucket: "dscmbcet-admin.appspot.com",
   messagingSenderId: "705554898608",
-  appId: "1:705554898608:web:5aa537bb05bf658a152575"
+  appId: "1:705554898608:web:5aa537bb05bf658a152575",
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 export const db = getFirestore(app);
-export const storage = getStorage(app)
+export const storage = getStorage(app);

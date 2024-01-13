@@ -215,7 +215,7 @@ function GEarth() {
           width="492.74"
           height="499.459"
           rx="246.37"
-          stroke= {theme === "dark" ? "white" : "#1A1A1A"}
+          stroke={theme === "dark" ? "white" : "#1A1A1A"}
           stroke-width="2.23973"
         />
         <defs>

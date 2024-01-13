@@ -17,37 +17,37 @@ import { WindowSizeContext } from "../context/window-size";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-	gsap.registerPlugin(ScrollTrigger);
-	const { theme, setTheme } = useContext(ThemeContext);
-	const { windowSize } = useContext(WindowSizeContext);
-	const [hidden, setHidden] = useState<boolean>(false);
-	const [toggle, setToggle] = useState<boolean>(false);
-	const [marquee, setMarquee] = useState<string[]>([]);
-	const [showMarquee, setShowMarquee] = useState<boolean>(false);
+  gsap.registerPlugin(ScrollTrigger);
+  const { theme, setTheme } = useContext(ThemeContext);
+  const { windowSize } = useContext(WindowSizeContext);
+  const [hidden, setHidden] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(false);
+  const [marquee, setMarquee] = useState<string[]>([]);
+  const [showMarquee, setShowMarquee] = useState<boolean>(false);
 
-	const navRef = useRef<HTMLDivElement | undefined>(undefined);
-	const sunmoonRef = useRef(null);
-	const ctx = gsap.context(() => {}, navRef?.current);
+  const navRef = useRef<HTMLDivElement | undefined>(undefined);
+  const sunmoonRef = useRef(null);
+  const ctx = gsap.context(() => {}, navRef?.current);
 
-	const changeToggle = () => {
-		setToggle(!toggle);
-	};
+  const changeToggle = () => {
+    setToggle(!toggle);
+  };
 
-	useEffect(() => {
-		return () => {
-			ctx.revert();
-		};
-	}, []);
+  useEffect(() => {
+    return () => {
+      ctx.revert();
+    };
+  }, []);
 
-	useEffect(() => {
-		const unsub = onSnapshot(doc(db, "marquee", "marqueeData"), (doc) => {
-			if (doc.data()?.marquee) setMarquee(doc.data()?.marquee);
-			if (doc.data()?.show) setShowMarquee(doc.data()?.show);
-		});
-		return () => {
-			unsub();
-		};
-	}, []);
+  useEffect(() => {
+    const unsub = onSnapshot(doc(db, "marquee", "marqueeData"), (doc) => {
+      if (doc.data()?.marquee) setMarquee(doc.data()?.marquee);
+      if (doc.data()?.show) setShowMarquee(doc.data()?.show);
+    });
+    return () => {
+      unsub();
+    };
+  }, []);
 
   useEffect(() => {
     ctx.add(() => {
@@ -73,7 +73,7 @@ function NavBar() {
               setHidden(false);
             },
           },
-        }
+        },
       );
       if (theme == "dark") {
         gsap.to(sunmoonRef.current, {
@@ -92,40 +92,43 @@ function NavBar() {
     return () => ctx.revert();
   }, [theme]);
 
-	const handleThemeChange = () => {
-		const isCurrentDark = theme === "dark";
-		setTheme(isCurrentDark ? "light" : "dark");
-		ctx.add(() => {
-			if (hidden) {
-				gsap.to(sunmoonRef.current, { y: -70, duration: 1 });
-				gsap.to(sunmoonRef.current, { y: -200, delay: 2, duration: 1 });
-			} else {
-				gsap.to(sunmoonRef.current, {
-					y: -70,
-					duration: 1,
-					repeat: 1,
-					yoyo: true,
-				});
-			}
-			if (!isCurrentDark) {
-				gsap.to(sunmoonRef.current, {
-					delay: hidden ? 0.5 : 0,
-					duration: 1,
-					rotation: "180_cw",
-				});
-			} else {
-				gsap.to(sunmoonRef.current, {
-					delay: hidden ? 0.5 : 0,
-					duration: 1,
-					rotation: "0_cw",
-				});
-			}
-		});
-	};
+  const handleThemeChange = () => {
+    const isCurrentDark = theme === "dark";
+    setTheme(isCurrentDark ? "light" : "dark");
+    ctx.add(() => {
+      if (hidden) {
+        gsap.to(sunmoonRef.current, { y: -70, duration: 1 });
+        gsap.to(sunmoonRef.current, { y: -200, delay: 2, duration: 1 });
+      } else {
+        gsap.to(sunmoonRef.current, {
+          y: -70,
+          duration: 1,
+          repeat: 1,
+          yoyo: true,
+        });
+      }
+      if (!isCurrentDark) {
+        gsap.to(sunmoonRef.current, {
+          delay: hidden ? 0.5 : 0,
+          duration: 1,
+          rotation: "180_cw",
+        });
+      } else {
+        gsap.to(sunmoonRef.current, {
+          delay: hidden ? 0.5 : 0,
+          duration: 1,
+          rotation: "0_cw",
+        });
+      }
+    });
+  };
 
   return (
     <div className="nav">
-      <div className="navBar" style={{height: !showMarquee ? '100px' : 'max-content'}}>
+      <div
+        className="navBar"
+        style={{ height: !showMarquee ? "100px" : "max-content" }}
+      >
         <div className="navBar_logoContainer">
           {windowSize > 1024 ? (
             <img className="noselect logo" src={bigLogo} />
@@ -182,12 +185,16 @@ function NavBar() {
           </li>
           <FilledButton
             text="Join Us"
-			size="small"
+            size="small"
             textColor="var(--eerie-black)"
             bgColor="var(--light-sky)"
             border={false}
             id="navbar-joinus"
-            onClick={(e) => {e.preventDefault();window.location.href='https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/'}}
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href =
+                "https://gdsc.community.dev/mar-baselios-college-of-engineering-and-technology-thiruvananthapuram/";
+            }}
           />
         </ul>
         <div className="hamburger_container">
@@ -199,87 +206,87 @@ function NavBar() {
             alt=""
           />
         </div>
-				<img className="navBar_SunMoon" ref={sunmoonRef} src={SunMoon} alt="" />
-				<div
-					role="none"
-					className={
-						toggle
-							? "backgroundOverlay"
-							: "backgroundOverlay backgroundOverlayClosed"
-					}
-					onClick={() => {
-						setToggle(false);
-					}}
-					onKeyDown={() => {
-						setToggle(false);
-					}}
-				/>
-			</div>
-			{showMarquee && marquee[0] && (
-				<Marquee
-					className="navBar_marquee"
-					gradient={false}
-					speed={60}
-					loop={0}
-				>
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-					{marquee.map((val, ind) => (
-						<div key={ind} className="marquee_val">
-							<div className="navBar_circle" />
-							{val}
-						</div>
-					))}
-				</Marquee>
-			)}
-		</div>
-	);
+        <img className="navBar_SunMoon" ref={sunmoonRef} src={SunMoon} alt="" />
+        <div
+          role="none"
+          className={
+            toggle
+              ? "backgroundOverlay"
+              : "backgroundOverlay backgroundOverlayClosed"
+          }
+          onClick={() => {
+            setToggle(false);
+          }}
+          onKeyDown={() => {
+            setToggle(false);
+          }}
+        />
+      </div>
+      {showMarquee && marquee[0] && (
+        <Marquee
+          className="navBar_marquee"
+          gradient={false}
+          speed={60}
+          loop={0}
+        >
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+          {marquee.map((val, ind) => (
+            <div key={ind} className="marquee_val">
+              <div className="navBar_circle" />
+              {val}
+            </div>
+          ))}
+        </Marquee>
+      )}
+    </div>
+  );
 }
 
 export default NavBar;

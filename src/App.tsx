@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { ThemeContext } from "./context/theme-context";
-import {
-  RouterProvider,
-  createBrowserRouter,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Team from "./pages/team/Team";
 import Events from "./pages/events/Events";
@@ -29,7 +26,7 @@ function App() {
 
   useEffect(() => {
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
 
     if (prefersDark) {
@@ -41,33 +38,31 @@ function App() {
     {
       path: "/",
       element: <Layout />,
-      errorElement: (
-        <h1>Page Not Found</h1>
-      ),
+      errorElement: <h1>Page Not Found</h1>,
       children: [
         {
           path: "",
-          element: <Home />
+          element: <Home />,
         },
         {
           path: "events",
-          element: <Events />
+          element: <Events />,
         },
         {
           path: "team",
-          element: <Team />
+          element: <Team />,
         },
         {
           path: "creators",
-          element: <Creators />
+          element: <Creators />,
         },
-      ]
+      ],
     },
   ]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <WindowSizeContext.Provider value={{windowSize: windowWidth}}>
+      <WindowSizeContext.Provider value={{ windowSize: windowWidth }}>
         <div className={`theme-${theme}`}>
           <RouterProvider router={router} />
         </div>

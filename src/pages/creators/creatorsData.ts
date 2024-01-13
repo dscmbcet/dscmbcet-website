@@ -18,79 +18,81 @@ import Abigail from "./assets/abhigayil.png";
 import Amrutha from "./assets/amrutha.png";
 
 export const developers = [
-    {
-        name: "Ritin",
-        imgSrc: Ritin,
-    },
-    {
-        name: "Liya",
-        imgSrc: Liya,
-    },
-    {
-        name: "Vinu",
-        imgSrc: Vinu,
-    },
-]
+  {
+    name: "Ritin",
+    imgSrc: Ritin,
+  },
+  {
+    name: "Liya",
+    imgSrc: Liya,
+  },
+  {
+    name: "Vinu",
+    imgSrc: Vinu,
+  },
+];
 
 export const designers = [
-    [
+  [
     {
-        name: "Varsha",
-        imgSrc: Varsha,
+      name: "Varsha",
+      imgSrc: Varsha,
     },
     {
-        name: "Sreelekshmi",
-        imgSrc: Sreelakshmi,
+      name: "Sreelekshmi",
+      imgSrc: Sreelakshmi,
     },
     {
-        name: "Navaneeth",
-        imgSrc: Navaneeth,
+      name: "Navaneeth",
+      imgSrc: Navaneeth,
     },
     {
-        name: "Mithun",
-        imgSrc: Mithun,
+      name: "Mithun",
+      imgSrc: Mithun,
     },
     {
-        name: "Sera",
-        imgSrc: Sera,
-    }
-],[
+      name: "Sera",
+      imgSrc: Sera,
+    },
+  ],
+  [
     {
-        name: "Rhea",
-        imgSrc: Rhea,
+      name: "Rhea",
+      imgSrc: Rhea,
     },
     {
-        name: "Jomi",
-        imgSrc: Jomi,
+      name: "Jomi",
+      imgSrc: Jomi,
     },
     {
-        name: "Medlyn",
-        imgSrc: Medlyn,
+      name: "Medlyn",
+      imgSrc: Medlyn,
     },
     {
-        name: "Karthika",
-        imgSrc: Karthika,
+      name: "Karthika",
+      imgSrc: Karthika,
     },
     {
-        name: "Meenakshi",
-        imgSrc: Meenakshi,
+      name: "Meenakshi",
+      imgSrc: Meenakshi,
     },
-],[
-    
+  ],
+  [
     {
-        name: "Shibin",
-        imgSrc: Shibin,
-    },
-    {
-        name: "Vlad",
-        imgSrc: Vlad,
+      name: "Shibin",
+      imgSrc: Shibin,
     },
     {
-        name: "Abigail",
-        imgSrc: Abigail,
+      name: "Vlad",
+      imgSrc: Vlad,
     },
     {
-        name: "Amrutha",
-        imgSrc: Amrutha,
+      name: "Abigail",
+      imgSrc: Abigail,
     },
-]];
+    {
+      name: "Amrutha",
+      imgSrc: Amrutha,
+    },
+  ],
+];
