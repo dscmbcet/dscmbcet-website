@@ -1,102 +1,103 @@
-.teamboxlead{
-    display: flex;
-    overflow: hidden;
+.teamboxlead {
+  display: flex;
+  overflow: hidden;
 }
 
-.teamboxlead div{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 25px;
-   
+.teamboxlead div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 25px;
 }
 
 .teamboxlead div div {
+  font-size: 20px;
+  width: 170px;
+  margin-bottom: -25px;
+}
+
+.teamboxlead div div h1 {
+  margin-left: 0px;
+  font-size: 40px;
+  width: 170px;
+}
+
+.gdsclead,
+.techlead,
+.designlead2 {
+  width: 470px;
+}
+
+.firstblock {
+  width: 602px;
+}
+
+.techteam {
+  width: 420px;
+}
+
+.designteam {
+  width: 280px;
+}
+
+.organizingteam {
+  width: 332px;
+}
+
+.socialmediateam {
+  width: 452px;
+}
+
+.secondblock {
+  width: 299px;
+}
+
+@media (max-width: 680px) {
+  .gdsclead,
+  .techlead,
+  .designlead2 {
+    width: 330px;
+  }
+
+  .teamboxlead {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teamboxlead div {
+    margin: 30px;
+    padding-bottom: 25px;
+  }
+
+  .teamboxlead div div {
     font-size: 20px;
-    width: 170px;
+    padding-bottom: 25px;
     margin-bottom: -25px;
-}
+    margin-left: -30px;
+  }
 
-.teamboxlead div div h1{
-    margin-left: 0px;
+  .teamboxlead div h1 {
+    margin-left: -30px;
     font-size: 40px;
-    width: 170px;
-}
+  }
 
-.gdsclead,.techlead,.designlead2{
-    width: 470px;
-}
+  .techteam,
+  .designteam,
+  .organizingteam,
+  .socialmediateam {
+    width: 335px !important;
+    padding-left: 50px !important;
+  }
 
+  .firstblock,
+  .secondblock,
+  .sociallead {
+    width: 330px;
+  }
 
-.firstblock{
-    width: 602px;
-}
-
-.techteam{
-    width: 420px;
-}
-
-.designteam{
-    width: 280px;
-}
-
-.organizingteam{
-    width:332px;
-}
-
-.socialmediateam{
-    width:452px
-}
-
-.secondblock{
-    width:299px ;
-}
-
-@media (max-width:680px){
-    .gdsclead,.techlead,.designlead2{
-        width: 330px;
-    }
-
-    .teamboxlead{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .teamboxlead div{
-        margin: 30px;
-        padding-bottom: 25px;
-    }
-
-     
-    .teamboxlead div div {
-        font-size: 20px;
-        padding-bottom:25px ;
-        margin-bottom: -25px;
-        margin-left: -30px;
-    }
-    
-
-    .teamboxlead div h1{
-        margin-left: -30px;
-        font-size: 40px;
-        
-    }
-   
-    
-    .techteam,.designteam,.organizingteam,.socialmediateam{
-        width: 335px !important;
-        padding-left: 50px !important;
-    }
-    
-   
-    
-    .firstblock,.secondblock,.sociallead{
-        width: 330px  ;
-    }
-    
-    .techlead{
-        padding-left: 20px !important;
-    }
+  .techlead {
+    padding-left: 20px !important;
+  }
 }

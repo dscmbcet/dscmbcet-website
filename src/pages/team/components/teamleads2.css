@@ -1,83 +1,80 @@
-.teamlead2{
-    display: flex;
-    overflow: hidden;
+.teamlead2 {
+  display: flex;
+  overflow: hidden;
 }
 
 .teamlead2 > img {
-    transform: translate(20px, 10px);
+  transform: translate(20px, 10px);
 }
 
-.teamlead2 div{
+.teamlead2 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 25px;
+}
+
+.teamlead2 div div {
+  font-size: 20px;
+  width: 200px;
+  margin-bottom: -25px;
+}
+
+.teamlead2 div h1 {
+  margin-left: 0px;
+  font-size: 40px;
+  width: 200px;
+}
+
+.designlead1 {
+  width: 490px;
+}
+
+.operationslead {
+  width: 480px;
+}
+
+.organizinglead {
+  width: 450px;
+}
+
+@media (max-width: 680px) {
+  .teamlead2 {
+    display: flex;
+  }
+
+  .teamlead2 > img {
+    transform: translate(40px, 40px);
+  }
+
+  .teamlead2 div {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 25px;
-   
-}
+  }
 
-.teamlead2 div div {
-    font-size: 20px;
+  .teamlead2 {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .teamlead2 div div {
+    font-size: 24px;
     width: 200px;
     margin-bottom: -25px;
-}
+  }
 
-.teamlead2 div h1{
+  .teamlead2 div h1 {
     margin-left: 0px;
-    font-size: 40px;
+    font-size: 37px;
     width: 200px;
-}
+  }
 
-.designlead1{
-    width:490px
-}
-
-.operationslead{
-    width:480px 
-}
-
-.organizinglead{
-    width:450px
-}
-
-@media (max-width:680px){
-    .teamlead2{
-        display: flex;
-    }
-
-    .teamlead2 > img {
-        transform: translate(40px, 40px);
-    }
-    
-    .teamlead2 div{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding-bottom: 25px;
-       
-    }
-
-    .teamlead2{
-        display: flex;
-       flex-direction: column;   
-       padding: 30px;
-    }
-    
-    .teamlead2 div div {
-        font-size: 24px;
-        width: 200px;
-        margin-bottom: -25px;
-    }
-    
-    .teamlead2 div h1{
-        margin-left: 0px;
-        font-size: 37px;
-        width: 200px;
-    }
-    
-    .designlead1,.operationslead,.organizinglead{
-        width:330px
-    }
-    
-    
-    
+  .designlead1,
+  .operationslead,
+  .organizinglead {
+    width: 330px;
+  }
 }

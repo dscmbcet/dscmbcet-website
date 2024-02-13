@@ -1,14 +1,14 @@
-.gEarth {   
-    margin-top: 30%;
-    max-width: 90vw;
-    height: auto;
-    border-radius: 100%;
+.gEarth {
+  margin-top: 30%;
+  max-width: 90vw;
+  height: auto;
+  border-radius: 100%;
 }
 
 .theme-dark .gEarth {
-    border-color: white;
+  border-color: white;
 }
 
 .theme-light .gEarth {
-    border-color: black;
+  border-color: black;
 }

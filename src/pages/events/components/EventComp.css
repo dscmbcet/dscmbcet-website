@@ -1,72 +1,76 @@
 .container {
-    position: relative;
-    width: 251px;
-    height: 333px;
-    background-color: aqua;
-    border-radius: 15px;
-    display: flex;
-    overflow: hidden;
-    color: white
+  position: relative;
+  width: 251px;
+  height: 333px;
+  background-color: aqua;
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  color: white;
 }
 
 .container_bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .container_gradient {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(30, 28, 28,.2) 20%, rgba(30, 28, 28, 1));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(30, 28, 28, 0.2) 20%,
+    rgba(30, 28, 28, 1)
+  );
 }
 
 .theme-dark .container {
-    border: 2px solid var(--cream);
+  border: 2px solid var(--cream);
 }
 
 .theme-light .container {
-    border: 2px solid var(--eerie-black);
+  border: 2px solid var(--eerie-black);
 }
 
 .component_main {
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: end;
-    justify-content: center;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
 
 .component_main_content {
-    width: 100%;
-    margin: 15px;
-    font-size: 17px;
+  width: 100%;
+  margin: 15px;
+  font-size: 17px;
 }
 
 .component_main_header {
-    font-weight: 500;
-    font-size: 27px;
-    margin-bottom: 5%;
+  font-weight: 500;
+  font-size: 27px;
+  margin-bottom: 5%;
 }
 
-.component_main_info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
+.component_main_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
 }
 
-.component_main_statusBar{
-    display: flex;
-    background-color: rgb(56, 55, 55);
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 5px;
-    border-radius: 100px;
+.component_main_statusBar {
+  display: flex;
+  background-color: rgb(56, 55, 55);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 100px;
 }
 
 .dot {
@@ -77,33 +81,33 @@
 }
 
 .component_desc {
-    position: absolute;
-    width: 100%;
-    height: 75%;
-    top: 100%;
-    padding:5px 15px 15px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  top: 100%;
+  padding: 5px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .component_desc_btn {
-    font-size: 20px;
-    height: 50px;
-    background-color: #4285f4;
-    font-weight: 300;
-    border-radius: 10px;
+  font-size: 20px;
+  height: 50px;
+  background-color: #4285f4;
+  font-weight: 300;
+  border-radius: 10px;
 }
 
-.component_desc_readmore{
-    background-color: transparent;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
+.component_desc_readmore {
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
 }
 
 .component_desc_btn > a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
