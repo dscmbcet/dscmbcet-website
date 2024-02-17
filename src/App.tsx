@@ -8,6 +8,7 @@ import Events from "./pages/events/Events";
 import Creators from "./pages/creators/Creators";
 import Layout from "./Layout";
 import { WindowSizeContext } from "./context/window-size";
+import Shortener from "./helpers/shortener";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -26,7 +27,7 @@ function App() {
 
   useEffect(() => {
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
+      "(prefers-color-scheme: dark)"
     ).matches;
 
     if (prefersDark) {
@@ -56,19 +57,30 @@ function App() {
           path: "creators",
           element: <Creators />,
         },
+        {
+          path: "s/:hash",
+        },
       ],
     },
   ]);
 
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <WindowSizeContext.Provider value={{ windowSize: windowWidth }}>
-        <div className={`theme-${theme}`}>
-          <RouterProvider router={router} />
-        </div>
-      </WindowSizeContext.Provider>
-    </ThemeContext.Provider>
-  );
+  const currentPath = window.location.pathname;
+
+  if (currentPath.startsWith("/s/")) {
+    // handle shortener
+    const hash = currentPath.split("/s/")[1];
+    return Shortener(hash);
+  } else {
+    return (
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <WindowSizeContext.Provider value={{ windowSize: windowWidth }}>
+          <div className={`theme-${theme}`}>
+            <RouterProvider router={router} />
+          </div>
+        </WindowSizeContext.Provider>
+      </ThemeContext.Provider>
+    );
+  }
 }
 
 export default App;
