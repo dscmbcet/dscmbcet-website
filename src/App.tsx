@@ -9,7 +9,7 @@ import Creators from "./pages/creators/Creators";
 import Layout from "./Layout";
 import { WindowSizeContext } from "./context/window-size";
 import Shortener from "./helpers/shortener";
-
+import Admin from "./pages/admin/Admin";
 function App() {
   const [theme, setTheme] = useState("light");
   const [windowWidth, setWindowWidth] = useState<number>(0);
@@ -56,6 +56,10 @@ function App() {
         {
           path: "creators",
           element: <Creators />,
+        },
+        {
+          path: "admin",
+          element: <Admin />,
         },
         {
           path: "s/:hash",
