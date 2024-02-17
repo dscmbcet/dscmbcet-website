@@ -10,7 +10,8 @@ import Layout from "./Layout";
 import { WindowSizeContext } from "./context/window-size";
 import Shortener from "./helpers/shortener";
 import Admin from "./pages/admin/Admin";
-import Dash from "./pages/dashboard/Dash";
+import Dashboard from "./pages/dashboard/Dashboard";
+
 function App() {
   const [theme, setTheme] = useState("light");
   const [windowWidth, setWindowWidth] = useState<number>(0);
@@ -60,9 +61,11 @@ function App() {
         },
         {
           path: "admin",
+          element: <Admin />,
         },
         {
-          path: "dash",
+          path: "dashboard",
+          element: <Dashboard />,
         },
         {
           path: "s/:hash",
@@ -77,10 +80,10 @@ function App() {
     // handle shortener
     const hash = currentPath.split("/s/")[1];
     return Shortener(hash);
-  } else if (currentPath.startsWith("/admin")) {
-    return <Admin />;
-  } else if (currentPath.startsWith("/dash")) {
-    return <Dash />;
+    // } else if (currentPath.startsWith("/admin")) {
+    //   return <Admin />;
+    // } else if (currentPath.startsWith("/dash")) {
+    //   return <Dashboard />;
   } else {
     return (
       <ThemeContext.Provider value={{ theme, setTheme }}>

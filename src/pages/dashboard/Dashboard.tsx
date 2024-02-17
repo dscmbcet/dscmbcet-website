@@ -1,9 +1,18 @@
 import { ThemeContext } from "../../context/theme-context";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import React from "react";
-import "./dash.css";
-function Dash() {
+import "./dashboard.css";
+
+function Dashboard() {
   const { theme, setTheme } = useContext(ThemeContext);
+  const navigate = useNavigate();
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (!isLoggedIn) {
+    navigate("/admin");
+    return;
+  }
 
   return (
     <div className="dash">
@@ -49,5 +58,24 @@ function Dash() {
       </div>
     </div>
   );
+
+  // const data = fetch(`${import.meta.env.VITE_SHORTENER_ENDPOINT}/getAll`, {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({
+  //     userName: import.meta.env.VITE_SHORTENER_USERNAME,
+  //     userPass: import.meta.env.VITE_SHORTENER_PASSWORD,
+  //   }),
+  // }).then((res) => res.json());
+
+  // return (
+  //   <ul>
+  //     {data.map((item) => (
+  //       <li key={item.url}>{item.hash}</li>
+  //     ))}
+  //   </ul>
+  // );
 }
-export default Dash;
+export default Dashboard;

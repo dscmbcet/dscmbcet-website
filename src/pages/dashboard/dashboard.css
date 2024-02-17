@@ -1,10 +1,11 @@
 .dash {
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  margin-left: 500px;
-  margin-right: 500px;
+  display: flex;
+  flex-direction: column;
+  overflow: none;
+  padding: 20px;
+  padding-top: 150px;
 }
+
 .button {
   background-color: #000000;
   border: none;
@@ -17,6 +18,7 @@
   margin: 4px 2px;
   border-radius: 12px;
 }
+
 input[type="text"] {
   width: 100%;
   padding: 12px 20px;
@@ -25,6 +27,7 @@ input[type="text"] {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 12px;
 }
+
 input[type="password"] {
   width: 100%;
   padding: 12px 20px;
@@ -33,12 +36,15 @@ input[type="password"] {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 12px;
 }
+
 .red {
   background-color: #d62d20;
 }
+
 .green {
   background-color: #008744;
 }
+
 .close {
   color: #aaaaaa;
   float: right;
