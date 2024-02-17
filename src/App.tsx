@@ -10,6 +10,7 @@ import Layout from "./Layout";
 import { WindowSizeContext } from "./context/window-size";
 import Shortener from "./helpers/shortener";
 import Admin from "./pages/admin/Admin";
+import Dash from "./pages/dashboard/Dash";
 function App() {
   const [theme, setTheme] = useState("light");
   const [windowWidth, setWindowWidth] = useState<number>(0);
@@ -60,6 +61,10 @@ function App() {
         {
           path: "admin",
           element: <Admin />,
+        },
+        {
+          path: "dash",
+          element: <Dash />,
         },
         {
           path: "s/:hash",

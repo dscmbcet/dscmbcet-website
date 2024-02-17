@@ -1,6 +1,7 @@
 import { ThemeContext } from "../../context/theme-context";
 import { useContext } from "react";
 import React from "react";
+import "./admin.css";
 function Admin() {
   const { theme, setTheme } = useContext(ThemeContext);
   return (
