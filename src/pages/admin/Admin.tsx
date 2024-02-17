@@ -11,10 +11,11 @@ function Admin() {
         <label>Username :</label>
         <input type="text" id="username" name="username" />
         <br />
+        <br />
         <label>Password :</label>
         <input type="password" id="password" name="password" />
         <br />
-        <input type="submit" value="Submit" />
+        <button className="button">Submit</button>
       </form>
     </div>
   );

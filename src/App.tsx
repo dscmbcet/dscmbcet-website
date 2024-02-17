@@ -63,7 +63,6 @@ function App() {
         },
         {
           path: "dash",
-          element: <Dash />,
         },
         {
           path: "s/:hash",
@@ -80,6 +79,8 @@ function App() {
     return Shortener(hash);
   } else if (currentPath.startsWith("/admin")) {
     return <Admin />;
+  } else if (currentPath.startsWith("/dash")) {
+    return <Dash />;
   } else {
     return (
       <ThemeContext.Provider value={{ theme, setTheme }}>

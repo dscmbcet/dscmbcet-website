@@ -1,0 +1,54 @@
+.dash {
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+.button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 12px;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 12px;
+}
+.red {
+  background-color: #d62d20;
+}
+.green {
+  background-color: #008744;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
