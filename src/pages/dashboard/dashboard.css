@@ -1,60 +1,52 @@
-.dash {
-  display: flex;
-  flex-direction: column;
-  overflow: none;
-  padding: 20px;
-  padding-top: 150px;
+.dashboard-landing {
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 25%;
 }
 
-.button {
-  background-color: #000000;
-  border: none;
-  color: white;
+.new-adder {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+}
+
+.shorten-button {
+  background-color: #0f0f10ef;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 12px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 12px;
-}
-
-input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 12px;
-}
-
-.red {
-  background-color: #d62d20;
-}
-
-.green {
-  background-color: #008744;
-}
-
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.input-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.list-existing {
+  list-style-type: disc;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.item-container {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 10px;
 }
