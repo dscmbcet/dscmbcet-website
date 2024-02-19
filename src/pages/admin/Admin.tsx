@@ -12,26 +12,26 @@ function Admin() {
   });
   const navigate = useNavigate();
 
-  if (localStorage.getItem("isLoggedIn")) {
+  if (localStorage.getItem("isLoggedIn") == "true") {
     navigate("/dashboard");
-    return;
+    return <></>;
   }
 
   const listenOnSubmitClick = () => {
     if (!userData.username || !userData.password) {
       alert("Please enter username and password");
-      return;
+      return <></>;
     }
     if (
       userData.username == import.meta.env.VITE_SHORTENER_USERNAME &&
       userData.password == import.meta.env.VITE_SHORTENER_PASSWORD
     ) {
-      localStorage.setItem("isLoggedIn", true);
+      localStorage.setItem("isLoggedIn", "true");
       navigate("/dashboard");
-      return;
+      return <></>;
     } else {
       alert("Invalid username or password");
-      return;
+      return <></>;
     }
   };
 
@@ -64,4 +64,5 @@ function Admin() {
     </div>
   );
 }
+
 export default Admin;

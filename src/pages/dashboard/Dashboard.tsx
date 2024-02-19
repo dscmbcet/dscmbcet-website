@@ -9,16 +9,15 @@ function Dashboard() {
   const navigate = useNavigate();
 
   const isLoggedIn = localStorage.getItem("isLoggedIn");
-  if (!isLoggedIn) {
+  if (isLoggedIn != "true") {
     navigate("/admin");
-    return;
+    return <></>;
   }
 
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const handleItemClick = (item) => {
+  const handleItemClick = (item: any) => {
     if (selectedItem === item) {
-      event.stopPropagation();
       setSelectedItem(null);
     } else {
       setSelectedItem(item);
