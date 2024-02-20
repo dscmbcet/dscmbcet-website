@@ -1,5 +1,5 @@
 import { ThemeContext } from "../../../context/theme-context";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import "./dashboard.css";
@@ -7,6 +7,9 @@ import "./dashboard.css";
 function Dashboard() {
   const { theme, setTheme } = useContext(ThemeContext);
   const navigate = useNavigate();
+  const endpoint = import.meta.env.VITE_SHORTENER_ENDPOINT;
+  const userName = import.meta.env.VITE_SHORTENER_USERNAME;
+  const userPass = import.meta.env.VITE_SHORTENER_PASSWORD;
 
   const isLoggedIn = localStorage.getItem("isLoggedIn");
   if (isLoggedIn != "true") {
@@ -14,6 +17,16 @@ function Dashboard() {
     return <></>;
   }
 
+  const [data, setData] = useState([
+    {
+      _id: null,
+      url: null,
+      hash: null,
+      uniqueClicks: null,
+      clicks: null,
+      ips: null,
+    },
+  ]);
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemClick = (item: any) => {
@@ -24,31 +37,30 @@ function Dashboard() {
     }
   };
 
-  const res = {
-    // temporary change later
-    error: null,
-    data: [
-      {
-        _id: "65d05562bdd6d44b840b0995",
-        url: "https://deno.land/x/",
-        hash: "deno",
-        createdAt: "2024-02-17T06:42:42.377Z",
-        clicks: 7,
-        uniqueClicks: 4,
-        ips: ["127.0.0.1", "121.121.121", "192.168.1.1", "192.168.69.1"],
-      },
-      {
-        _id: "65d05aa9a4d4de1991418a38",
-        url: "https://xditya.me/",
-        hash: "xditya",
-        createdAt: "2024-02-17T07:05:13.191Z",
-        clicks: 17,
-        uniqueClicks: 2,
-        ips: ["127.0.0.1", "121.121.121", "192.168.1.1", "192.168.69.1"],
-      },
-    ],
-  };
-  const data = res.data;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(endpoint + "/api/getAll", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userName,
+            userPass,
+          }),
+        });
+
+        const fetchedData = await res.json();
+        setData(fetchedData.data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="dashboard-landing">
       <div className="new-adder">
@@ -74,37 +86,48 @@ function Dashboard() {
         <h2>Existing Shortened URLs</h2>
         <br />
         {data.length === 0 && <p>No URLs found.</p>}
-        {data.length !== 0 &&
-          data.map((item) => (
-            <div
-              key={item._id}
-              className={`item-container ${selectedItem === item._id ? "expanded" : ""}`}
-              onClick={() => handleItemClick(item._id)}
-            >
-              <p>
-                <strong>URL:</strong> {item.url}
-                <br />
-                <strong>Hash:</strong> {item.hash}
-              </p>
-              {selectedItem === item._id && (
-                <div>
+        {data ? (
+          <div>
+            {data.length !== 0 ? (
+              data.map((item) => (
+                <div
+                  key={item._id}
+                  className={`item-container ${selectedItem === item._id ? "expanded" : ""}`}
+                  onClick={() => handleItemClick(item._id)}
+                >
                   <p>
-                    <strong>Number of Clicks:</strong> {item.clicks}
+                    <strong>URL:</strong> {item.url}
+                    <br />
+                    <strong>Hash:</strong> {item.hash}
                   </p>
-                  <p>
-                    <strong>Unique Clicks:</strong> {item.uniqueClicks}
-                  </p>
-                  <button onClick={() => console.log("List IPs:", item.ips)}>
-                    List IPs
-                  </button>
-                  <br />
-                  <button>Edit</button>
-                  <br />
-                  <button>Delete</button>
+                  {selectedItem === item._id && (
+                    <div className="item-details">
+                      <p>
+                        <strong>Number of Clicks:</strong> {item.clicks}
+                      </p>
+                      <p>
+                        <strong>Unique Clicks:</strong> {item.uniqueClicks}
+                      </p>
+                      <br />
+                      <button
+                        className="action-button"
+                        onClick={() => console.log("List IPs:", item.ips)}
+                      >
+                        List IPs
+                      </button>
+                      <button className="action-button">Edit</button>
+                      <button className="action-button">Delete</button>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          ))}
+              ))
+            ) : (
+              <p>No data available.</p>
+            )}
+          </div>
+        ) : (
+          <div>Loading...</div>
+        )}
       </div>
     </div>
   );
