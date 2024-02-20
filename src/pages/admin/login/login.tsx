@@ -1,8 +1,8 @@
-import { ThemeContext } from "../../context/theme-context";
+import { ThemeContext } from "../../../context/theme-context";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import "./admin.css";
+import "./login.css";
 
 function Admin() {
   const { theme, setTheme } = useContext(ThemeContext);
