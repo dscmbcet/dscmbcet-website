@@ -28,6 +28,11 @@ function Dashboard() {
     },
   ]);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [urlData, setUrlData] = useState({
+    url: "",
+    hash: "",
+    submit: false,
+  });
 
   const handleItemClick = (item: any) => {
     if (selectedItem === item) {
@@ -68,6 +73,9 @@ function Dashboard() {
           type="text"
           placeholder="Enter URL"
           className="input-container"
+          onChange={(e) => {
+            setUrlData({ ...urlData, url: e.target.value });
+          }}
         />
         <br />
         <br />
@@ -75,11 +83,39 @@ function Dashboard() {
           type="text"
           placeholder="Enter hash"
           className="input-container"
+          onChange={(e) => {
+            setUrlData({ ...urlData, hash: e.target.value });
+          }}
         />
         <br />
         <br />
-        <button className="shorten-button">Shorten</button>
+        <button
+          className="shorten-button"
+          onClick={(e) => {
+            setUrlData({ ...urlData, submit: true });
+          }}
+        >
+          Shorten
+        </button>
       </div>
+      {urlData.submit === true && urlData.hash !== "" && urlData.url !== "" && (
+        <div className="new-adder">
+          <p>URL shortened successfully!</p>
+          <p>
+            <strong>URL:</strong> {urlData.url}
+            <br />
+            <strong>Hash:</strong> {urlData.hash}
+          </p>
+          <br />
+          {/* #TODO: shorten the URL */}
+          <button
+            className="action-button"
+            onClick={() => setUrlData({ url: "", hash: "", submit: false })}
+          >
+            Close
+          </button>
+        </div>
+      )}
       <br />
       <br />
       <div className="list-existing">
